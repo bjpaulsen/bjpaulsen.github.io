@@ -222,6 +222,56 @@
             left: 15px;
         }
 
+        .imgbox {
+            position: fixed;
+            height: 100vh;
+            width: 350px;
+            right: -300px;
+            top: 0px;
+        }
+
+        @keyframes imgbox {
+            0% {
+                right: -400px;
+            }
+
+            50% {
+                right: -400px;
+            }
+
+            70% {
+                right: -280px;
+            }
+
+            85% {
+                right: 310px;
+            }
+
+            100% {
+                right: -300px;
+            }
+        }
+
+        #me_img {
+            transform: rotate(180deg);
+            position: fixed;
+            width: 350px;
+            right: -350px;
+            top: 210px;
+        }
+
+        #about_ib {
+            background: #006060;
+        }
+
+        #skills_ib {
+            background: #003060;
+        }
+
+        #portfolio_ib {
+            background: #000060;
+        }
+
         .sub {
             position: fixed;
             height: 75px;
@@ -247,6 +297,8 @@
         a {
             width: 850px;
         }
+
+        img {}
     </style>
 </head>
 
@@ -283,7 +335,11 @@
                 as a scientist, as well as a look into the lives of the world's best biotechnicians and chemical
                 engineers.
             </p>
-
+            <div id="about_ib" class="imgbox">
+                <div class="sub">Me and a friend goofing around on a ROP Biotech field trip. I'm the one on the left!
+                </div>
+            </div>
+            <img id="me_img" src="http://gdurl.com/hwh2">
     </div>
     <div class="superdiv" id="skillsdiv">
         <p class="subh" style="color:#003060">What do I do, anyway?</p>
@@ -304,6 +360,7 @@
             <p class="subp" style="top:280px">I can't wait to get my hands on more!</p>
         </p>
     </div>
+    <div id="skills_ib" class="imgbox"></div>
     <div class="superdiv" id="portfoliodiv">
         <p class="subh" style="color:#000060">What have I accomplished?</p>
         <p class="subp">As you can probably tell, I'm hyped to get underway in AP Computer Science. The thing I look
@@ -341,6 +398,9 @@
                 </li><br><br><br><br>
             </ul><br>
         </p>
+        <div id="portfolio_ib" class="imgbox">
+            <img src="https://codehs.com/share/NqYWtJRlHHET2B0lzUW6">
+        </div>
     </div>
 
     <div id="button0" class="button" onclick="fadeIn('aboutdiv')">ABOUT</div>
