@@ -9,11 +9,10 @@
             margin: 0;
             padding: 0;
             position: absolute;
-            background: #ffffff;
+            background: #dddddd;
         }
 
         #welcome {
-            background: #ffffff;
             text-align: center;
             font-family: 'Oswald', sans-serif;
             font-size: 90px;
@@ -71,7 +70,8 @@
             font-family: 'Oswald', sans-serif;
             font-size: 28px;
             border-radius: 50%;
-            background: #006064;
+            background: #00363a;
+            box-shadow: 5px 5px 0px #002222;
             left: 90px;
             width: 140px;
             height: 140px;
@@ -80,19 +80,20 @@
 
         .button:hover {
             transform: scale(1.25);
+            box-shadow: 7px 7px #002222;
         }
 
         #button0 {
             top: 250px;
-            border: 4px solid #002E64;
-            color: #002E64;
+            border: 4px solid #006064;
+            color: #006064;
             animation-name: button0_a;
             animation-duration: 2.3s;
         }
 
         #button0:hover {
-            background: #002E64;
-            color: #006064;
+            background: #006064;
+            color: #00363a;
         }
 
         @keyframes button0_a {
@@ -123,7 +124,7 @@
 
         #button1:hover {
             background: #360064;
-            color: #006064;
+            color: #00363a;
         }
 
         @keyframes button1_a {
@@ -154,7 +155,7 @@
 
         #button2:hover {
             background: #64002E;
-            color: #006064;
+            color: #00363a;
         }
 
         @keyframes button2_a {
@@ -178,8 +179,9 @@
         #menu_block {
             position: fixed;
             top: 0;
-            color: #006064;
-            background-color: #006064;
+            color: #00363a;
+            background-color: #00363a;
+            box-shadow: 10px 0px #002222;
             height: 100vh;
             width: 340px;
         }
@@ -251,7 +253,7 @@
     <p class="font-effect-anaglyph" id="welcome">benjamin paulsen</p>
 
     <div class="superdiv" id="aboutdiv">
-        <p class="subh" style="color:#002E64">Who am I?</p>
+        <p class="subh" style="color:#006064">Who am I?</p>
         <p class="subp">Welcome to my AP Computer Science website. To answer the question, I'm Benjamin James Holmes
             Paulsen,
             but unless you're feeling super fancy you can call me Ben. On this site, you can find info about me, my
