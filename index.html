@@ -13,12 +13,13 @@
         }
 
         #welcome {
-            position: fixed;
+            background: #ffffff;
             text-align: center;
             font-family: 'Oswald', sans-serif;
-            font-size: 70px;
+            font-size: 90px;
             line-height: 90px;
-            left: 50px;
+            top: 70px;
+            left: 450px;
             z-index: 100;
             transition: text-shadow .18s;
             animation-name: title_a;
@@ -68,9 +69,9 @@
             text-align: center;
             line-height: 135px;
             font-family: 'Oswald', sans-serif;
-            font-size: 25px;
+            font-size: 28px;
             border-radius: 50%;
-            background: #ffffff;
+            background: #222222;
             left: 90px;
             width: 140px;
             height: 140px;
@@ -83,7 +84,7 @@
 
         #button0 {
             top: 250px;
-            border: 1px solid #006060;
+            border: 4px solid #006060;
             color: #006060;
             animation-name: button0_a;
             animation-duration: 2.3s;
@@ -91,7 +92,7 @@
 
         #button0:hover {
             background: #006060;
-            color: #ffffff;
+            color: #222222;
         }
 
         @keyframes button0_a {
@@ -114,7 +115,7 @@
 
         #button1 {
             top: 470px;
-            border: 1px solid #003060;
+            border: 4px solid #003060;
             color: #003060;
             animation-name: button1_a;
             animation-duration: 2.5s;
@@ -122,7 +123,7 @@
 
         #button1:hover {
             background: #003060;
-            color: #ffffff;
+            color: #222222;
         }
 
         @keyframes button1_a {
@@ -145,7 +146,7 @@
 
         #button2 {
             top: 690px;
-            border: 1px solid #000060;
+            border: 4px solid #000060;
             color: #000060;
             animation-name: button2_a;
             animation-duration: 2.7s;
@@ -153,7 +154,7 @@
 
         #button2:hover {
             background: #000060;
-            color: #ffffff;
+            color: #222222;
         }
 
         @keyframes button2_a {
@@ -174,9 +175,18 @@
             }
         }
 
+        #menu_block {
+            position: fixed;
+            top: 0;
+            color: #222222;
+            background-color: #222222;
+            height: 100vh;
+            width: 340px;
+        }
+
         .superdiv {
-            left: 400px;
-            top: 210px;
+            left: 450px;
+            top: 250px;
             width: 850px;
             height: 750px;
             font-family: 'Libre Baskerville', monospace;
@@ -222,42 +232,6 @@
             left: 15px;
         }
 
-        @keyframes imgbox {
-            0% {
-                right: -400px;
-            }
-
-            50% {
-                right: -400px;
-            }
-
-            70% {
-                right: -280px;
-            }
-
-            85% {
-                right: 310px;
-            }
-
-            100% {
-                right: -300px;
-            }
-        }
-
-        .sub {
-            position: fixed;
-            height: 75px;
-            width: 330px;
-            right: -350px;
-            top: 500px;
-            background: #333333;
-            color: lightgrey;
-            padding: 10px;
-            font-family: 'Open Sans Condensed', sans-serif;
-            font-size: 25px;
-
-        }
-
         ul {
             left: 50px;
             top: 240px;
@@ -274,37 +248,37 @@
 
 <body>
       
-    <p class="font-effect-anaglyph" id="welcome">benjamin<br>paulsen</p>
+    <p class="font-effect-anaglyph" id="welcome">benjamin paulsen</p>
 
     <div class="superdiv" id="aboutdiv">
-        <p class="subh" style="color:#006060">Who am I?</h2>
-            <p class="subp">Welcome to my AP Computer Science website. To answer the question, I'm Benjamin James Holmes
-                Paulsen,
-                but unless you're feeling super fancy you can call me Ben. On this site, you can find info about me, my
-                portfolio, and examples
-                of my Computer Science skills. Enjoy yourself.
-                <br>
-                <hr>
-            </p><br>
-            <p class="subp">
-                <ul> For starters:
-                    <li>I'm 18 years old.</li><br>
-                    <li>I like economic theory, computer science, cats, and rainy days.</li><br>
-                    <li>I'm a volunteer for the Red Cross and the SPCA.</li><br>
-                    <li>My favorite movie is Ex Machina (2014).</li><br>
-                    <li>My favorite band is Queen (ancient history).</li>
-                </ul>
-            </p>
-            <p class="subp" style="top:230px">
-                Throughout my education, I've enjoyed challenging myself; this last year I took AP English, AP Calculus,
-                ROP Biotechnology,
-                and AP Computer Science. In particular, though it is unlikely I will enter into the field, I find
-                biotechnology to be an
-                interesting, challenging, and incredibly fun subject to study. As an ROP course, it gives me on-the-job
-                experience in a lab
-                as a scientist, as well as a look into the lives of the world's best biotechnicians and chemical
-                engineers.
-            </p>
+        <p class="subh" style="color:#006060">Who am I?</p>
+        <p class="subp">Welcome to my AP Computer Science website. To answer the question, I'm Benjamin James Holmes
+            Paulsen,
+            but unless you're feeling super fancy you can call me Ben. On this site, you can find info about me, my
+            portfolio, and examples
+            of my Computer Science skills. Enjoy yourself.
+            <br>
+            <hr>
+        </p><br>
+        <p class="subp">
+            <ul> For starters:
+                <li>I'm 18 years old.</li><br>
+                <li>I like economic theory, computer science, cats, and rainy days.</li><br>
+                <li>I'm a volunteer for the Red Cross and the SPCA.</li><br>
+                <li>My favorite movie is Ex Machina (2014).</li><br>
+                <li>My favorite band is Queen (ancient history).</li>
+            </ul>
+        </p>
+        <p class="subp" style="top:230px">
+            Throughout my education, I've enjoyed challenging myself; this last year I took AP English, AP Calculus,
+            ROP Biotechnology,
+            and AP Computer Science. In particular, though it is unlikely I will enter into the field, I find
+            biotechnology to be an
+            interesting, challenging, and incredibly fun subject to study. As an ROP course, it gives me on-the-job
+            experience in a lab
+            as a scientist, as well as a look into the lives of the world's best biotechnicians and chemical
+            engineers.
+        </p>
     </div>
     <div class="superdiv" id="skillsdiv">
         <p class="subh" style="color:#003060">What do I do, anyway?</p>
@@ -363,6 +337,8 @@
             </ul><br>
         </p>
     </div>
+
+    <div id="menu_block"></div>
 
     <div id="button0" class="button" onclick="fadeIn('aboutdiv')">ABOUT</div>
     <div id="button1" class="button" onclick="fadeIn('skillsdiv')">SKILLS</div>
