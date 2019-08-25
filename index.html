@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             position: absolute;
-            background: #111111;
+            background: #dddddd;
         }
 
         #welcome {
@@ -70,8 +70,8 @@
             font-family: 'Oswald', sans-serif;
             font-size: 28px;
             border-radius: 50%;
-            background: #00363a;
-            box-shadow: 5px 5px 0px #002222;
+            background: #ffffff;
+            box-shadow: 0px 0px 20px #666666;
             left: 90px;
             width: 140px;
             height: 140px;
@@ -80,7 +80,7 @@
 
         .button:hover {
             transform: scale(1.25);
-            box-shadow: 7px 7px #002222;
+            box-shadow: 0px 0px 40px #666666;
         }
 
         #button0 {
@@ -93,7 +93,7 @@
 
         #button0:hover {
             background: #006064;
-            color: #00363a;
+            color: #ffffff;
         }
 
         @keyframes button0_a {
@@ -124,7 +124,7 @@
 
         #button1:hover {
             background: #360064;
-            color: #00363a;
+            color: #ffffff;
         }
 
         @keyframes button1_a {
@@ -155,7 +155,7 @@
 
         #button2:hover {
             background: #64002E;
-            color: #00363a;
+            color: #ffffff;
         }
 
         @keyframes button2_a {
@@ -180,9 +180,9 @@
             position: fixed;
             top: 0px;
             left: -20px;
-            color: #00363a;
-            background-color: #00363a;
-            box-shadow: 10px 0px #002222;
+            color: #ffffff;
+            background-color: #ffffff;
+            box-shadow: 30px 0px 25px #bbbbbb;
             height: 100vh;
             width: 360px;
             animation-name: menu_a;
@@ -206,6 +206,24 @@
             100% {
                 left: -20px;
             }
+        }
+
+        #shadowdiv {
+            position: fixed;
+            top: -5px;
+            left: 1500px;
+            height: 105vh;
+            width: 15px;
+            background: #dddddd;
+            box-shadow: 30px 0px 25px #777777;
+        }
+
+        #linkbox {
+            position: fixed;
+            left: 1500px;
+            height: 100vh;
+            background-color: #999999;
+            width: 1000px;
         }
 
         .superdiv {
@@ -362,17 +380,21 @@
         </p>
     </div>
 
-    <div id="menu_block"></div>
+    <div id="linkbox"></div>
+    <div class="panel" id="menu_block"></div>
+    <div class="panel" id="shadowdiv"></div>
 
     <div id="button0" class="button" onclick="fadeIn('aboutdiv')">ABOUT</div>
     <div id="button1" class="button" onclick="fadeIn('skillsdiv')">SKILLS</div>
     <div id="button2" class="button" onclick="fadeIn('portfoliodiv')">PORTFOLIO</div>
 
     <script>
+        // shows about page by default
         document.getElementById("aboutdiv").style.opacity = "1";
         document.getElementById("skillsdiv").style.display = "none";
         document.getElementById("portfoliodiv").style.display = "none";
 
+        // fadeIn switches website tabs by hiding all tabs, then showing the selected page
         function fadeIn(id) {
             document.getElementById("aboutdiv").style.opacity = "0";
             document.getElementById("skillsdiv").style.display = "none";
