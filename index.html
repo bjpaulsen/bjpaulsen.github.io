@@ -17,19 +17,16 @@
         }
 
         #welcome {
-            position: relative;
+            position: fixed;
+            top: 70px;
+            left: 1560px;
             text-align: center;
             font-family: 'Oswald', sans-serif;
-            font-size: 90px;
-            line-height: 90px;
-            top: 70px;
-            left: 0px;
-            z-index: 100;
-            transition: text-shadow .18s;
-        }
-
-        #welcome:hover {
-            text-shadow: 2px 2px 2px #000000;
+            font-size: 75px;
+            line-height: 80px;
+            color: #333333;
+            background-color: #aaaaaa;
+            text-shadow: 5px 0px 5px #888888;
         }
 
         .button {
@@ -147,12 +144,11 @@
 
         #menu_block {
             position: fixed;
-            top: 0px;
+            top: -5px;
             left: -20px;
-            color: #ffffff;
             background-color: #ffffff;
             box-shadow: 30px 0px 25px #bbbbbb;
-            height: 100vh;
+            height: 105vh;
             width: 360px;
             animation-name: menu_a;
             animation-duration: 1.1s;
@@ -208,15 +204,35 @@
         }
 
         .superdiv {
+            position: absolute;
             left: 450px;
             top: 250px;
             width: 850px;
-            height: 750px;
             font-family: 'Libre Baskerville', monospace;
+        }
+
+        @keyframes about_a {
+            0% {
+                left: -1450px;
+            }
+
+            15% {
+                left: -1450px;
+            }
+
+            60% {
+                left: 490px;
+            }
+
+            100% {
+                left: 450px;
+            }
         }
 
         #aboutdiv {
             opacity: 1;
+            animation-name: about_a;
+            animation-duration: 1.0s;
         }
 
         #skillsdiv {
@@ -228,12 +244,10 @@
         }
 
         .subh {
-            position: relative;
             font-size: 60px;
         }
 
         .subp {
-            position: relative;
             font-size: 20px;
             top: 15px;
             left: 15px;
@@ -257,106 +271,108 @@
 
 
 
+    <p id="welcome">benjamin<br>paulsen</p>
 
     <div class="panel" id="main_block">
 
-        <p class="font-effect-anaglyph" id="welcome">benjamin paulsen</p>
-
-        <div class="superdiv" id="aboutdiv">
-            <p class="subh" style="color:#006064">Who am I?</p>
-            <p class="subp">Welcome to my AP Computer Science website. To answer the question, I'm Benjamin James Holmes
-                Paulsen,
-                but unless you're feeling super fancy you can call me Ben. On this site, you can find info about me, my
-                portfolio, and examples
-                of my Computer Science skills. Enjoy yourself.
-                <br>
-                <hr>
-            </p><br>
-            <p class="subp">
-                <ul> For starters:
-                    <li>I'm 18 years old.</li><br>
-                    <li>I like economic theory, computer science, cats, and rainy days.</li><br>
-                    <li>I'm a volunteer for the Red Cross and the SPCA.</li><br>
-                    <li>My favorite movie is Ex Machina (2014).</li><br>
-                    <li>My favorite band is Queen (ancient history).</li>
-                </ul>
-            </p>
-            <p class="subp" style="top:230px">
-                Throughout my education, I've enjoyed challenging myself; this last year I took AP English, AP Calculus,
-                ROP Biotechnology,
-                and AP Computer Science. In particular, though it is unlikely I will enter into the field, I find
-                biotechnology to be an
-                interesting, challenging, and incredibly fun subject to study. As an ROP course, it gives me on-the-job
-                experience in a lab
-                as a scientist, as well as a look into the lives of the world's best biotechnicians and chemical
-                engineers.
-            </p>
-        </div>
-        <div class="superdiv" id="skillsdiv">
-            <p class="subh" style="color:#360064">What do I do, anyway?</p>
-            <p class="subp">I'm a student of computer science! Part of the reason I love this subject is that it's
-                involved
-                in such a
-                diverse set of fields, from robotics to gaming to biotechnology. For the next few years, my plan is to
-                dip
-                my toes into
-                as many of these fields I can. Some of the topics and languages I've studied are:
-                <ul>
-                    <li>Javascript</li><br>
-                    <li>C++</li><br>
-                    <li>HTML</li><br>
-                    <li>CSS</li><br>
-                    <li>Markov Chains</li><br>
-                    <li>Neural Networks</li><br>
-                    <li>Data Encryption</li><br>
-                </ul><br>
-                <p class="subp" style="top:280px">I can't wait to get my hands on more!</p>
-            </p>
-        </div>
-        <div class="superdiv" id="portfoliodiv">
-            <p class="subh" style="color:#64002E">What have I accomplished?</p>
-            <p class="subp">As you can probably tell, I'm hyped to get underway in AP Computer Science. The thing I look
-                forward to most is developing
-                the ability to understand programming problems innately, and then sharing my knowledge with someone in
-                need
-                of help. I
-                think that many of the world's problems, such as its inefficient logistical system for the distribution
-                of
-                resources,
-                can be solved with Computer Science. If people like my classmates and myself step up to programming for
-                the
-                good of the
-                world, rather than for the good of our wallets, I know we can do great things. <br><br><br>
-                Here's a running list of the major projects I've taken up. (I'm working on updating the links!)
-                <ul style="top:400px">
-                    <li><a href="https://codehs.com/share/r49KJt9HeXJtfaEbeA6M">My first ever procedural art, using the
-                            Karel API.</a><br>
-                        Run it a few times, maybe it'll create a pattern you like. <br> (Be sure to use top speed!)
-                    </li><br><br><br><br>
-                    <li><a href="">A "Pong" clone, called Ping.</a><br>
-                        It also comes with an AI to play against -- or it can even play against itself!
-                    </li><br><br><br><br>
-                    <li><a href="">A rendition of "Snake" with game modes and features.</a><br>
-                        Much credit for the base code to <a href="https://github.com/prashantgupta24">Prashant
-                            Gupta,</a><br> who
-                        helped start me on my journey into js game design.
-                    </li><br><br><br><br>
-                    <li><a href="">"Pew," an Asteroids ripoff.</a><br>
-                        To my surprise, I couldn't find the original Asteroids game anywhere on the internet -- this
-                        could
-                        not stand!
-                    </li><br><br><br><br>
-                    <li><a href="">My first original game, Froggo!</a><br>
-                        Based off the Atari classic "Frogger", here is my modern, minimalist take on the concept.<br>
-                    </li><br><br><br><br>
-                    <li><a href="https://codehs.com/share/NqYWtJRlHHET2B0lzUW6">A custom image filter.</a><br>
-                        An experiment in manipulating image data.<br> 
-                    </li><br><br><br><br>
-                </ul><br>
-            </p>
-        </div>
 
     </div>
+
+
+    <div class="superdiv" id="aboutdiv">
+        <p class="subh" style="color:#006064">Who am I?</p>
+        <p class="subp">Welcome to my AP Computer Science website. To answer the question, I'm Benjamin James Holmes
+            Paulsen,
+            but unless you're feeling super fancy you can call me Ben. On this site, you can find info about me, my
+            portfolio, and examples
+            of my Computer Science skills. Enjoy yourself.
+            <br>
+            <hr>
+        </p><br>
+        <p class="subp">
+            <ul> For starters:
+                <li>I'm 18 years old.</li><br>
+                <li>I like economic theory, computer science, cats, and rainy days.</li><br>
+                <li>I'm a volunteer for the Red Cross and the SPCA.</li><br>
+                <li>My favorite movie is Ex Machina (2014).</li><br>
+                <li>My favorite band is Queen (ancient history).</li>
+            </ul>
+        </p>
+        <p class="subp" style="top:230px">
+            Throughout my education, I've enjoyed challenging myself; this last year I took AP English, AP Calculus,
+            ROP Biotechnology,
+            and AP Computer Science. In particular, though it is unlikely I will enter into the field, I find
+            biotechnology to be an
+            interesting, challenging, and incredibly fun subject to study. As an ROP course, it gives me on-the-job
+            experience in a lab
+            as a scientist, as well as a look into the lives of the world's best biotechnicians and chemical
+            engineers.
+        </p>
+    </div>
+    <div class="superdiv" id="skillsdiv">
+        <p class="subh" style="color:#360064">What do I do, anyway?</p>
+        <p class="subp">I'm a student of computer science! Part of the reason I love this subject is that it's
+            involved
+            in such a
+            diverse set of fields, from robotics to gaming to biotechnology. For the next few years, my plan is to
+            dip
+            my toes into
+            as many of these fields I can. Some of the topics and languages I've studied are:
+            <ul>
+                <li>Javascript</li><br>
+                <li>C++</li><br>
+                <li>HTML</li><br>
+                <li>CSS</li><br>
+                <li>Markov Chains</li><br>
+                <li>Neural Networks</li><br>
+                <li>Data Encryption</li><br>
+            </ul><br>
+            <p class="subp" style="top:280px">I can't wait to get my hands on more!</p>
+        </p>
+    </div>
+    <div class="superdiv" id="portfoliodiv">
+        <p class="subh" style="color:#64002E">What have I accomplished?</p>
+        <p class="subp">As you can probably tell, I'm hyped to get underway in AP Computer Science. The thing I look
+            forward to most is developing
+            the ability to understand programming problems innately, and then sharing my knowledge with someone in
+            need
+            of help. I
+            think that many of the world's problems, such as its inefficient logistical system for the distribution
+            of
+            resources,
+            can be solved with Computer Science. If people like my classmates and myself step up to programming for
+            the
+            good of the
+            world, rather than for the good of our wallets, I know we can do great things. <br><br><br>
+            Here's a running list of the major projects I've taken up. (I'm working on updating the links!)
+            <ul style="top:400px">
+                <li><a href="https://codehs.com/share/r49KJt9HeXJtfaEbeA6M">My first ever procedural art, using the
+                        Karel API.</a><br>
+                    Run it a few times, maybe it'll create a pattern you like. <br> (Be sure to use top speed!)
+                </li><br><br><br><br>
+                <li><a href="">A "Pong" clone, called Ping.</a><br>
+                    It also comes with an AI to play against -- or it can even play against itself!
+                </li><br><br><br><br>
+                <li><a href="">A rendition of "Snake" with game modes and features.</a><br>
+                    Much credit for the base code to <a href="https://github.com/prashantgupta24">Prashant
+                        Gupta,</a><br> who
+                    helped start me on my journey into js game design.
+                </li><br><br><br><br>
+                <li><a href="">"Pew," an Asteroids ripoff.</a><br>
+                    To my surprise, I couldn't find the original Asteroids game anywhere on the internet -- this
+                    could
+                    not stand!
+                </li><br><br><br><br>
+                <li><a href="">My first original game, Froggo!</a><br>
+                    Based off the Atari classic "Frogger", here is my modern, minimalist take on the concept.<br>
+                </li><br><br><br><br>
+                <li><a href="https://codehs.com/share/NqYWtJRlHHET2B0lzUW6">A custom image filter.</a><br>
+                    An experiment in manipulating image data.<br> 
+                </li><br><br><br><br>
+            </ul><br>
+        </p>
+    </div>
+
     <div class="panel" id="menu_block">
         <div id="button0" class="button" onclick="fadeIn('aboutdiv')">ABOUT</div>
         <div id="button1" class="button" onclick="fadeIn('skillsdiv')">SKILLS</div>
