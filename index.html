@@ -211,19 +211,41 @@
         #shadowdiv {
             position: fixed;
             top: -5px;
-            left: 1500px;
+            left: 1450px;
             height: 105vh;
             width: 25px;
             background: #dddddd;
             box-shadow: 30px 0px 25px #929292;
+            animation-name: link_a;
+            animation-duration: 1.3s;
         }
 
         #linkbox {
             position: fixed;
-            left: 1500px;
+            left: 1450px;
             height: 100vh;
             background-color: #aaaaaa;
             width: 1000px;
+            animation-name: link_a;
+            animation-duration: 1.3s;
+        }
+
+        @keyframes link_a {
+            0% {
+                left: 2000px;
+            }
+
+            60% {
+                left: 2000px;
+            }
+
+            80% {
+                left: 1430px;
+            }
+
+            100% {
+                left: 1450px;
+            }
         }
 
         .superdiv {
