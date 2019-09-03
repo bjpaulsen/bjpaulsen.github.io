@@ -26,31 +26,41 @@
             line-height: 80px;
             color: #333333;
             background-color: #aaaaaa;
-            text-shadow: 5px 0px 5px #888888;
+            text-shadow: 10px 10px 25px #777777;
+        }
+
+        #me {
+            position: fixed;
+            left: 1560px;
+            top: 300px;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 25px #777777;
         }
 
         .button {
             position: fixed;
             text-align: center;
-            line-height: 135px;
+            line-height: 155px;
             font-family: 'Oswald', sans-serif;
-            font-size: 28px;
+            font-size: 32px;
             border-radius: 50%;
             background: #ffffff;
-            box-shadow: 10px 10px 25px #888888;
-            left: 90px;
-            width: 140px;
-            height: 140px;
+            box-shadow: 10px 10px 25px #999999;
+            left: 85px;
+            width: 160px;
+            height: 160px;
             transition: transform .18s, background .18s, color .18s, box-shadow .18s;
         }
 
         .button:hover {
             transform: scale(1.25);
-            box-shadow: 20px 20px 40px #888888;
+            box-shadow: 20px 20px 40px #999999;
         }
 
         #button0 {
-            top: 250px;
+            top: 135px;
             border: 4px solid #006064;
             color: #006064;
             animation-name: button0_a;
@@ -76,12 +86,12 @@
             }
 
             100% {
-                left: 90px;
+                left: 85px;
             }
         }
 
         #button1 {
-            top: 470px;
+            top: 405px;
             border: 4px solid #360064;
             color: #360064;
             animation-name: button1_a;
@@ -107,12 +117,12 @@
             }
 
             100% {
-                left: 90px;
+                left: 85px;
             }
         }
 
         #button2 {
-            top: 690px;
+            top: 675px;
             border: 4px solid #64002E;
             color: #64002E;
             animation-name: button2_a;
@@ -138,7 +148,7 @@
             }
 
             100% {
-                left: 90px;
+                left: 85px;
             }
         }
 
@@ -253,6 +263,18 @@
             left: 15px;
         }
 
+        .my_links {
+            position: fixed;
+            left: 1255px;
+            top: 610px;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 38px;
+            color: #333333;
+            background-color: #aaaaaa;
+            text-shadow: 10px 10px 25px #777777;
+        }
+
         ul {
             left: 50px;
             top: 240px;
@@ -272,12 +294,10 @@
 
 
     <p id="welcome">benjamin<br>paulsen</p>
+    <img src="me_library.jpg" id="me">
+    <p><a href="https://github.com/bjpaulsen" class="my_links">Github</a></p>
 
-    <div class="panel" id="main_block">
-
-
-    </div>
-
+    <div class="panel" id="main_block"></div>
 
     <div class="superdiv" id="aboutdiv">
         <p class="subh" style="color:#006064">Who am I?</p>
