@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Oswald&effect=anaglyph">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display:700|Oswald&effect=anaglyph">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300i" rel="stylesheet">
     <style>
         * {
@@ -216,9 +217,8 @@
         .superdiv {
             position: absolute;
             left: 450px;
-            top: 250px;
+            top: 70px;
             width: 850px;
-            font-family: 'Libre Baskerville', monospace;
         }
 
         @keyframes about_a {
@@ -245,7 +245,7 @@
             animation-duration: 1.0s;
         }
 
-        #skillsdiv {
+        #resumediv {
             display: none;
         }
 
@@ -254,12 +254,15 @@
         }
 
         .subh {
-            font-size: 60px;
+            font-family: "Oswald";
+            font-size: 100px;
         }
 
         .subp {
+            position: relative;
+            font-family: 'Open Sans', monospace;
             font-size: 20px;
-            top: 15px;
+            top: 200px;
             left: 15px;
         }
 
@@ -279,7 +282,7 @@
             left: 50px;
             top: 240px;
             width: 800px;
-            font-family: 'Libre Baskerville', monospace;
+            font-family: 'Open Sans', monospace;
             font-size: 20px;
         }
 
@@ -300,7 +303,7 @@
     <div class="panel" id="main_block"></div>
 
     <div class="superdiv" id="aboutdiv">
-        <p class="subh" style="color:#006064">Who am I?</p>
+        <p class="subh" style="color:#006064">About Me</p>
         <p class="subp">Welcome to my AP Computer Science website. To answer the question, I'm Benjamin James Holmes
             Paulsen,
             but unless you're feeling super fancy you can call me Ben. On this site, you can find info about me, my
@@ -318,7 +321,7 @@
                 <li>My favorite band is Queen (ancient history).</li>
             </ul>
         </p>
-        <p class="subp" style="top:230px">
+        <p class="subp" style="top:300px">
             Throughout my education, I've enjoyed challenging myself; this last year I took AP English, AP Calculus,
             ROP Biotechnology,
             and AP Computer Science. In particular, though it is unlikely I will enter into the field, I find
@@ -329,8 +332,8 @@
             engineers.
         </p>
     </div>
-    <div class="superdiv" id="skillsdiv">
-        <p class="subh" style="color:#360064">What do I do, anyway?</p>
+    <div class="superdiv" id="resumediv">
+        <p class="subh" style="color:#360064">My Skills</p>
         <p class="subp">I'm a student of computer science! Part of the reason I love this subject is that it's
             involved
             in such a
@@ -347,11 +350,11 @@
                 <li>Neural Networks</li><br>
                 <li>Data Encryption</li><br>
             </ul><br>
-            <p class="subp" style="top:280px">I can't wait to get my hands on more!</p>
+            <p class="subp" style="top:320px">I can't wait to get my hands on more!</p>
         </p>
     </div>
     <div class="superdiv" id="portfoliodiv">
-        <p class="subh" style="color:#64002E">What have I accomplished?</p>
+        <p class="subh" style="color:#64002E">Examples Of My Work</p>
         <p class="subp">As you can probably tell, I'm hyped to get underway in AP Computer Science. The thing I look
             forward to most is developing
             the ability to understand programming problems innately, and then sharing my knowledge with someone in
@@ -395,20 +398,20 @@
 
     <div class="panel" id="menu_block">
         <div id="button0" class="button" onclick="fadeIn('aboutdiv')">ABOUT</div>
-        <div id="button1" class="button" onclick="fadeIn('skillsdiv')">SKILLS</div>
+        <div id="button1" class="button" onclick="fadeIn('resumediv')">RESUME</div>
         <div id="button2" class="button" onclick="fadeIn('portfoliodiv')">PORTFOLIO</div>
     </div>
 
     <script>
         // shows about page by default
         document.getElementById("aboutdiv").style.opacity = "1";
-        document.getElementById("skillsdiv").style.display = "none";
+        document.getElementById("resumediv").style.display = "none";
         document.getElementById("portfoliodiv").style.display = "none";
 
         // fadeIn switches website tabs by hiding all tabs, then showing the selected page
         function fadeIn(id) {
             document.getElementById("aboutdiv").style.opacity = "0";
-            document.getElementById("skillsdiv").style.display = "none";
+            document.getElementById("resumediv").style.display = "none";
             document.getElementById("portfoliodiv").style.display = "none";
             if (document.getElementById(id).style.display != "block" || document.getElementById(id).style.opacity != "1") {
                 document.getElementById(id).style.display = "block";
