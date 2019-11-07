@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             position: absolute;
-            background: #dddddd;
+            background: #e0e0e0;
         }
 
         html {
@@ -38,6 +38,15 @@
             width: 13vw;
             border-radius: 50%;
             box-shadow: 10px 10px 25px #777777;
+        }
+
+        .a_img {
+            top: 12vw;
+            left: 1.5vw;
+            height: 10vw;
+            width: 10vw;
+            border-radius: 50%;
+            box-shadow: 10px 10px 25px #aaaaaa;
         }
 
         .button {
@@ -190,7 +199,7 @@
             top: -5px;
             left: 0px;
             height: 105vh;
-            background-color: #dddddd;
+            background-color: #e0e0e0;
             box-shadow: 30px 0px 25px #929292;
             width: 75vw;
             animation-name: main_a;
@@ -236,7 +245,7 @@
             }
 
             100% {
-                left: 25vw;
+                left: 24vw;
             }
         }
 
@@ -261,7 +270,9 @@
 
         .subh {
             font-family: "Oswald";
+            font-weight: 900;
             font-size: 5.5vw;
+            text-shadow: 10px 10px 25px #aaaaaa;
         }
 
         .subp {
@@ -269,6 +280,15 @@
             font-family: 'Open Sans', monospace;
             font-size: 1.1vw;
             top: 11vw;
+        }
+
+        .subp_a {
+            position: relative;
+            font-family: 'Open Sans', monospace;
+            font-size: 1.1vw;
+            top: 16vw;
+            left: 15vw;
+            width: 30vw;
         }
 
         .my_links {
@@ -299,7 +319,7 @@
 
 
     <p id="welcome">Benjamin<br>Paulsen</p>
-    <img src="me_library.jpg" id="me">
+    <img src="tea_2.jpg" id="me">
     <p><a href="https://www.linkedin.com/in/benjamin-paulsen-155478192/" class="my_links"
             style="top:35.5vw; left:84.5vw">Linkedin</a></p>
     <p><a href="https://github.com/bjpaulsen" class="my_links">Github</a></p>
@@ -307,26 +327,49 @@
     <div class="panel" id="main_block"></div>
 
     <div class="superdiv" id="aboutdiv">
-        <p class="subh" style="color:#006064">About Me</p>
-        <p class="subp">I'm under construction, much like this website!</p>
+        <p class="subh" style="color:#006064">ABOUT ME</p>
+        <img src="me_succulent.jpg" class="a_img">
+        <p class="subp_a">
+            Hello, I’m Benjamin! I am a sophomore studying Computer Science at the University of California,
+            Santa Cruz.<br><br><br><br><br><br>
+        </p>
+        <img src="hackACM_3.PNG" class="a_img" style="top:25vw; left:34vw">
+        <p class="subp_a" style="left:0vw">
+            I’m interested in cooperating with other engineers to build our knowledge and learn to develop
+            effective, inclusive teams. That’s why I became a tutor. I’m a good listener and communicator, I love to
+            code,
+            and I’m a patient teacher.<br><br><br><br><br>
+        </p>
+        <img src="prom.jpg" class="a_img" style="top:41vw">
+        <p class="subp_a">
+            I believe that people working together can become better and create more than
+            they
+            can alone. If we truly listen to one another, and utilize our diverse set of experiences as students and
+            engineers,
+            I know we can create a welcoming and empowering place of learning. I’m truly excited to contribute to the
+            field of
+            computer science, and I think that my enthusiasm is one of my greatest strengths.<br><br><br><br><br>
+        </p>
+        <img src="spca_2.jpg" class="a_img" style="top:57vw; left:34vw">
+        <p class="subp_a" style="left:0vw">
+            I have experience serving the public, from children and teens, to adults and seniors. I have worked at a
+            local library, helped organize and run two blood drives, fed our community at Food Not Bombs, and cared for
+            animals at the Santa Cruz SPCA. For more on what I can contribute, be sure to read my resume. I look forward
+            to working with you!<br><br><br><br><br>
+        </p>
     </div>
     <div class="superdiv" id="resumediv">
-        <p class="subh" style="color:#360064">My Resume</p>
+        <p class="subh" style="color:#360064">RESUME</p>
         <img src="resume.png" id="resume">
 
     </div>
     <div class="superdiv" id="portfoliodiv">
-        <p class="subh" style="color:#64002E">Examples Of My Work</p>
-        <p class="subp">As you can probably tell, I'm hyped to get underway in Computer Science. The thing I look
-            forward to most is developing the ability to understand programming problems innately, and then sharing my
-            knowledge with someone in need
-            of help. I think that many of the world's problems, such as its inefficient logistical system for the
-            distribution
-            of resources, can be solved with Computer Science. If people like my classmates and myself step up to
-            programming for
-            the good of the world, I know we can do great things. <br><br><br>
-            Here's a running list of the major projects I've taken up. (I'm working on updating the links!)
+        <p class="subh" style="color:#64002E">PORTFOLIO</p>
+        <p class="subp">Here's a running list of the major projects I've taken up.
             <ul>
+                <li><a href="https://bjpaulsen.github.io">This website!</a><br>Designed and implemented by me,
+                    completely from
+                    scratch.</li><br><br><br>
                 <li><a href="https://bjpaulsen.github.io/pewpew">Pew Pew.</a><br>An original Galaga-style arcade game.
                     Written
                     using
@@ -352,12 +395,9 @@
                     could
                     not stand!
                 </li><br><br><br><br>
-                <li><a href="">My first original game, Froggo!</a><br>
-                    Based off the Atari classic "Frogger", here is my modern, minimalist take on the concept.<br>
-                </li><br><br><br><br>
                 <li><a href="https://codehs.com/share/NqYWtJRlHHET2B0lzUW6">A custom image filter.</a><br>
                     An experiment in manipulating image data.<br> 
-                </li><br><br><br><br>
+                </li><br><br><br><br><br>
             </ul><br>
         </p>
     </div>
