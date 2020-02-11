@@ -10,6 +10,7 @@
             padding: 0;
             position: absolute;
             background: #e0e0e0;
+            white-space: normal;
         }
 
         html {
@@ -24,6 +25,7 @@
             font-family: 'Oswald', sans-serif;
             font-size: 4vw;
             line-height: 4.2vw;
+            white-space: pre-line;
             color: #333333;
             background-color: #aaaaaa;
             text-shadow: 10px 10px 25px #777777;
@@ -289,6 +291,7 @@
             font-family: 'Open Sans', monospace;
             font-size: 1.1vw;
             top: 11vw;
+            margin-bottom: 1vw;
         }
 
         .subp_a {
@@ -298,6 +301,7 @@
             top: 15vw;
             left: 15vw;
             width: 30vw;
+            margin-bottom: 6vw;
         }
 
         .my_links {
@@ -319,6 +323,13 @@
             width: 40vw;
             font-family: 'Open Sans', monospace;
             font-size: 1.1vw;
+            margin-bottom: 6vw;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 2em;
+            white-space: pre-line;
         }
 
         a {
@@ -334,7 +345,8 @@
 
 
 
-    <p id="welcome">Benjamin<br>Paulsen</p>
+    <p id="welcome">Benjamin
+        Paulsen</p>
     <img src="tea_2.jpg" id="me">
     <p><a href="https://github.com/bjpaulsen" class="my_links">Github</a></p>
     <p><a href="https://www.linkedin.com/in/benjamin-paulsen-155478192/" class="my_links" style="top:37vw; left:84.5vw">Linkedin</a></p>
@@ -347,14 +359,13 @@
         <img src="me_succulent.jpg" class="a_img">
         <p class="subp_a">
             Hello, I’m Benjamin! I am a sophomore studying Computer Science, Game Design at the University of California,
-            Santa Cruz.<br><br><br><br><br>
+            Santa Cruz.
         </p>
         <img src="hackACM_3.PNG" class="a_img" style="top:25vw; left:34vw">
         <p class="subp_a" style="left:0vw">
             Right now I'm working at Tech4Good Lab, creating interfaces for learning platforms that will change the way we teach STEM.
             I'm also a Learning Support Services tutor, helping my fellow students get into engineering and find community at our school.
             I'm interested in researching computer science, education, game design, and putting my skills to the test!
-            <br><br><br><br><br>
         </p>
         <img src="prom.JPG" class="a_img" style="top:41vw">
         <p class="subp_a">
@@ -362,14 +373,13 @@
             effective, inclusive teams. That’s why I became a tutor.
             I believe that if we truly listen to one another, and utilize our diverse set of experiences as students and engineers,
             we can create a welcoming and empowering place of learning.
-            <br><br><br><br><br>
         </p>
         <img src="spca_2.JPG" class="a_img" style="top:57vw; left:34vw">
         <p class="subp_a" style="left:0vw">
             I have experience serving the public, from children and teens, to adults and seniors. I have worked at a
             local library, helped organize and run two blood drives, fed our community at Food Not Bombs, and cared for
             animals at the Santa Cruz SPCA. For more on what I can contribute, be sure to read my resume. I look forward
-            to working with you!<br><br><br><br><br>
+            to working with you!
         </p>
     </div>
     <div class="superdiv" id="resumediv">
@@ -382,86 +392,71 @@
         <p class="portfolioh">WEB</p>
         <p class="subp">
             <ul>
-                <li><a href="https://bjpaulsen.github.io">This website.</a><br>Designed and implemented by me,
-                    completely from
-                    scratch.</li><br><br><br>
-            </ul><br><br><br>
+                <li><a href="https://bjpaulsen.github.io">This website.</a>
+                    Designed and implemented by me, completely from scratch.</li>
+            </ul>
         </p>
         <p class="portfolioh">GAMES</p>
         <p class="subp">
             <ul>
-                <li><a href="https://bjpaulsen.github.io/pewpew">Pew Pew.</a><br>An original Galaga-style arcade game.
-                    Written using Javascript OOP and p5js.</li><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/Flicky">Flicky.</a><br>A Star-Trek inspired, turn-based
-                    strategy game. Control a fleet of starships and defeat the enemy faction! Choose from four empires,
-                    multiple scenarios, and compete with 1-3 friends for control of the galaxy!
-                </li><br><br><br><br><br>
-                <li><a href="https://bjpaulsen.github.io/Froggo">Froggo.</a><br>Froggo is a simple, minimlist game
-                    inspired by the classic hit "Frogger". The initial release was written over the course of three days
-                    as part of an independent study of Javascript.</li><br><br><br><br><br>
-                <li><a href="https://bjpaulsen.github.io/dino">Dino.</a><br>Inspired by Chrome's internet disconnect
-                    page, Dino is my rendition of the classic side-scroller jumping game, complete with a scoreboard so
-                    you can compete with friends.</li><br><br><br><br><br>
-                <li><a href="https://bjpaulsen.github.io/ping">Ping.</a><br>
+                <li><a href="https://bjpaulsen.github.io/pewpew">Pew Pew.</a>
+                    An original Galaga-style arcade game.
+                    Written using Javascript OOP and p5js.</li>
+                <li><a href="https://github.com/bjpaulsen/Flicky">Flicky.</a>
+                    A Star-Trek inspired, turn-based strategy game. Control a fleet of starships and defeat the enemy faction! Choose from four empires, multiple scenarios, and compete with 1-3 friends for control of the galaxy!
+                </li>
+                <li><a href="https://bjpaulsen.github.io/Froggo">Froggo.</a>
+                    Froggo is a simple, minimlist game inspired by the classic hit "Frogger". The initial release was written over the course of three days as part of an independent study of Javascript.</li>
+                <li><a href="https://bjpaulsen.github.io/dino">Dino.</a>
+                    Inspired by Chrome's internet disconnect page, Dino is my rendition of the classic side-scroller jumping game, complete with a scoreboard so you can compete with friends.</li>
+                <li><a href="https://bjpaulsen.github.io/ping">Ping.</a>
                     A Pong clone that comes with an AI to play against -- or it can even play against itself!
-                </li><br><br><br><br>
-                <li><a href="https://bjpaulsen.github.io/pew">Pew.</a><br>
-                    To my surprise, I couldn't find the original Asteroids game anywhere on the internet -- so I made my
-                    own version!
-                </li><br><br><br><br>
-                <li><a href="https://bjpaulsen.github.io/thefrog">The Frog.</a><br>
+                </li>
+                <li><a href="https://bjpaulsen.github.io/pew">Pew.</a>
+                    To my surprise, I couldn't find the original Asteroids game anywhere on the internet -- so I made my own version!
+                </li>
+                <li><a href="https://bjpaulsen.github.io/thefrog">The Frog.</a>
                     An original branching-story game about the weirdness, hilarity, and devastation of early romantic relationships.
-                </li><br><br><br><br>
-                <li><a href="https://bjpaulsen.github.io/snake">Snake.</a><br>
-                    The classic, with added game modes and features.<br> Majority credit for the base code
-                    to<a href="https://github.com/prashantgupta24"> Prashant Gupta,</a><br>
-                    whose example helped start me on my journey into js game design.
-                </li><br><br><br><br><br><br>
-            </ul><br>
+                </li>
+                <li><a href="https://bjpaulsen.github.io/snake">Snake.</a>
+                    The classic, with added game modes and features. Huge credit to<a href="https://github.com/prashantgupta24"> Prashant Gupta,</a>
+                    whose example and starter code helped start me on my journey into js game design.
+                </li>
+            </ul>
         </p>
         <p class="portfolioh">PROGRAMS</p>
         <p class="subp">
             <ul>
-                <li><a href="https://github.com/jonzivku/yshell">yshell.</a><br>yshell is a C++ implementation of a UNIX-style
-                    terminal, complete with a fully memory-based filesystem.
-                    Created with Jon Zivku for CSE 111, Advanced Programming. (Private for academic integrity, email me for employer access)</li>
-                <br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/BigInt">BigInt.</a><br>BigInt is a C++ implementation of the dc
-                    calculator program. It can handle calculations with integers well beyond the normal memory range of signed longs.
-                    Created with Jon Zivku for CSE 111, Advanced Programming. (Private for academic integrity, email me for employer access)</li>
-                <br><br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/FindComponents">FindComponents.</a><br>FindPath is a C implementation of
-                    Depth First Search for Graphs. This algorithm finds each connected component of a graph, along with other useful structural data.
-                    Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)</li>
-                <br><br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/FindPath">FindPath.</a><br>FindPath is a C implementation of
-                    Breadth First Search for Graphs. This algorithm finds the shortest path to any node.
-                    Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)</li>
-                <br><br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/BigInteger">BigInteger.</a><br>BigInteger is a C implementation of
-                    big integer arithmetic. This implementation is highly efficient and again limited only by memory space.
-                    Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)</li>
-                <br><br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/Sparse">Sparse.</a><br>Sparse is a project in C which builds matrices
-                    from and input file and performs efficient matrix operations, especially on large, sparse matrices.
-                    Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)</li>
-                <br><br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/Lex">Lex.</a><br>Lex is a C implementation of insertion sort.
-                    It outputs the lines of a file in lexicographic order.
-                    Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)</li>
-                <br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/LoopPedal-HackACM">LoopPedal.</a><br>LoopPedal is a live music
-                    performance tool that lets a solo artist become like an orchestra. Built at HackACM 2019 in under 12
-                    hours by me, Ankur Mishra, Kai O'Brien, and Robin Rae. Won the hackathon beginner category.</li>
-                <br><br><br><br><br>
-                <li><a href="https://github.com/bjpaulsen/FinalGrade">FinalGrade.</a><br>FinalGrade is a grade planner
-                    tool for students.</li>
-                <br><br><br>
-                <li><a href="https://github.com/slugbus/front-end">SlugBus++.</a><br>A bus tracking app developed by
-                    Jorge Henriquez, John Hanly, Justyn Duthler, Jeremy Diamzon, and Case Delst at CruzHacks 2019. I
-                    later joined the team to improve on the map interface and help design a new bus stop UI.</li>
-                <br><br><br><br><br>
-            </ul><br><br><br>
+                <li><a href="https://github.com/jonzivku/yshell">yshell.</a>
+                    yshell is a C++ implementation of a UNIX-style terminal, complete with a fully memory-based filesystem. Created with Jon Zivku for CSE 111, Advanced Programming. (Private for academic integrity, email me for employer access)
+                </li>
+                <li><a href="https://github.com/bjpaulsen/BigInt">BigInt.</a>
+                    BigInt is a C++ implementation of the dc calculator program. It can handle calculations with integers well beyond the normal memory range of signed longs. Created with Jon Zivku for CSE 111, Advanced Programming. (Private for academic integrity, email me for employer access)
+                </li>
+                <li><a href="https://github.com/bjpaulsen/FindComponents">FindComponents.</a>
+                    FindPath is a C implementation of Depth First Search for Graphs. This algorithm finds each connected component of a graph, along with other useful structural data. Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)
+                </li>
+                <li><a href="https://github.com/bjpaulsen/FindPath">FindPath.</a>
+                    FindPath is a C implementation of Breadth First Search for Graphs. This algorithm finds the shortest path to any node. Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)
+                </li>
+                <li><a href="https://github.com/bjpaulsen/BigInteger">BigInteger.</a>
+                    BigInteger is a C implementation of big integer arithmetic. This implementation is highly efficient and again limited only by memory space. Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)
+                </li>
+                <li><a href="https://github.com/bjpaulsen/Sparse">Sparse.</a>
+                    Sparse is a project in C which builds matrices from and input file and performs efficient matrix operations, especially on large, sparse matrices. Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)
+                </li>
+                <li><a href="https://github.com/bjpaulsen/Lex">Lex.</a>
+                    Lex is a C implementation of insertion sort. It outputs the lines of a file in lexicographic order. Created for CSE 101, Algorithms and Abstract Data Types. (Private for academic integrity, email me for employer access)
+                </li>
+                <li><a href="https://github.com/bjpaulsen/LoopPedal-HackACM">LoopPedal.</a>
+                    LoopPedal is a live music performance tool that lets a solo artist become like an orchestra. Built at HackACM 2019 in under 12 hours by me, Ankur Mishra, Kai O'Brien, and Robin Rae. Won the hackathon beginner category.
+                </li>
+                <li><a href="https://github.com/bjpaulsen/FinalGrade">FinalGrade.</a>
+                    FinalGrade is a grade planner tool for students.</li>
+                <li><a href="https://github.com/slugbus/front-end">SlugBus++.</a>
+                    A bus tracking app developed by Jorge Henriquez, John Hanly, Justyn Duthler, Jeremy Diamzon, and Case Delst at CruzHacks 2019. I later joined the team to improve on the map interface and help design a new bus stop UI.
+                </li>
+            </ul>
         </p>
     </div>
 
