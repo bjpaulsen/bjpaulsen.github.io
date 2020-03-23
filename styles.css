@@ -325,7 +325,6 @@ li {
 }
 
 a {
-  font-family: "Open Sans";
   white-space: pre;
   text-decoration: none;
   text-shadow: 10px 10px 25px #999999;
@@ -334,4 +333,18 @@ a {
 
 b {
   background-color: transparent;
+}
+
+.jump-to {
+  position: relative;
+  left: 40vw;
+}
+
+.jump-text {
+  width: 8vw;
+  font-family: "Oswald";
+  font-size: 1.5vw;
+  font-weight: 900;
+  text-shadow: 8px 8px 25px #aaaaaa;
+  text-align: right;
 }
