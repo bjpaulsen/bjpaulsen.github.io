@@ -66,14 +66,14 @@ html {
 
 #button0 {
   top: 15vh;
-  border: 4px solid #006064;
-  color: #006064;
+  border: 4px solid #f8615a;
+  color: #f8615a;
   animation-name: button0_a;
   animation-duration: 1.5s;
 }
 
 #button0:hover {
-  background: #006064;
+  background: #f8615a;
   color: #ffffff;
 }
 
@@ -97,14 +97,14 @@ html {
 
 #button1 {
   top: 41vh;
-  border: 4px solid #360064;
-  color: #360064;
+  border: 4px solid #b80d57;
+  color: #b80d57;
   animation-name: button1_a;
   animation-duration: 1.7s;
 }
 
 #button1:hover {
-  background: #360064;
+  background: #b80d57;
   color: #ffffff;
 }
 
@@ -128,14 +128,14 @@ html {
 
 #button2 {
   top: 68vh;
-  border: 4px solid #64002e;
-  color: #64002e;
+  border: 4px solid #721b65;
+  color: #721b65;
   animation-name: button2_a;
   animation-duration: 1.9s;
 }
 
 #button2:hover {
-  background: #64002e;
+  background: #721b65;
   color: #ffffff;
 }
 
@@ -338,12 +338,19 @@ b {
 .jump-to {
   position: relative;
   left: 40vw;
+  width: 8vw;
+  padding-left: 0px;
+  transition: padding 0.18s;
+}
+
+.jump-to:hover {
+  padding-left: 0.5vw;
 }
 
 .jump-text {
   width: 8vw;
   font-family: "Oswald";
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   font-weight: 900;
   text-shadow: 8px 8px 25px #aaaaaa;
   text-align: right;
