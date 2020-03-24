@@ -368,3 +368,76 @@ b {
 .color3 {
   color: #721b65;
 }
+
+@media only screen and (max-width: 1280px) {
+  .superdiv {
+    top: 20vw;
+    left: 10vw;
+  }
+
+  #menu_block {
+    top: -5px;
+    left: -20px;
+    height: 125px;
+    width: 105vw;
+    animation: none;
+  }
+
+  #main_block {
+    top: 14w;
+    width: 100vw;
+    animation: none;
+  }
+
+  #aboutdiv {
+    opacity: 1;
+    animation: none;
+  }
+
+  .button {
+    font-size: 50px;
+    border-radius: 0px;
+    background: none;
+    box-shadow: none;
+    left: 10vw;
+    width: fit-content;
+    line-height: 65px;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .button:hover {
+    box-shadow: none;
+  }
+
+  #button0 {
+    top: 25px;
+    animation: none;
+  }
+
+  #button1 {
+    top: 25px;
+    left: 38vw;
+    animation: none;
+  }
+
+  #button2 {
+    top: 25px;
+    left: 68vw;
+    animation: none;
+  }
+
+  .subh {
+    font-size: 100px;
+    width: 80vw;
+  }
+
+  .subp_a {
+    font-size: 24px;
+    left: 0px;
+    top: 30vw;
+    width: 80vw;
+    margin-bottom: 6vw;
+  }
+}
