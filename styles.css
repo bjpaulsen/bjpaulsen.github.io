@@ -36,11 +36,27 @@ html {
 
 .a_img {
   top: 12vw;
-  left: 1.5vw;
+  left: 34vw;
   height: 10vw;
   width: 10vw;
   border-radius: 50%;
   box-shadow: 10px 10px 25px #aaaaaa;
+}
+
+.img1 {
+  left: 1.5vw;
+}
+
+.img2 {
+  top: 25vw;
+}
+
+.img3 {
+  top: 41vw;
+  left: 1.5vw;
+}
+.img4 {
+  top: 57vw;
 }
 
 .button {
@@ -297,6 +313,10 @@ html {
   margin-bottom: 6vw;
 }
 
+.a2 {
+  left: 0vw;
+}
+
 .my_links {
   position: fixed;
   left: 85vw;
@@ -357,6 +377,11 @@ b {
   text-align: right;
 }
 
+.references {
+  top: 2vw;
+  left: 37vw;
+}
+
 .color1 {
   color: #f8615a;
 }
@@ -371,7 +396,7 @@ b {
 
 @media only screen and (max-width: 1280px) {
   .superdiv {
-    top: 20vw;
+    top: 150px;
     left: 10vw;
   }
 
@@ -384,7 +409,7 @@ b {
   }
 
   #main_block {
-    top: 14w;
+    top: 120px;
     width: 100vw;
     animation: none;
   }
@@ -435,9 +460,42 @@ b {
 
   .subp_a {
     font-size: 24px;
-    left: 0px;
-    top: 30vw;
-    width: 80vw;
+    left: 200px;
+    top: 210px;
+    width: 55vw;
     margin-bottom: 6vw;
+  }
+
+  .a_img {
+    top: 200px;
+    left: 0px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 25px #aaaaaa;
+  }
+
+  .img2 {
+    top: 450px;
+  }
+
+  .img3 {
+    top: 700px;
+  }
+
+  .img4 {
+    top: 950px;
+  }
+
+  #resume {
+    top: 200px;
+    width: 80vw;
+  }
+
+  .references {
+    top: 50px;
+    left: 400px;
+    font-size: 32px;
+    width: 150px;
   }
 }
