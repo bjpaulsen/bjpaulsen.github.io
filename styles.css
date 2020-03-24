@@ -356,3 +356,15 @@ b {
   text-shadow: 8px 8px 25px #aaaaaa;
   text-align: right;
 }
+
+.color1 {
+  color: #f8615a;
+}
+
+.color2 {
+  color: #b80d57;
+}
+
+.color3 {
+  color: #721b65;
+}
