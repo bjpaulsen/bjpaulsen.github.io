@@ -368,6 +368,14 @@ b {
   padding-left: 0.5vw;
 }
 
+.sjump {
+  top: 3vw;
+}
+
+.wjump {
+  top: 6vw;
+}
+
 .jump-text {
   width: 8vw;
   font-family: "Oswald";
@@ -464,6 +472,36 @@ b {
     top: 210px;
     width: 55vw;
     margin-bottom: 6vw;
+  }
+
+  .jump-to {
+    left: 550px;
+    width: 200px;
+  }
+
+  .sjump {
+    top: 55px;
+  }
+
+  .wjump {
+    top: 110px;
+  }
+
+  .jump-text {
+    width: 200px;
+    font-size: 40px;
+  }
+
+  .portfolioh {
+    top: 200px;
+    font-size: 48px;
+  }
+
+  ul {
+    top: 250px;
+    width: 80vw;
+    font-size: 24px;
+    margin-bottom: 6em;
   }
 
   .a_img {
