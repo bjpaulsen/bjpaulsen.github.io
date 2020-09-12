@@ -1,14 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  position: absolute;
   white-space: normal;
 }
 
 #welcome {
   position: fixed;
-  top: 4vw;
-  left: 81vw;
+  margin-top: 4vw;
+  margin-left: 81vw;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 4vw;
@@ -19,8 +18,8 @@
 
 #me {
   position: fixed;
-  left: 81vw;
-  top: 16vw;
+  margin-left: 81vw;
+  margin-top: 16vw;
   height: 13vw;
   width: 13vw;
   border-radius: 50%;
@@ -28,8 +27,8 @@
 }
 
 .a_img {
-  top: 12vw;
-  left: 34vw;
+  margin-top: 12vw;
+  margin-left: 34vw;
   height: 10vw;
   width: 10vw;
   border-radius: 50%;
@@ -37,34 +36,44 @@
 }
 
 .img1 {
-  left: 1.5vw;
+  margin-left: 1.5vw;
 }
 
 .img2 {
-  top: 25vw;
+  margin-top: 25vw;
 }
 
 .img3 {
-  top: 41vw;
-  left: 1.5vw;
+  margin-top: 41vw;
+  margin-left: 1.5vw;
 }
 .img4 {
-  top: 57vw;
+  margin-top: 57vw;
+}
+
+
+
+.menu {
+  border: 1px solid black;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-left: 50px;
 }
 
 .button {
-  position: fixed;
   text-align: center;
   vertical-align: middle;
-  line-height: 8vw;
+  line-height: 120px;
   font-family: "Oswald", sans-serif;
-  font-size: 1.7vw;
+  font-weight: normal;
+  font-size: 25px;
   border-radius: 50%;
-  background: #ffffff;
   box-shadow: 10px 10px 0px #aaaaaa;
-  left: 4vw;
-  width: 8vw;
-  height: 8vw;
+  width: 120px;
+  height: 120px;
   transition: transform 0.18s, background 0.18s, color 0.18s, box-shadow 0.18s;
 }
 
@@ -74,11 +83,8 @@
 }
 
 #button0 {
-  top: 15vh;
   border: 4px solid #f8615a;
   color: #f8615a;
-  animation-name: button0_a;
-  animation-duration: 1.5s;
 }
 
 #button0:hover {
@@ -87,30 +93,9 @@
   color: #ffffff;
 }
 
-@keyframes button0_a {
-  0% {
-    left: -10vw;
-  }
-
-  60% {
-    left: -10vw;
-  }
-
-  80% {
-    left: 6vw;
-  }
-
-  100% {
-    left: 4vw;
-  }
-}
-
 #button1 {
-  top: 41vh;
   border: 4px solid #b80d57;
   color: #b80d57;
-  animation-name: button1_a;
-  animation-duration: 1.7s;
 }
 
 #button1:hover {
@@ -118,30 +103,9 @@
   color: #ffffff;
 }
 
-@keyframes button1_a {
-  0% {
-    left: -10vw;
-  }
-
-  60% {
-    left: -10vw;
-  }
-
-  80% {
-    left: 6vw;
-  }
-
-  100% {
-    left: 4vw;
-  }
-}
-
 #button2 {
-  top: 68vh;
   border: 4px solid #721b65;
   color: #721b65;
-  animation-name: button2_a;
-  animation-duration: 1.9s;
 }
 
 #button2:hover {
@@ -149,45 +113,17 @@
   color: #ffffff;
 }
 
-@keyframes button2_a {
-  0% {
-    left: -10vw;
-  }
-
-  60% {
-    left: -10vw;
-  }
-
-  80% {
-    left: 6vw;
-  }
-
-  100% {
-    left: 4vw;
-  }
-}
-
-#menu_block {
-  position: fixed;
-  top: -5px;
-  left: -20px;
-  background-color: #ffffff;
-  height: 105vh;
-  width: 18vw;
-}
-
 #main_block {
   position: fixed;
-  top: -5px;
-  left: 0px;
+  margin-top: -5px;
+  margin-left: 0px;
   height: 105vh;
   width: 75vw;
 }
 
 .superdiv {
-  position: absolute;
-  left: 24vw;
-  top: 3vw;
+  margin-left: 24vw;
+  margin-top: 3vw;
   width: 45vw;
 }
 
@@ -195,12 +131,12 @@
   opacity: 1;
 }
 
-#resumediv {
+#gamesdiv {
   display: none;
 }
 
-#resume {
-  top: 11vw;
+#games {
+  margin-top: 11vw;
   width: 45vw;
 }
 
@@ -216,7 +152,7 @@
 
 .portfolioh {
   position: relative;
-  top: 11vw;
+  margin-top: 11vw;
   font-family: "Oswald";
   font-weight: 900;
   font-size: 3vw;
@@ -227,7 +163,7 @@
   position: relative;
   font-family: "Open Sans", monospace;
   font-size: 1.1vw;
-  top: 11vw;
+  margin-top: 11vw;
   margin-bottom: 1vw;
 }
 
@@ -235,20 +171,20 @@
   position: relative;
   font-family: "Open Sans", monospace;
   font-size: 1.1vw;
-  top: 15vw;
-  left: 15vw;
+  margin-top: 15vw;
+  margin-left: 15vw;
   width: 30vw;
   margin-bottom: 6vw;
 }
 
 .a2 {
-  left: 0vw;
+  margin-left: 0vw;
 }
 
 .my_links {
   position: fixed;
-  left: 85vw;
-  top: 32.5vw;
+  margin-left: 85vw;
+  margin-top: 32.5vw;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 2vw;
@@ -257,8 +193,8 @@
 
 ul {
   position: relative;
-  left: 50px;
-  top: 13vw;
+  margin-left: 50px;
+  margin-top: 13vw;
   width: 40vw;
   font-family: "Open Sans", monospace;
   font-size: 1.1vw;
@@ -283,7 +219,7 @@ b {
 
 .jump-to {
   position: relative;
-  left: 40vw;
+  margin-left: 40vw;
   width: 8vw;
   padding-left: 0px;
   transition: padding 0.18s;
@@ -294,11 +230,11 @@ b {
 }
 
 .sjump {
-  top: 3vw;
+  margin-top: 3vw;
 }
 
 .wjump {
-  top: 6vw;
+  margin-top: 6vw;
 }
 
 .jump-text {
@@ -310,8 +246,8 @@ b {
 }
 
 .references {
-  top: 2vw;
-  left: 37vw;
+  margin-top: 2vw;
+  margin-left: 37vw;
 }
 
 .color1 {
@@ -326,24 +262,22 @@ b {
   color: #721b65;
 }
 
+
+
+
+
+
+
+
 @media only screen and (max-width: 1280px) {
   .superdiv {
-    top: 150px;
-    left: 10vw;
+    margin-top: 150px;
+    margin-left: 10vw;
   }
 
-  #menu_block {
-    top: -5px;
-    left: -20px;
-    height: 125px;
-    width: 105vw;
-    animation: none;
-  }
-
-  #main_block {
-    top: 120px;
-    width: 100vw;
-    animation: none;
+  .menu {
+    display: flex;
+    flex-direction: row;
   }
 
   #aboutdiv {
@@ -356,12 +290,13 @@ b {
     border-radius: 0px;
     background: none;
     box-shadow: none;
-    left: 10vw;
+    margin-left: 10vw;
     width: fit-content;
     line-height: 65px;
     height: 70px;
     padding-left: 10px;
     padding-right: 10px;
+    font-weight: normal;
   }
 
   .button:hover {
@@ -369,19 +304,19 @@ b {
   }
 
   #button0 {
-    top: 25px;
+    margin-top: 25px;
     animation: none;
   }
 
   #button1 {
-    top: 25px;
-    left: 38vw;
+    margin-top: 25px;
+    margin-left: 38vw;
     animation: none;
   }
 
   #button2 {
-    top: 25px;
-    left: 68vw;
+    margin-top: 25px;
+    margin-left: 68vw;
     animation: none;
   }
 
@@ -392,23 +327,23 @@ b {
 
   .subp_a {
     font-size: 24px;
-    left: 200px;
-    top: 210px;
+    margin-left: 200px;
+    margin-top: 210px;
     width: 55vw;
     margin-bottom: 6vw;
   }
 
   .jump-to {
-    left: 550px;
+    margin-left: 550px;
     width: 200px;
   }
 
   .sjump {
-    top: 55px;
+    margin-top: 55px;
   }
 
   .wjump {
-    top: 110px;
+    margin-top: 110px;
   }
 
   .jump-text {
@@ -417,20 +352,20 @@ b {
   }
 
   .portfolioh {
-    top: 200px;
+    margin-top: 200px;
     font-size: 48px;
   }
 
   ul {
-    top: 250px;
+    margin-top: 250px;
     width: 75vw;
     font-size: 24px;
     margin-bottom: 6em;
   }
 
   .a_img {
-    top: 200px;
-    left: 0px;
+    margin-top: 200px;
+    margin-left: 0px;
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -438,25 +373,25 @@ b {
   }
 
   .img2 {
-    top: 450px;
+    margin-top: 450px;
   }
 
   .img3 {
-    top: 700px;
+    margin-top: 700px;
   }
 
   .img4 {
-    top: 950px;
+    margin-top: 950px;
   }
 
-  #resume {
-    top: 200px;
+  #games {
+    margin-top: 200px;
     width: 80vw;
   }
 
   .references {
-    top: 50px;
-    left: 400px;
+    margin-top: 50px;
+    margin-left: 400px;
     font-size: 32px;
     width: 150px;
   }
