@@ -80,19 +80,20 @@
   margin-left: 275px;
   width: 100%;
   margin-right: 75px;
-  margin-top: 50px;
 }
 
 .section-header {
   font-family: "Oswald";
   font-weight: 900;
   font-size: 78px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .me-img {
   flex: 0 1 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 48px;
+  margin-bottom: 48px;
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -140,11 +141,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 600px;
-}
-
-#games {
-  margin-top: 50px;
+  max-width: 500px;
+  padding-left: 20px;
 }
 
 .sub-header {
@@ -207,6 +205,27 @@
   background-image: url('./images/stay-sane.jpg');
 }
 
+#queer-spacetime {
+  background-image: url('./images/queer_time.png');
+  color: #972486;
+}
+
+#fling-fleet {
+  background-image: url('./images/fling-fleet-prototype.png');
+  color: #eeeeee;
+  font-family: "Open Sans Condensed";
+  font-size: 50px;
+}
+
+#software-list {
+  margin-top: 50px;
+}
+
+li {
+  margin-bottom: 2em;
+  max-width: 700px;
+}
+
 
 
 .portfolioh {
@@ -250,21 +269,7 @@
   color: #333333;
 }
 
-ul {
-  position: relative;
-  margin-left: 50px;
-  margin-top: 13vw;
-  width: 40vw;
-  font-family: "Open Sans", monospace;
-  font-size: 1.1vw;
-  margin-bottom: 5vw;
-}
 
-li {
-  position: relative;
-  margin-bottom: 1.5em;
-  white-space: pre-line;
-}
 
 a {
   text-decoration: none;
