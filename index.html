@@ -3,12 +3,52 @@
 
     <head>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:wght@400;700">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300i" rel="stylesheet">
         <title>Ben Paulsen</title>
     </head>
 
     <body>
+
+        <div class="content-container" id="about">
+            <div class="menu">
+                <a href="#about"><div id="button0" class="button">ABOUT</div></a>
+                <a href="#games"><div id="button1" class="button">GAMES</div></a>
+                <a href="#software"><div id="button2" class="button">SOFTWARE</div></a>
+            </div>
+
+            <div class="main">
+
+                <div class="section-header" style="color:#f8615a">ABOUT</div>
+                <div class="about-me">
+                    <img class="me-img" src="images/tea_2.jpg">
+                    <div class="about-text">
+                        <div class="links">
+                            <a class="link" href="./images/Resume.pdf" id="download-resume" download="Resume_Benjamin_Paulsen">resume</a>
+                            <a class="link" href="https://gamesbyboon.itch.io/">itch.io</a>
+                            <a class="link" href="https://github.com/bjpaulsen">github</a>
+                            <a class="link" href="https://www.linkedin.com/in/benjamin-paulsen-155478192/">linkedin</a>
+                        </div>
+                        <div class="text">What's up! I'm Ben Paulsen, and I'm studying Computer Science: Game Design at the University of California, Santa Cruz.</div>
+                        <div class="text">My focus is on game development and design, but I also make <a href="https://thehandholdingyearningclub.bandcamp.com/" class="paragraph-link">music</a> and <a href="https://www.instagram.com/just.bens.art/" class="paragraph-link">art</a>.</div>
+                        <div class="text">I'm currently working on a multiplayer space fleet battler, and a platformer about queer time.</div>
+                    </div>
+                </div>
+
+                <div class="games-header">
+                    <div class="section-header" style="color:#b80d57" id="games">GAMES</div>
+                </div>
+                <div class="releases">
+                    <a href="https://gamesbyboon.itch.io/flock-together"><div class="release" id="flock-together"><div>Flock Together</div></div></a>
+                    <a href="https://gamesbyboon.itch.io/pewpew"><div class="release" id="pewpew"></div></a>
+                    <a href="https://gamesbyboon.itch.io/froggo"><div class="release" id="froggo">Froggo</div></a>
+                    <a href="https://gamesbyboon.itch.io/stay-sane"><div class="release" id="stay-sane"></div></a>
+                </div>
+
+            </div>
+        </div>
+
         <!-- <p id="welcome">Benjamin
             Paulsen</p>
         <img src="images/tea_2.jpg" id="me">
@@ -17,7 +57,7 @@
         <p><a href="https://gamesbyboon.itch.io/" style="left:82.1vw" class="my_links">Itch.io (Games)</a></p>
 
         <div class="superdiv" id="aboutdiv">
-            <p class="subh" style="color:#f8615a">ABOUT</p>
+            <p class="section-header" style="color:#f8615a">ABOUT</p>
             <img src="images/me_succulent.jpg" class="a_img img1">
             <p class="subp_a">
                 What's up, I’m Ben! I am studying Computer Science: Game Design at the University of California,
@@ -46,12 +86,12 @@
         </div>
 
         <div class="superdiv" id="gamesdiv">
-            <p class="subh" style="color:#b80d57">GAMES</p>
+            <p class="section-header" style="color:#b80d57">GAMES</p>
 
         </div>
 
         <div class="superdiv" id="portfoliodiv">
-            <p class="subh" style="color:#721b65">PORTFOLIO</p>
+            <p class="section-header" style="color:#721b65">PORTFOLIO</p>
 
             <p class="jump-to wjump"><a class="jump-text" href="#web" style="color: #721b65">WEB</a></p>
             <p class="jump-to sjump"><a class="jump-text" href="#software" style="color: #b80d57">SOFTWARE</a></p>
@@ -138,12 +178,6 @@
                 </ul>
             </p>
         </div> -->
-
-        <div class="menu">
-            <a href="#about"><div id="button0" class="button">ABOUT</div></a>
-            <a href="#games"></a><div id="button1" class="button">GAMES</div></a>
-            <a href="#software"></a><div id="button2" class="button">PORTFOLIO</div></a>
-        </div>
 
     </body>
 

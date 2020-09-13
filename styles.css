@@ -4,57 +4,14 @@
   white-space: normal;
 }
 
-#welcome {
-  position: fixed;
-  margin-top: 4vw;
-  margin-left: 81vw;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-size: 4vw;
-  line-height: 4.2vw;
-  white-space: pre-line;
-  color: #333333;
-}
-
-#me {
-  position: fixed;
-  margin-left: 81vw;
-  margin-top: 16vw;
-  height: 13vw;
-  width: 13vw;
-  border-radius: 50%;
-  box-shadow: 10px 10px 0px #aaaaaa;
-}
-
-.a_img {
-  margin-top: 12vw;
-  margin-left: 34vw;
-  height: 10vw;
-  width: 10vw;
-  border-radius: 50%;
-  box-shadow: 10px 10px 0px #aaaaaa;
-}
-
-.img1 {
-  margin-left: 1.5vw;
-}
-
-.img2 {
-  margin-top: 25vw;
-}
-
-.img3 {
-  margin-top: 41vw;
-  margin-left: 1.5vw;
-}
-.img4 {
-  margin-top: 57vw;
+.content-container {
+  display: flex;
+  flex-direction: row;
 }
 
 
 
 .menu {
-  border: 1px solid black;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -113,42 +70,150 @@
   color: #ffffff;
 }
 
-#main_block {
-  position: fixed;
-  margin-top: -5px;
-  margin-left: 0px;
-  height: 105vh;
-  width: 75vw;
+
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 300px;
+  width: 100%;
+  margin-right: 100px;
+  margin-top: 50px;
 }
 
-.superdiv {
-  margin-left: 24vw;
-  margin-top: 3vw;
-  width: 45vw;
-}
-
-#aboutdiv {
-  opacity: 1;
-}
-
-#gamesdiv {
-  display: none;
-}
-
-#games {
-  margin-top: 11vw;
-  width: 45vw;
-}
-
-#portfoliodiv {
-  display: none;
-}
-
-.subh {
+.section-header {
   font-family: "Oswald";
   font-weight: 900;
-  font-size: 5.5vw;
+  font-size: 78px;
 }
+
+.about-me {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.me-img {
+  flex: 0 1 auto;
+  margin-right: 78px;
+  margin-bottom: 50px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.about-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 350px;
+}
+
+.text {
+  font-family: "Open Sans", monospace;
+  color: #333333;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.paragraph-link {
+  font-weight: bold;
+  transition: text-shadow .18s;
+}
+
+.paragraph-link:hover {
+  text-shadow: 1px 1px 0px #f8615a;
+}
+
+.links {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-family: "Oswald";
+  font-weight: 900;
+  font-size: 26px;
+  color: #222222;
+}
+
+.link {
+  margin-right: 32px;
+  transition: text-shadow .18s;
+}
+
+.link:hover {
+  text-shadow: 2px 2px 0px #f8615a;
+}
+
+.games-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sub-header {
+  font-size: 36px;
+  color: #333333;
+  font-family: "Oswald";
+  font-weight: 900;
+}
+
+.releases {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.release {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30vw;
+  height: 20vw;
+  margin: 16px;
+  margin-top: 40px;
+  border-radius: 200px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 30%;
+  box-shadow: 10px 10px 0px #aaaaaa;
+  transition: transform .18s, box-shadow .18s;
+  font-size: 42px;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-align: center;
+}
+
+.release:hover {
+  transform: scale(1.07);
+  box-shadow: 23px 23px 0px #aaaaaa;
+}
+
+#flock-together {
+  background-image: url('./images/flock-together.png');
+  color: #333333;
+}
+
+#pewpew {
+  background-image: url('./images/pewpew.png');
+}
+
+#froggo {
+  background-image: url('./images/froggo.png');
+  font-family: "Courier New";
+  color: white;
+}
+
+#stay-sane {
+  background-image: url('./images/stay-sane.jpg');
+}
+
+
 
 .portfolioh {
   position: relative;
@@ -208,9 +273,9 @@ li {
 }
 
 a {
-  white-space: pre;
   text-decoration: none;
-  font-weight: bold;
+  cursor: pointer;
+  color: #333333;
 }
 
 b {
@@ -265,134 +330,34 @@ b {
 
 
 
-
-
-
-
-@media only screen and (max-width: 1280px) {
-  .superdiv {
-    margin-top: 150px;
-    margin-left: 10vw;
+@media only screen and (max-width:1263px) {
+  .release {
+    width: 50vw;
   }
-
-  .menu {
-    display: flex;
-    flex-direction: row;
+  #pewpew {
+    background-position-y: 35%;
   }
+}
 
-  #aboutdiv {
-    opacity: 1;
-    animation: none;
+
+
+
+@media only screen and (max-width:1027px) {
+  .main {
+    align-items: center;
   }
-
-  .button {
-    font-size: 50px;
-    border-radius: 0px;
-    background: none;
-    box-shadow: none;
-    margin-left: 10vw;
-    width: fit-content;
-    line-height: 65px;
-    height: 70px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: normal;
+  .about-me {
+    justify-content: center;
   }
-
-  .button:hover {
-    box-shadow: none;
+  .me-img {
+    margin-left: 78px;
   }
-
-  #button0 {
-    margin-top: 25px;
-    animation: none;
+  .links {
+    justify-content: center;
+    margin-left: 32px;
+    margin-bottom: 32px;
   }
-
-  #button1 {
-    margin-top: 25px;
-    margin-left: 38vw;
-    animation: none;
-  }
-
-  #button2 {
-    margin-top: 25px;
-    margin-left: 68vw;
-    animation: none;
-  }
-
-  .subh {
-    font-size: 100px;
-    width: 80vw;
-  }
-
-  .subp_a {
-    font-size: 24px;
-    margin-left: 200px;
-    margin-top: 210px;
-    width: 55vw;
-    margin-bottom: 6vw;
-  }
-
-  .jump-to {
-    margin-left: 550px;
-    width: 200px;
-  }
-
-  .sjump {
-    margin-top: 55px;
-  }
-
-  .wjump {
-    margin-top: 110px;
-  }
-
-  .jump-text {
-    width: 200px;
-    font-size: 40px;
-  }
-
-  .portfolioh {
-    margin-top: 200px;
-    font-size: 48px;
-  }
-
-  ul {
-    margin-top: 250px;
-    width: 75vw;
-    font-size: 24px;
-    margin-bottom: 6em;
-  }
-
-  .a_img {
-    margin-top: 200px;
-    margin-left: 0px;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    box-shadow: 10px 10px 25px #aaaaaa;
-  }
-
-  .img2 {
-    margin-top: 450px;
-  }
-
-  .img3 {
-    margin-top: 700px;
-  }
-
-  .img4 {
-    margin-top: 950px;
-  }
-
   #games {
-    margin-top: 200px;
-    width: 80vw;
-  }
-
-  .references {
     margin-top: 50px;
-    margin-left: 400px;
-    font-size: 32px;
-    width: 150px;
   }
 }
