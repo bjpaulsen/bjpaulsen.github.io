@@ -259,7 +259,8 @@ a {
   }
 }
 
-@media only screen and (max-width:740px) {
+/* activates mobile version */
+@media only screen and (max-width:980px) {
   .menu {
     display: none;
   }
