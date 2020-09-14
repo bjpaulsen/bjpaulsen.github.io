@@ -252,7 +252,10 @@ a {
     width: 50vw;
   }
   #pewpew {
-    background-position-y: 35%;
+    background-position-y: 38%;
+  }
+  #stay-sane {
+    background-position-y: 45%;
   }
 }
 
@@ -262,5 +265,8 @@ a {
   }
   .main {
     margin-left: 75px;
+  }
+  .release {
+    width: 60vw;
   }
 }
