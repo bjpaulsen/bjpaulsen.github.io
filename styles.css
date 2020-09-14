@@ -90,6 +90,10 @@
   margin-top: 50px;
 }
 
+.inner {
+  max-width: 500px;
+}
+
 .me-img {
   flex: 0 1 auto;
   margin-top: 48px;
@@ -116,7 +120,6 @@
 }
 
 .links {
-  margin-bottom: 16px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -138,9 +141,6 @@
 }
 
 .about-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   max-width: 500px;
   padding-left: 20px;
 }
@@ -217,6 +217,9 @@
   font-size: 50px;
 }
 
+
+
+
 #software-list {
   margin-top: 50px;
 }
@@ -225,6 +228,9 @@ li {
   margin-bottom: 2em;
   max-width: 700px;
 }
+
+
+
 
 a {
   text-decoration: none;
@@ -269,5 +275,8 @@ a {
   }
   .release {
     width: 60vw;
+  }
+  .about-text {
+    max-width: 700px;
   }
 }
