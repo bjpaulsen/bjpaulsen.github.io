@@ -226,92 +226,10 @@ li {
   max-width: 700px;
 }
 
-
-
-.portfolioh {
-  position: relative;
-  margin-top: 11vw;
-  font-family: "Oswald";
-  font-weight: 900;
-  font-size: 3vw;
-  color: #333333;
-}
-
-.subp {
-  position: relative;
-  font-family: "Open Sans", monospace;
-  font-size: 1.1vw;
-  margin-top: 11vw;
-  margin-bottom: 1vw;
-}
-
-.subp_a {
-  position: relative;
-  font-family: "Open Sans", monospace;
-  font-size: 1.1vw;
-  margin-top: 15vw;
-  margin-left: 15vw;
-  width: 30vw;
-  margin-bottom: 6vw;
-}
-
-.a2 {
-  margin-left: 0vw;
-}
-
-.my_links {
-  position: fixed;
-  margin-left: 85vw;
-  margin-top: 32.5vw;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-size: 2vw;
-  color: #333333;
-}
-
-
-
 a {
   text-decoration: none;
   cursor: pointer;
   color: #333333;
-}
-
-b {
-  background-color: transparent;
-}
-
-.jump-to {
-  position: relative;
-  margin-left: 40vw;
-  width: 8vw;
-  padding-left: 0px;
-  transition: padding 0.18s;
-}
-
-.jump-to:hover {
-  padding-left: 0.5vw;
-}
-
-.sjump {
-  margin-top: 3vw;
-}
-
-.wjump {
-  margin-top: 6vw;
-}
-
-.jump-text {
-  width: 8vw;
-  font-family: "Oswald";
-  font-size: 1.75vw;
-  font-weight: 900;
-  text-align: right;
-}
-
-.references {
-  margin-top: 2vw;
-  margin-left: 37vw;
 }
 
 .color1 {
@@ -335,5 +253,14 @@ b {
   }
   #pewpew {
     background-position-y: 35%;
+  }
+}
+
+@media only screen and (max-width:740px) {
+  .menu {
+    display: none;
+  }
+  .main {
+    margin-left: 75px;
   }
 }
