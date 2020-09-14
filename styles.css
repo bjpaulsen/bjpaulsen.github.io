@@ -141,6 +141,7 @@
 }
 
 .about-text {
+  margin-top: 8px;
   max-width: 500px;
   padding-left: 20px;
 }
