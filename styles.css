@@ -146,13 +146,6 @@
   padding-left: 20px;
 }
 
-.sub-header {
-  font-size: 36px;
-  color: #333333;
-  font-family: "Oswald";
-  font-weight: 900;
-}
-
 .releases {
   display: inline-flex;
   flex-direction: row;
@@ -167,7 +160,7 @@
   flex-direction: column;
   justify-content: center;
   width: 30vw;
-  height: 20vw;
+  min-height: 20vw;
   margin: 18px;
   margin-top: 40px;
   border-radius: 200px;
@@ -218,6 +211,59 @@
   font-size: 50px;
 }
 
+.project-title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.hidden {
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  
+  display: none;
+  margin: 50px;
+  margin-top: 0px;
+
+  color: #333333;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: normal;
+
+  background-color: #ffffff;
+  padding: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-radius: 200px;
+  box-shadow: 10px 10px 0px #aaaaaa;
+}
+
+.video {
+  width: 36vw;
+  height: 18vw;
+  margin-bottom: 32px;
+}
+
+.sub-header {
+  font-size: 36px;
+  color: #333333;
+  font-family: "Oswald";
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+.info-text {
+  max-width: 700px;
+}
+
+.info {
+  margin-bottom: 1em;
+}
+
+.sub-info {
+  margin-bottom: auto;
+  margin-left: 2em;
+}
 
 
 
