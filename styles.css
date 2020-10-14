@@ -211,6 +211,11 @@
   font-size: 50px;
 }
 
+#stomp-out {
+  background-image: url('./images/stomp-out.png');
+  color: #eeeeee;
+}
+
 .project-title {
   margin-top: 16px;
   margin-bottom: 16px;
