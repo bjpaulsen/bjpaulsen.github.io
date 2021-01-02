@@ -180,6 +180,12 @@
   box-shadow: 22px 22px 0px #aaaaaa;
 }
 
+#escher-worldgen {
+  background-image: url('./images/escher-worldgen2.png');
+  color: #ffffff;
+  font-family: "Libre Baskerville";
+}
+
 #chaotic-concoction {
   background-image: url('./images/chaotic-concoction.png');
 }
