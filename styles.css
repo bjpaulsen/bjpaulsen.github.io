@@ -180,6 +180,10 @@
   box-shadow: 22px 22px 0px #aaaaaa;
 }
 
+#your-personal-photon {
+  background-image: url('./images/your_personal_photon.png');
+}
+
 #escher-worldgen {
   background-image: url('./images/escher-worldgen2.png');
   color: #ffffff;
