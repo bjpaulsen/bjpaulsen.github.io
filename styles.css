@@ -214,6 +214,10 @@
   background-image: url('./images/stay-sane.jpg');
 }
 
+#in-a-flash {
+  background-image: url('./images/in-a-flash-logo-standalone.png');
+}
+
 #queer-spacetime {
   background-image: url('./images/queer_time.png');
   color: #972486;

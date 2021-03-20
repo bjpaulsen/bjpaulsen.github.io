@@ -10,20 +10,20 @@
         <title>Ben Paulsen</title>
 
         <script>
-            function toggleOpen(openId, closeId) {
+            function toggleOpen(openId, closeId, closeId2) {
                 let openElement = document.getElementById(openId);
                 let closeElement = document.getElementById(closeId);
-                // let closeElement2 = document.getElementById(closeId2);
+                let closeElement2 = document.getElementById(closeId2);
                 if (openElement.style.display === "none" || openElement.style.display === "") {
                     openElement.style.display = "flex";
                     if (closeElement.style.display === "flex") {
                         closeElement.style.display = "none";
                         closeElement.parentElement.style.width = openElement.parentElement.style.width;
                     }
-                    // if (closeElement2.style.display === "flex") {
-                    //     closeElement2.style.display = "none";
-                    //     closeElement2.parentElement.style.width = openElement.parentElement.style.width;
-                    // }
+                    if (closeElement2.style.display === "flex") {
+                        closeElement2.style.display = "none";
+                        closeElement2.parentElement.style.width = openElement.parentElement.style.width;
+                    }
                     openElement.parentElement.style.width = "63vw";
                 }
                 else if (openElement.style.display === "flex") {
@@ -74,7 +74,38 @@
                 <div class="section-header" style="color:#b80d57">CURRENT PROJECTS</div>
                 <div class="releases">
                     
-                    <div class="release" id="queer-spacetime" onclick="toggleOpen('queer-spacetime-info', 'fling-fleet-info')">
+                    <div class="release" id="in-a-flash" onclick="toggleOpen('in-a-flash-info', 'queer-spacetime-info', 'fling-fleet-info')">
+                        <div class="project-title"></div>
+                        
+                        <div class="hidden" id="in-a-flash-info">
+                            <iframe class="video" src="https://www.youtube-nocookie.com/embed/nJYynlN-jDg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" rel="0" allowfullscreen></iframe>
+                            <div class="info-text">In A Flash is a 1-2 player action arcade game. Engage in a fast-paced battle to control the momentum of the game. Get past your opponent to win.</div>
+                            <div class="sub-header">Core Gameplay:</div>
+                            <ul>
+                                <li class="info"><b>Varied Unit Types</b> 
+                                    <ul>
+                                        <li class="sub-info">Rapid fire triangles that zip across the screen, stealing points.</li>
+                                        <li class="sub-info">Mass hordes of slow moving, tanky squares.</li>
+                                        <li class="sub-info">Cause chaos with well-placed exploding circles.</li>
+                                    </ul>
+                                </li>
+                                <li class="info"><b>Strategic Placement</b> 
+                                    <ul>
+                                        <li class="sub-info">Choose the right lane at the right time to attack or defend.</li>
+                                    </ul>
+                                </li>
+                                <li class="info"><b>Coming Soon:</b> 
+                                    <ul>
+                                        <li class="sub-info">Singleplayer campaign against AI.</li>
+                                        <li class="sub-info">Upgradeable units and tech trees.</li>
+                                        <li class="sub-info">Colorblind mode and customizable color schemes.</li>
+                                        <li class="sub-info">More music!</li>
+                                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="release" id="queer-spacetime" onclick="toggleOpen('queer-spacetime-info', 'fling-fleet-info', 'in-a-flash-info')">
                         <div class="project-title">Queer Time</div>
                         
                         <div class="hidden" id="queer-spacetime-info">
@@ -110,7 +141,7 @@
                     
                     
                     
-                    <div class="release" id="fling-fleet" onclick="toggleOpen('fling-fleet-info', 'queer-spacetime-info')">
+                    <div class="release" id="fling-fleet" onclick="toggleOpen('fling-fleet-info', 'queer-spacetime-info', 'in-a-flash-info')">
                         <div class="project-title">Fling Fleet</div>
                         
                         <div class="hidden" id="fling-fleet-info">
