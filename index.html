@@ -10,20 +10,20 @@
         <title>Ben Paulsen</title>
 
         <script>
-            function toggleOpen(openId, closeId, closeId2) {
+            function toggleOpen(openId, closeId) {
                 let openElement = document.getElementById(openId);
                 let closeElement = document.getElementById(closeId);
-                let closeElement2 = document.getElementById(closeId2);
+                // let closeElement2 = document.getElementById(closeId2);
                 if (openElement.style.display === "none" || openElement.style.display === "") {
                     openElement.style.display = "flex";
                     if (closeElement.style.display === "flex") {
                         closeElement.style.display = "none";
                         closeElement.parentElement.style.width = openElement.parentElement.style.width;
                     }
-                    if (closeElement2.style.display === "flex") {
-                        closeElement2.style.display = "none";
-                        closeElement2.parentElement.style.width = openElement.parentElement.style.width;
-                    }
+                    // if (closeElement2.style.display === "flex") {
+                    //     closeElement2.style.display = "none";
+                    //     closeElement2.parentElement.style.width = openElement.parentElement.style.width;
+                    // }
                     openElement.parentElement.style.width = "63vw";
                 }
                 else if (openElement.style.display === "flex") {
@@ -74,7 +74,7 @@
                 <div class="section-header" style="color:#b80d57">CURRENT PROJECTS</div>
                 <div class="releases">
                     
-                    <div class="release" id="queer-spacetime" onclick="toggleOpen('queer-spacetime-info', 'fling-fleet-info', 'stomp-out-info')">
+                    <div class="release" id="queer-spacetime" onclick="toggleOpen('queer-spacetime-info', 'fling-fleet-info')">
                         <div class="project-title">Queer Time</div>
                         
                         <div class="hidden" id="queer-spacetime-info">
@@ -110,7 +110,7 @@
                     
                     
                     
-                    <div class="release" id="fling-fleet" onclick="toggleOpen('fling-fleet-info', 'queer-spacetime-info', 'stomp-out-info')">
+                    <div class="release" id="fling-fleet" onclick="toggleOpen('fling-fleet-info', 'queer-spacetime-info')">
                         <div class="project-title">Fling Fleet</div>
                         
                         <div class="hidden" id="fling-fleet-info">
@@ -135,31 +135,6 @@
                                 <li class="info"><b>Factions</b> 
                                     <ul>
                                         <li class="sub-info">Choose from 4 factions with completely different playstyles and ships at their disposal.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="release" id="stomp-out" onclick="toggleOpen('stomp-out-info', 'queer-spacetime-info', 'fling-fleet-info')">
-                        <div class="project-title">Stomp Out</div>
-                        
-                        <div class="hidden" id="stomp-out-info">
-                            <div class="info-images">
-                                <video class="info-img" src="./images/stomp-out.mp4" controls>
-                            </div>
-                            <div class="info-text">Stomp out is a vertical fighting game and a race to the top. Bounce up the platforms and STOMP your friends out! An early prototype of movement is shown above. The game will be built in Unity and C#.</div>
-                            <div class="sub-header">Core Gameplay:</div>
-                            <ul>
-                                <li class="info"><b>Timing is Key</b> 
-                                    <ul>
-                                        <li class="sub-info">Use a powerful downward stomp to bounce off of platforms.</li>
-                                        <li class="sub-info">Use the same ability to battle your friends downward.</li>
-                                    </ul>
-                                </li>
-                                <li class="info"><b>Unlock Unique Abilities</b> 
-                                    <ul>
-                                        <li class="sub-info">Though it starts out simple, players can unlock powers of levitation, super-stomps, dodges, and sideways-stomps!</li>
                                     </ul>
                                 </li>
                             </ul>
