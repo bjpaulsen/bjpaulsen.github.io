@@ -218,6 +218,11 @@
   background-image: url('./images/in-a-flash-logo-standalone.png');
 }
 
+#sscl {
+  background-image: url('./images/sscl_2.png');
+  color: #ffffff;
+}
+
 #queer-spacetime {
   background-image: url('./images/queer_time.png');
   color: #972486;
