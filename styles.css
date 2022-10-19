@@ -197,6 +197,10 @@
   background-image: url('./images/chaotic-concoction.png');
 }
 
+#asterion {
+  background-image: url('./images/asterion.png');
+}
+
 #flock-together {
   background-image: url('./images/flock-together.png');
   color: #333333;
@@ -364,6 +368,9 @@ a {
   }
   #chaotic-concoction {
     background-position-y: 45%;
+  }
+  #asterion {
+    background-position-y: 60%;
   }
   #sscl {
     background-position-y: 0%;
