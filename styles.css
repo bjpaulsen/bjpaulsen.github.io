@@ -201,6 +201,10 @@
   background-image: url('./images/asterion.png');
 }
 
+#distracction {
+  background-image: url('./images/distracction.png');
+}
+
 #flock-together {
   background-image: url('./images/flock-together.png');
   color: #333333;
