@@ -182,6 +182,10 @@
   box-shadow: 22px 22px 0px #aaaaaa;
 }
 
+#hearthstone {
+  background-image: url('./images/hearthstone-logo.jpeg');
+}
+
 #your-personal-photon {
   background-image: url('./images/your_personal_photon.png');
 }
@@ -360,6 +364,9 @@ a {
 @media only screen and (max-width:1054px) {
   .release {
     width: 50vw;
+  }
+  #hearthstone {
+    background-position-y: 50%;
   }
   #pewpew {
     background-position-y: 38%;
