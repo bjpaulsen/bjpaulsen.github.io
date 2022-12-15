@@ -182,6 +182,10 @@
   box-shadow: 22px 22px 0px #aaaaaa;
 }
 
+#acquiesce {
+  background-image: url('./images/acquiesce-logo.png');
+}
+
 #hearthstone {
   background-image: url('./images/hearthstone-logo.jpeg');
 }
