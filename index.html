@@ -37,17 +37,10 @@
     </head>
 
     <body>
-
-        <div class="content-container" id="about">
-            <div class="menu">
-                <a href="#about"><div id="button0" class="button">ABOUT</div></a>
-                <a href="#games"><div id="button1" class="button">GAMES</div></a>
-                <a href="#software"><div id="button2" class="button">CODE</div></a>
-            </div>
-
-            <div class="main">
-
-                <div class="section-header" style="color:#c5c5ff">ABOUT</div>
+        <div class="main">
+            <div class="aboutplaceholder"></div>
+            <div class="about">
+                <div class="section-header" style="color:#9fc6dd">ABOUT</div>
                 <img class="me-img" src="images/badge_smile.jpg">
                 <div class="links">
                     <a target="_blank" rel="noopener noreferrer" class="link" href="./images/Benjamin_Paulsen_Resume.pdf" id="download-resume" download="Benjamin_Paulsen_Resume">resume</a>
@@ -59,84 +52,31 @@
                     <div class="about-text">What's up! I'm Ben Paulsen. I'm a game designer studying at <a target="_blank" rel="noopener noreferrer" href="https://www.ucsc.edu/" class="paragraph-link">UCSC</a>. Last summer, I worked on <a target="_blank" rel="noopener noreferrer" href="https://playhearthstone.com/" class="paragraph-link">Hearthstone</a> at Blizzard Entertainment as an Intern Game Designer. Before that, I was a Lead Developer at <a target="_blank" rel="noopener noreferrer" href="https://tech4good.soe.ucsc.edu/#/" class="paragraph-link">Tech4Good Lab</a>, creating platforms for <a target="_blank" rel="noopener noreferrer" class="paragraph-link" href="https://relate.soe.ucsc.edu/#/">team-building games</a> and <a target="_blank" rel="noopener noreferrer" class="paragraph-link" href="https://causeway.soe.ucsc.edu/#/">teaching web development</a>.</div>
                     <div class="about-text">My focus is on game design, but I also make <a target="_blank" rel="noopener noreferrer" href="https://thehandholdingyearningclub.bandcamp.com/" class="paragraph-link">music</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.bens.art/" class="paragraph-link">art</a>.</div>
                     <div class="about-text">I'm currently working on a <a target="_blank" rel="noopener noreferrer" href="https://silmist.itch.io/future-in-flames" class="paragraph-link">survival horror game</a> about capnomancy, or divination by smoke.</div>
-                </div><br><br>
-
-                <div class="section-header" style="color:#9fc6dd" id="games"><div class="inner">GAMES</div></div><br>
-                <div class="text">
-                    <div class="about-text">I've had a hand in creating these! For some, I was the sole designer, programmer, artist, and composer. For others, I was a designer on a large team.</div>
-                </div><br>
+                </div>
+            </div>
+            <div class="games">
+                <div class="section-header" style="color:#c5c5ff" id="games">GAMES</div><br>
                 <div class="releases">
                     <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="release" id="hearthstone"></div></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/acquiesce"><div class="release" id="acquiesce"></div></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/shuffle-city"><div class="release" id="shuffle-city"></div></a>
+                    <a href="#button0"><div id="button0" class="button">V</div></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/acquiesce"><div class="release" id="acquiesce" style="transform: rotate(-5deg)"></div></a>
+                    <div id="button0" class="button">V</div>
+                    <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/shuffle-city"><div class="release" id="shuffle-city" style="transform: rotate(5deg)"></div></a>
+                    <div id="button0" class="button">V</div>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/in-a-flash"><div class="release" id="in-a-flash"></div></a>
+                    <div id="button0" class="button">V</div>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/chaotic-concoction"><div class="release" id="chaotic-concoction"></div></a>
+                    <div id="button0" class="button">V</div>
                     <a target="_blank" rel="noopener noreferrer" href="https://dyllistan.itch.io/asterion"><div class="release" id="asterion"></div></a>
+                    <div id="button0" class="button">V</div>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/distracction"><div class="release" id="distracction"></div></a>
+                    <div id="button0" class="button">V</div>
                     <a target="_blank" rel="noopener noreferrer" href="https://gameshowcase.ucsc.edu/project/sea-star-crossed-lovers/"><div class="release" id="sscl">Sea Star Crossed Lovers</div></a>
+                    <div id="button0" class="button">V</div>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/escher-worldgen"><div class="release" id="escher-worldgen"><div>Escher Level Generator</div></div></a>
+                    <div id="button0" class="button">V</div>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/flock-together"><div class="release" id="flock-together"><div>Flock Together</div></div></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/your-personal-photon"><div class="release" id="your-personal-photon"></div></a>
                 </div>
-
-                <div class="section-header" style="color:#97d4c4" id="software">CODE SAMPLES</div>
-                <ul class="text" id="software-list">
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://relate.soe.ucsc.edu/#/">Relate.</a>
-                        <div class="text">Relate is a platform for team bonding games that build on each other to support community-wide ideation and deliberation. As a Lead Developer for Relate in Summer 2020, I co-led a team of five developers to create a responsive UI, managed team tasks and Firebase backend, and coordinated with a design team and 2 other dev teams.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://causeway.soe.ucsc.edu/#/">Causeway.</a>
-                        <div class="text">Causeway allows anyone to work on small development roles that contribute to real-world projects and teach professional skills along the way. As Causeway's Lead Developer in June 2020 through March 2021, I designed and developed user onboarding for a key part of the platform, debugged and built on a large codebase, and helped conduct 3 rounds of user research. I led two teams of 3 developers to adapt to feedback and improve our user experience.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/escher-worldgen/blob/main/generate.py">Escher Level Generator.</a>
-                        <div class="text"><b>(Public Source Code)</b></div>
-                        <div class="text">I wrote this level generator in Python. It's designed to create a text file that represents a 3D level based on command line specifications, which can be imported into our Unity project. A C# script then uses the generated text file to construct the playable level.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/In-A-Flash">In A Flash.</a>
-                        <div class="text"><b>(Public Source Code)</b></div>
-                        <div class="text">In A Flash was a solo project in Unity and C#. I designed and implemented 2 AI opponents with varying levels of game awareness and difficulty. I also created 4 distinct unit types with upgrades, an interactive tutorial, a gameplay HUD and menus.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/GDACollab/SeaStarCrossedLovers">Sea Star Crossed Lovers.</a>
-                        <div class="text"><b>(Public Source Code)</b></div>
-                        <div class="text">SSCL was created in Unity, in collaboration with 80+ developers at <a target="_blank" rel="noopener noreferrer"  class="color3" href="http://gdacollab.com/">GDA Collab</a>, UC Santa Cruz. I collaborated on obstacle design, and implemented a Pause Menu UI. I also implemented sound effects and music in Unity.
-                            </div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/keyvalue">keyvalue.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">keyvalue is a C++ implementation of a dictionary interface for a balanced binary search tree, able to store and lookup information with O(log(n)) runtime. Created with pair programmer Jon Zivku.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/jonzivku/yshell">yshell.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">yshell is a C++ implementation of a UNIX-style terminal, complete with a fully memory-based filesystem. Created with pair programmer Jon Zivku.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/BigInt">BigInt.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">BigInt is a C++ implementation of the dc calculator program. It can handle calculations with integers well beyond the normal memory range of signed longs. Created with pair programmer Jon Zivku.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/FindComponents">FindComponents.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">FindPath is a C implementation of Depth First Search for Graphs. This algorithm finds each connected component of a graph, along with other useful structural data.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/FindPath">FindPath.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">FindPath is a C implementation of Breadth First Search for Graphs. This algorithm finds the shortest path to any node.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/BigInteger">BigInteger.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">BigInteger is a C implementation of big integer arithmetic. This implementation is highly efficient and again limited only by memory space.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/Sparse">Sparse.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">Sparse is a project in C which builds matrices from an input file and performs efficient matrix operations, especially on large, sparse matrices.</div>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" class="color3" href="https://github.com/bjpaulsen/Lex">Lex.</a>
-                        <div class="text"><b>(Private for academic integrity, email bjpaulse@ucsc.edu for employer access)</b></div>
-                        <div class="text">Lex is a C implementation of insertion sort. It outputs the lines of a file in lexicographic order.</div>
-                    </li>
-                </ul>
-
             </div>
-        </div>
-
     </body>
-
 </html>
