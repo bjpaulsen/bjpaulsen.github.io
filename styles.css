@@ -52,20 +52,19 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-right: 20px;
 }
 
 .section-header {
-  font-family: "Oswald";
+  font-family: "Avenir Next";
   font-weight: 900;
   font-size: 78px;
   text-align: center;
   vertical-align: middle;
-  top: 0px;
-  border-top: 50px;
+  margin-top: 50px;
   position: sticky;
   background: #ffffff;
   width: 100%;
-  height: 200px;
   z-index: 1;
 }
 
@@ -81,10 +80,11 @@
 }
 
 .text {
-  font-family: "Open Sans", monospace;
+  font-family: "Avenir Next", monospace;
   color: #333333;
-  font-size: 16px;
-  margin-top: 8px;
+  font-size: 17px;
+  margin-top: 6px;
+  margin-left: 6px;
 }
 
 .paragraph-link {
@@ -93,62 +93,81 @@
 }
 
 .paragraph-link:hover {
-  text-shadow: 1px 1px 0px #c5c5ff;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #9fc6dd;
+  color: #9fc6dd;
 }
 
 .links {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 32px;
+  margin-left: 20px;
   margin-bottom: 32px;
-  font-family: "Oswald";
-  font-weight: 900;
-  font-size: 26px;
+  font-family: "Avenir Next";
+  font-weight: 700;
+  font-size: 24px;
   color: #222222;
 }
 
 .link {
-  margin-right: 32px;
-  transition: text-shadow .18s;
+  margin-right: 30px;
+  transition: text-shadow .18s, border-color .18s;
+  border-radius: 200px;
+  text-align: center;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #ffffff;
 }
 
 .link:hover {
-  text-shadow: 2px 2px 0px #c5c5ff;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #9fc6dd;
+  color: #9fc6dd;
 }
 
 .about-text {
-  margin-top: 8px;
+  margin-top: 10px;
   max-width: 500px;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .releases {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .release {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  width: 30vw;
-  min-height: 20vw;
-  margin: 18px;
-  margin-top: 40px;
-  border-radius: 200px;
+  width: 21vw;
+  min-height: 14vw;
+  margin: 12px;
   background-size: cover;
   background-position-x: center;
   background-position-y: 30%;
-  transition: transform .18s, box-shadow .18s;
+  transition: transform .18s, border-width .18s;
   font-size: 42px;
-  font-family: "Oswald";
-  font-weight: bold;
+  font-family: "Avenir Next";
+  font-weight: 900;
   text-align: center;
+  border-color: #ffffff;
+  border-radius: 200px;
+  border-style: solid;
+  border-width: 10px;
 }
 
 .release:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
+  border-color: #c5c5ff;
 }
 
 #acquiesce {
@@ -166,8 +185,9 @@
 #escher-worldgen {
   background-image: url('./images/escher-worldgen2.png');
   color: #ffffff;
-  font-family: "Libre Baskerville";
-  font-size: 38px;
+  font-family: "Avenir Next";
+  font-weight: "900";
+  font-size: 42px;
 }
 
 #chaotic-concoction {
@@ -268,7 +288,7 @@
 .sub-header {
   font-size: 36px;
   color: #333333;
-  font-family: "Oswald";
+  font-family: "Avenir Next";
   margin-bottom: .5em;
   margin-top: .5em;
 }
@@ -334,9 +354,10 @@ a {
 
 
 /* activates when games stack */
-@media only screen and (max-width:1054px) {
+@media only screen and (max-width:1250px) {
   .release {
-    width: 50vw;
+    width: 38vw;
+    min-height: 12vw;
   }
   #hearthstone {
     background-position-y: 50%;
