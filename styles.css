@@ -57,7 +57,7 @@
 }
 
 .section-header {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", "Open Sans";
   font-weight: 900;
   font-size: 78px;
   text-align: center;
@@ -81,7 +81,7 @@
 }
 
 .text {
-  font-family: "Avenir Next", monospace;
+  font-family: "Avenir Next", "Open Sans", sans-serif;
   color: #333333;
   font-size: 17px;
   margin-top: 6px;
@@ -108,7 +108,7 @@
   justify-content: center;
   margin-left: 20px;
   margin-bottom: 28px;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", "Open Sans";
   font-weight: 700;
   font-size: 24px;
   color: #222222;
@@ -156,7 +156,7 @@
   background-position-y: 30%;
   transition: transform .18s, border-width .18s;
   font-size: 2.75vw;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", "Open Sans";
   font-weight: 900;
   text-align: center;
   border-color: #ffffff;
