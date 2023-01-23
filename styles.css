@@ -57,7 +57,7 @@
 }
 
 .section-header {
-  font-family: "Avenir Next", "Open Sans";
+  font-family: "Figtree", "Open Sans";
   font-weight: 900;
   font-size: 78px;
   text-align: center;
@@ -81,9 +81,10 @@
 }
 
 .text {
-  font-family: "Avenir Next", "Open Sans", sans-serif;
+  font-family: "Figtree", "Open Sans", sans-serif;
+  font-weight: 300;
   color: #333333;
-  font-size: 17px;
+  font-size: 17.5px;
   margin-top: 6px;
   margin-left: 6px;
 }
@@ -108,9 +109,9 @@
   justify-content: center;
   margin-left: 20px;
   margin-bottom: 28px;
-  font-family: "Avenir Next", "Open Sans";
+  font-family: "Figtree", "Open Sans";
   font-weight: 700;
-  font-size: 24px;
+  font-size: 26px;
   color: #222222;
 }
 
@@ -156,7 +157,7 @@
   background-position-y: 30%;
   transition: transform .18s, border-width .18s;
   font-size: 2.75vw;
-  font-family: "Avenir Next", "Open Sans";
+  font-family: "Figtree", "Open Sans";
   font-weight: 900;
   text-align: center;
   border-color: #ffffff;
