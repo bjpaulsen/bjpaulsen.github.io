@@ -92,6 +92,7 @@
 .paragraph-link {
   font-weight: 700;
   cursor: pointer;
+  color: #9fc6dd;
 }
 
 .paragraph-link:hover {
@@ -111,7 +112,6 @@
   font-family: "Figtree", "Open Sans";
   font-weight: 700;
   font-size: 26px;
-  color: #222222;
 }
 
 .link {
@@ -120,14 +120,15 @@
   border-radius: 200px;
   text-align: center;
   cursor: pointer;
+  color: #9fc6dd;
 }
 
 .link:hover {
+  color: #9fc6dd;
   text-decoration-line: underline;
   text-decoration-style: dashed;
   text-decoration-thickness: 4px;
   text-decoration-color: #9fc6dd;
-  color: #9fc6dd;
 }
 
 .about-text {
@@ -258,11 +259,11 @@ a {
 }
 
 .color1 {
-  color: #c5c5ff;
+  color: #9fc6dd;
 }
 
 .color2 {
-  color: #9fc6dd;
+  color: #c5c5ff;
 }
 
 .color3 {
