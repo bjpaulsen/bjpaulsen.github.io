@@ -71,7 +71,7 @@
 
 .me-img {
   flex: 0 1 auto;
-  margin-top: 48px;
+  margin-top: 35px;
   margin-bottom: 48px;
   height: 200px;
   width: 200px;
@@ -317,9 +317,12 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .games {
+    margin-top: 25px;
+  }
   .release {
-    width: 55vw;
-    min-height: 18vw;
+    width: 60vw;
+    min-height: 20vw;
     font-size: 4vw;
   }
   .aboutplaceholder, .about {
