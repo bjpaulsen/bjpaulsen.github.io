@@ -6,6 +6,16 @@
   cursor: default;
 }
 
+::selection {
+  color: #ffffff;
+  background: #97d4c4;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #ffffff;
+  background: #97d4c4;
+}
+
 .button {
   text-align: center;
   vertical-align: middle;
@@ -46,6 +56,7 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
+  top: 0;
 }
 
 .games {
@@ -156,7 +167,7 @@
   background-size: cover;
   background-position-x: center;
   background-position-y: 30%;
-  transition: transform .18s, border-width .18s;
+  transition: transform .18s;
   font-size: 2.75vw;
   font-family: "Figtree", "Open Sans";
   font-weight: 900;
@@ -339,5 +350,15 @@ a {
   #shuffle-city {
     background-size: 150%;
     background-position-y: 50%;
+  }
+}
+
+/* activates "short window" version to scroll about section */
+@media (max-height:780px) {
+  .aboutplaceholder, .about {
+    position: relative;
+  }
+  .aboutplaceholder {
+    min-width: 0;
   }
 }
