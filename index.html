@@ -10,36 +10,84 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <script>
-            function toggleOpen(openId, closeId, closeId2) {
-                let openElement = document.getElementById(openId);
-                let closeElement = document.getElementById(closeId);
-                let closeElement2 = document.getElementById(closeId2);
-                if (openElement.style.display === "none" || openElement.style.display === "") {
-                    openElement.style.display = "flex";
-                    if (closeElement.style.display === "flex") {
-                        closeElement.style.display = "none";
-                        closeElement.parentElement.style.width = openElement.parentElement.style.width;
-                    }
-                    if (closeElement2.style.display === "flex") {
-                        closeElement2.style.display = "none";
-                        closeElement2.parentElement.style.width = openElement.parentElement.style.width;
-                    }
-                    openElement.parentElement.style.width = "63vw";
-                }
-                else if (openElement.style.display === "flex") {
-                    openElement.style.display = "none";
-                    openElement.parentElement.style.width = closeElement.parentElement.style.width;
+            let inCounter = 1;
+            let outCounter = 0;
+            let infoPanelOut = 800;
+            let gamesOut = 130;
+
+            function easeInOutBack(x) {
+                const c1 = 1.70158;
+                const c2 = c1 * 1.525;
+
+                return x < 0.5
+                ? (Math.pow(2 * x, 2) * ((c2 + 1) * 2 * x - c2)) / 2
+                : (Math.pow(2 * x - 2, 2) * ((c2 + 1) * (x * 2 - 2) + c2) + 2) / 2;
+            }
+
+            function easeOutBounce(x) {
+                const n1 = 7.5625;
+                const d1 = 2.75;
+
+                if (x < 1 / d1) {
+                    return n1 * x * x;
+                } else if (x < 2 / d1) {
+                    return n1 * (x -= 1.5 / d1) * x + 0.75;
+                } else if (x < 2.5 / d1) {
+                    return n1 * (x -= 2.25 / d1) * x + 0.9375;
+                } else {
+                    return n1 * (x -= 2.625 / d1) * x + 0.984375;
                 }
             }
-        </script>
 
+            function tri(t) { return t*t*t*t; }
+
+            function in_out (t) {
+                return t < .5 ?
+                tri(t * 2) * .5 :
+                1 - tri((1 - t) * 2) * .5;// + .5;
+            } 
+
+            function slideIn(infoPanel) {
+                inCounter -= 0.01;
+                infoPanel.style.left = easeInOutBack(inCounter)*infoPanelOut+640 + "px";
+                if (inCounter > 0)
+                    setTimeout(slideIn.bind(null, infoPanel), 10);
+            }
+
+            function slideOut(infoPanel) {
+                outCounter += 0.01;
+                infoPanel.style.marginLeft = easeInOutBack(outCounter)*gamesOut + "vw";
+                if (outCounter < 1)
+                    setTimeout(slideOut.bind(null, infoPanel), 10);
+            }
+
+            function openInfo(openId) {
+                infoPanel = document.getElementById(openId);
+                infoPanel.style.display = "flex";
+
+                games = document.getElementById("game-releases");
+                games.style.display = "none";
+                
+                // inCounter = 1;
+                // slideIn(infoPanel);
+                // outCounter = 0;
+                // slideOut(games);
+            }
+
+            function closeInfo(closeId) {
+                infoPanel = document.getElementById(closeId);
+                infoPanel.style.display = "none";
+
+                games = document.getElementById("game-releases");
+                games.style.display = "flex";
+            }
+        </script>
     </head>
 
     <body>
         <div class="main">
-            <div class="aboutplaceholder"></div>
-            <div class="about">
-                <div class="section-header color1">ABOUT</div>
+            <div class="about color1">
+                <div class="section-header">ABOUT</div>
                 <img class="me-img" src="images/koi.jpg">
                 <div class="links">
                     <a target="_blank" rel="noopener noreferrer" class="link" href="./images/Ben_Paulsen_Resume.pdf" id="download-resume" download="Benjamin_Paulsen_Resume">resume</a>
@@ -48,16 +96,17 @@
                     <a target="_blank" rel="noopener noreferrer" class="link" href="https://www.linkedin.com/in/benjaminpaulsen/">linkedin</a>
                 </div>
                 <div class="text">
-                    <div class="about-text">What's up! I'm Ben Paulsen. I'm a game designer studying at <a target="_blank" rel="noopener noreferrer" href="https://www.ucsc.edu/" class="paragraph-link">UCSC</a>.</div>
-                    <div class="about-text">Last summer, I worked on <a target="_blank" rel="noopener noreferrer" href="https://playhearthstone.com/" class="paragraph-link">Hearthstone</a> at Blizzard Entertainment as an Intern Game Designer. Before that, I was a Lead Developer at <a target="_blank" rel="noopener noreferrer" href="https://tech4good.soe.ucsc.edu/#/" class="paragraph-link">Tech4Good Lab</a>, creating platforms for <a target="_blank" rel="noopener noreferrer" class="paragraph-link" href="https://relate.soe.ucsc.edu/#/">team-building games</a> and <a target="_blank" rel="noopener noreferrer" class="paragraph-link" href="https://causeway.soe.ucsc.edu/#/">teaching web development</a>.</div>
-                    <div class="about-text">My focus is on game design, but I also make <a target="_blank" rel="noopener noreferrer" href="https://thehandholdingyearningclub.bandcamp.com/" class="paragraph-link">music</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.bens.art/" class="paragraph-link">art</a>.</div>
+                    <div class="about-text">I'm Ben Paulsen, a game designer studying at <a target="_blank" rel="noopener noreferrer" href="https://www.ucsc.edu/" class="paragraph-link color1">UCSC</a>.</div>
+                    <div class="about-text">Last summer, I worked on <a target="_blank" rel="noopener noreferrer" href="https://playhearthstone.com/" class="paragraph-link color1">Hearthstone</a> at Blizzard Entertainment as an Intern Game Designer. Before that, I was a Lead Developer at <a target="_blank" rel="noopener noreferrer" href="https://tech4good.soe.ucsc.edu/#/" class="paragraph-link color1">Tech4Good Lab</a>, creating platforms for <a target="_blank" rel="noopener noreferrer" class="paragraph-link color1" href="https://relate.soe.ucsc.edu/#/">team-building games</a> and <a target="_blank" rel="noopener noreferrer" class="paragraph-link color1" href="https://causeway.soe.ucsc.edu/#/">teaching web development</a>.</div>
+                    <div class="about-text">My focus is on game design, but I also make <a target="_blank" rel="noopener noreferrer" href="https://thehandholdingyearningclub.bandcamp.com/" class="paragraph-link color1">music</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.bens.art/" class="paragraph-link color1">art</a>.</div>
                     <div class="about-text">I'm currently working on a roguelite about a shapeshifting mechanical dragon with a team of 13.</div>
                 </div>
             </div>
-            <div class="games">
-                <div class="section-header" style="color:#c5c5ff" id="games">GAMES</div><br>
-                <div class="releases">
-                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="release" id="hearthstone"></div></a>
+            <div id="aboutplaceholder"></div>
+            <div class="games color2">
+                <div class="section-header" id="games-header">GAMES</div><br>
+                <div class="releases" id="game-releases">
+                    <div class="release" id="hearthstone" onclick="openInfo('hearthstone-info')"></div>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/acquiesce"><div class="release" id="acquiesce"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/shuffle-city"><div class="release" id="shuffle-city"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/in-a-flash"><div class="release" id="in-a-flash"></div></a>
@@ -67,6 +116,64 @@
                     <a target="_blank" rel="noopener noreferrer" href="https://gameshowcase.ucsc.edu/project/sea-star-crossed-lovers/"><div class="release" id="sscl">Sea Star<br>Crossed Lovers</div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/escher-worldgen"><div class="release" id="escher-worldgen"><div>Escher Level Generator</div></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/flock-together"><div class="release" id="flock-together"><div>Flock Together</div></div></a>
+                </div>
+                <div class="hidden" id="hearthstone-info">
+                    <div class="section-header">HEARTHSTONE</div><br>
+                    <div class="release-info">
+                        <div class="info-row">
+                            <div class="info-button" onclick="closeInfo('hearthstone-info')">❮ BACK</div>
+                            <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="info-button">PLAY ❯</div></a>
+                        </div>
+                        <div class="info-box color2b thick-padding rounded-top">
+                            <div class="info-subtitle">Hearthstone is a fast-paced strategy card game from Blizzard Entertainment.</div>
+                        </div>
+                        <div class="info-box color2c thick-padding">
+                            <div class="info-subtitle">I was a Game Design Intern.</div>
+                            <div class="text align-center color2c">Responsible for <b>designing game mechanics, conducting playtests, and debugging code.</b></div>
+                        </div>
+                        <div class="info-box color2d">
+                            <div class="text info-subtitle underline color2d">I designed cards for:</div>
+                            <div class="info-row clump">
+                                <div class="info-column">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/priest">
+                                        <div class="little-img" id="anduin"></div>
+                                        <div class="link color2d">Priest</div>
+                                    </a>
+                                </div>
+                                <div class="info-column">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/warrior">
+                                        <div class="little-img" id="garrosh"></div>
+                                        <div class="link color2d">Warrior</div>
+                                    </a>
+                                </div>
+                                <div class="info-column">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/warlock">
+                                        <div class="little-img" id="guldan"></div>
+                                        <div class="link color2d">Warlock</div>
+                                    </a>
+                                </div>
+                                <div class="info-column">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/mage">
+                                        <div class="little-img" id="jaina"></div>
+                                        <div class="link color2d">Mage</div>
+                                    </a>
+                                </div>
+                                <div class="info-column">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/deathknight">
+                                        <div class="little-img" id="lichking"></div>
+                                        <div class="link color2d">Death Knight</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <ul>
+                            <li>Rapidly prototyped and playtested card designs to create exciting new mechanics and strategies.</li>
+                            <li>Collaborated with artists, engineers, voice actors, and writers to expand on a polished AAA title.</li>
+                            <li>Debugged and reviewed gameplay code to ensure a frictionless experience.</li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>
