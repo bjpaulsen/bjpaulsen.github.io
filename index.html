@@ -60,27 +60,6 @@
                 if (outCounter < 1)
                     setTimeout(slideOut.bind(null, infoPanel), 10);
             }
-
-            function openInfo(openId) {
-                infoPanel = document.getElementById(openId);
-                infoPanel.style.display = "flex";
-
-                games = document.getElementById("game-releases");
-                games.style.display = "none";
-                
-                // inCounter = 1;
-                // slideIn(infoPanel);
-                // outCounter = 0;
-                // slideOut(games);
-            }
-
-            function closeInfo(closeId) {
-                infoPanel = document.getElementById(closeId);
-                infoPanel.style.display = "none";
-
-                games = document.getElementById("game-releases");
-                games.style.display = "flex";
-            }
         </script>
     </head>
 
@@ -88,7 +67,7 @@
         <div class="main">
             <div class="about color1">
                 <div class="section-header">ABOUT</div>
-                <img class="me-img" src="images/koi.jpg">
+                <img class="me-img" src="./images/koi.jpg">
                 <div class="links">
                     <a target="_blank" rel="noopener noreferrer" class="link" href="./images/Ben_Paulsen_Resume.pdf" id="download-resume" download="Benjamin_Paulsen_Resume">resume</a>
                     <a target="_blank" rel="noopener noreferrer" class="link" href="https://banjo-games.itch.io/">itch.io</a>
@@ -104,9 +83,9 @@
             </div>
             <div id="aboutplaceholder"></div>
             <div class="games color2">
-                <div class="section-header" id="games-header">GAMES</div><br>
+                <div class="section-header">GAMES</div><br>
                 <div class="releases" id="game-releases">
-                    <div class="release" id="hearthstone" onclick="openInfo('hearthstone-info')"></div>
+                    <a href="./hearthstone"><div class="release" id="hearthstone"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/acquiesce"><div class="release" id="acquiesce"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/shuffle-city"><div class="release" id="shuffle-city"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/in-a-flash"><div class="release" id="in-a-flash"></div></a>
@@ -116,64 +95,6 @@
                     <a target="_blank" rel="noopener noreferrer" href="https://gameshowcase.ucsc.edu/project/sea-star-crossed-lovers/"><div class="release" id="sscl">Sea Star<br>Crossed Lovers</div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/escher-worldgen"><div class="release" id="escher-worldgen"><div>Escher Level Generator</div></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/flock-together"><div class="release" id="flock-together"><div>Flock Together</div></div></a>
-                </div>
-                <div class="hidden" id="hearthstone-info">
-                    <div class="section-header">HEARTHSTONE</div><br>
-                    <div class="release-info">
-                        <div class="info-row">
-                            <div class="info-button" onclick="closeInfo('hearthstone-info')">❮ BACK</div>
-                            <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="info-button">PLAY ❯</div></a>
-                        </div>
-                        <div class="info-box color2b thick-padding rounded-top">
-                            <div class="info-subtitle">Hearthstone is a fast-paced strategy card game from Blizzard Entertainment.</div>
-                        </div>
-                        <div class="info-box color2c thick-padding">
-                            <div class="info-subtitle">I was a Game Design Intern.</div>
-                            <div class="text align-center color2c">Responsible for <b>designing game mechanics, conducting playtests, and debugging code.</b></div>
-                        </div>
-                        <div class="info-box color2d">
-                            <div class="text info-subtitle underline color2d">I designed cards for:</div>
-                            <div class="info-row clump">
-                                <div class="info-column">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/priest">
-                                        <div class="little-img" id="anduin"></div>
-                                        <div class="link color2d">Priest</div>
-                                    </a>
-                                </div>
-                                <div class="info-column">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/warrior">
-                                        <div class="little-img" id="garrosh"></div>
-                                        <div class="link color2d">Warrior</div>
-                                    </a>
-                                </div>
-                                <div class="info-column">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/warlock">
-                                        <div class="little-img" id="guldan"></div>
-                                        <div class="link color2d">Warlock</div>
-                                    </a>
-                                </div>
-                                <div class="info-column">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/mage">
-                                        <div class="little-img" id="jaina"></div>
-                                        <div class="link color2d">Mage</div>
-                                    </a>
-                                </div>
-                                <div class="info-column">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/deathknight">
-                                        <div class="little-img" id="lichking"></div>
-                                        <div class="link color2d">Death Knight</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <ul>
-                            <li>Rapidly prototyped and playtested card designs to create exciting new mechanics and strategies.</li>
-                            <li>Collaborated with artists, engineers, voice actors, and writers to expand on a polished AAA title.</li>
-                            <li>Debugged and reviewed gameplay code to ensure a frictionless experience.</li>
-                        </ul>
-
-                    </div>
                 </div>
             </div>
         </div>
