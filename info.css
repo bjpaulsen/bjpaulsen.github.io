@@ -27,12 +27,16 @@ body {
 }
 
 .info-button {
-    color: #c5c5ff;
     font-size: 36px;
     font-weight: 700;
 
     cursor: pointer;
     width: max-content;
+    min-width: 43px;
+    min-height: 43px;
+
+    padding: 20px;
+
 }
 
 .info-header {
@@ -45,10 +49,14 @@ body {
     z-index: 1;
 }
 
-.info-subheader {
+.game-oneliner {
     position: absolute;
     top: 150px;
     width: 580px;
+    align-self: center;
+    text-align: center;
+    font-size: 24px;
+    text-decoration-thickness: 4px;
 }
 
 .release-info {
@@ -65,7 +73,7 @@ body {
     flex-direction: column;
     border-radius: 5px;
     /* box-shadow: #e0e0e0 0px 0px 12px; */
-    margin-top: 10px;
+    margin-bottom: 50px;
     justify-content: center;
 }
 
@@ -141,6 +149,17 @@ body {
     cursor: pointer;
 }
 
+.slide {
+    position: absolute;
+    top: 500px;
+    justify-self: center;
+    align-self: center;
+}
+
+.hidden {
+    display: none;
+}
+
 /* activates mobile version */
 @media only screen and (max-width:1074px) {
     .info-header{
@@ -155,12 +174,11 @@ body {
     }
     .info-button {
         background-color: #ffffff;
-        padding: 20px;
         border-radius: 4em;
         box-shadow: #bbbbbb 0px 0px 20px;
     }
     .release-info {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 120px;
     }
 }
