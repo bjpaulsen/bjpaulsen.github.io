@@ -3,3 +3,111 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    /* box-shadow: #e0e0e0 0px 0px 12px; */
+    margin-top: 10px;
+}
+
+.release-info {
+    display: flex;
+    flex-direction: column;
+  
+    width: 70%;
+  
+    background-color: #ffffff;
+    
+    border-color: #c5c5ff;
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 10px;
+  
+    margin-top: 22px;
+  
+    padding: 50px;
+  }
+  
+.info-row {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.clump {
+    justify-content: center;
+}
+
+.info-column {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.info-column:hover {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #ffffff;
+}
+
+.info-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #c5c5ff;
+    font-size: 36px;
+    font-weight: 700;
+
+    cursor: pointer;
+    width: fit-content;
+}
+
+.info-button:hover {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 4px;
+}
+
+.info-subtitle {
+    align-self: center;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    text-decoration-thickness: 4px;
+}
+
+.rounded-top {
+    border-radius: 70px 70px 5px 5px;
+}
+
+.thick-padding {
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+
+.little-img {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

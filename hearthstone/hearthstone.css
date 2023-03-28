@@ -1,0 +1,20 @@
+#anduin {
+    background-image: url('../images/anduin.gif');
+}
+
+#garrosh {
+    background-image: url('../images/garrosh.gif');
+}
+
+#guldan {
+    background-image: url('../images/guldan.gif');
+}
+
+#jaina {
+    background-image: url('../images/jaina.gif');
+}
+
+#lichking {
+    background-image: url('../images/lichking.png');
+    margin-left: 23px;
+}

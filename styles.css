@@ -1,507 +1,368 @@
 * {
-  margin: 0;
-  padding: 0;
-  white-space: normal;
-  scroll-behavior: smooth;
-  cursor: default;
-  font-size: 17.5px;
-  font-family: "Figtree", "Open Sans";
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+    scroll-behavior: smooth;
+    cursor: default;
+    font-size: 17.5px;
+    font-family: "Figtree", "Open Sans";
 }
 
 ::selection {
-  color: #ffffff;
-  background: #97d4c4;
+    color: #ffffff;
+    background: #97d4c4;
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: #ffffff;
-  background: #97d4c4;
+    color: #ffffff;
+    background: #97d4c4;
 }
 
 .main {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 #aboutplaceholder, .about {
-  min-width: 600px;
+    min-width: 600px;
 }
 
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
 }
 
 .games {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
 }
 
 .section-header {
-  font-weight: 900;
-  font-size: 78px;
-  text-align: center;
-  vertical-align: middle;
-  margin-top: 50px;
-  position: sticky;
-  background: #ffffff;
-  width: 100%;
-  z-index: 1;
+    font-weight: 900;
+    font-size: 78px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 50px;
+    position: sticky;
+    background: #ffffff;
+    width: 100%;
+    z-index: 1;
 }
 
 .me-img {
-  flex: 0 1 auto;
-  margin-top: 35px;
-  margin-bottom: 48px;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 0% 15%;
+    flex: 0 1 auto;
+    margin-top: 35px;
+    margin-bottom: 48px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0% 15%;
 }
 
 .text {
-  font-weight: 300;
-  margin-top: 16px;
-  line-height: 1.4em;
-  color: #111111;
+    font-weight: 300;
+    margin-top: 16px;
+    line-height: 1.4em;
+    color: #111111;
 }
 
 .paragraph-link {
-  font-weight: 700;
-  cursor: pointer;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .paragraph-link:hover {
-  text-decoration-line: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 3px;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 3px;
 }
 
 .links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 22px;
-  margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 22px;
+    margin-right: 10px;
 }
 
 .link {
-  margin-left: 15px;
-  margin-right: 15px;
-  text-align: center;
-  cursor: pointer;
-  font-size: 26px;
-  font-weight: 700;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 .link:hover {
-  text-decoration-line: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 4px;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 4px;
 }
 
 .about-text {
-  margin-top: 10px;
-  margin-left: 23px;
-  max-width: 460px;
+    margin-top: 10px;
+    margin-left: 23px;
+    max-width: 460px;
 }
 
 .releases {
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin-top: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .release {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 21vw;
-  min-height: 14vw;
-  margin: 12px;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: 30%;
-  transition: transform .18s;
-  font-size: 2.75vw;
-  font-weight: 900;
-  text-align: center;
-  border-color: #ffffff;
-  border-radius: 200px;
-  border-style: solid;
-  border-width: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 21vw;
+    min-height: 14vw;
+    margin: 12px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 30%;
+    transition: transform .18s;
+    font-size: 2.75vw;
+    font-weight: 900;
+    text-align: center;
+    border-color: #ffffff;
+    border-radius: 200px;
+    border-style: solid;
+    border-width: 10px;
 }
 
 .release:hover {
-  transform: scale(1.05);
-  border-color: #c5c5ff;
-  cursor: pointer;
-}
-
-.hidden {
-  flex-direction: column;
-  align-items: center;
-  
-  display: none;
-  position: absolute;
-}
-
-.release-info {
-  display: flex;
-  flex-direction: column;
-
-  width: 70%;
-
-  background-color: #ffffff;
-  
-  border-color: #c5c5ff;
-  border-radius: 100px;
-  border-style: solid;
-  border-width: 10px;
-
-  margin-top: 22px;
-
-  padding: 50px;
-}
-
-.info-row {
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.clump {
-  justify-content: center;
-}
-
-.info-column {
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-
-.info-column:hover {
-  text-decoration-line: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 4px;
-  text-decoration-color: #ffffff;
-}
-
-.info-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #c5c5ff;
-  font-size: 36px;
-  font-weight: 700;
-
-  cursor: pointer;
-  width: fit-content;
-}
-
-.info-button:hover {
-  text-decoration-line: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 4px;
-}
-
-.info-subtitle {
-  align-self: center;
-  text-align: center;
-  font-size: 36px;
-  font-weight: 900;
-  text-decoration-thickness: 4px;
+    transform: scale(1.05);
+    border-color: #c5c5ff;
+    cursor: pointer;
 }
 
 .underline {
-  text-decoration-line: underline;
+    text-decoration-line: underline;
 }
 
 .align-center {
-  align-self: center;
-  text-align: center;
-}
-
-.info-box {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  /* box-shadow: #e0e0e0 0px 0px 12px; */
-  margin-top: 10px;
-}
-
-.rounded-top {
-  border-radius: 70px 70px 5px 5px;
-}
-
-.thick-padding {
-  padding-top: 25px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 25px;
-}
-
-.little-img {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 140px;
-  height: 140px;
-  color: #ffffff;
-  font-size: 28px;
-  font-weight: 700;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
-  text-align: center;
-  margin-bottom: 10px;
-  cursor: pointer;
+    align-self: center;
+    text-align: center;
 }
 
 #acquiesce {
-  background-image: url('./images/acquiesce-logo.png');
+    background-image: url('./images/acquiesce-logo.png');
 }
 
 #hearthstone {
-  background-image: url('./images/hearthstone-logo.jpeg');
+    background-image: url('./images/hearthstone-logo.jpeg');
 }
 
-  #anduin {
-    background-image: url('./images/anduin.gif');
-  }
-
-  #garrosh {
-    background-image: url('./images/garrosh.gif');
-  }
-
-  #guldan {
-    background-image: url('./images/guldan.gif');
-  }
-
-  #jaina {
-    background-image: url('./images/jaina.gif');
-  }
-
-  #lichking {
-    background-image: url('./images/lichking.png');
-    margin-left: 23px;
-  }
-
 #your-personal-photon {
-  background-image: url('./images/your_personal_photon.png');
+    background-image: url('./images/your_personal_photon.png');
 }
 
 #escher-worldgen {
-  background-image: url('./images/escher-worldgen2.png');
-  color: #ffffff;
+    background-image: url('./images/escher-worldgen2.png');
+    color: #ffffff;
 }
 
 #chaotic-concoction {
-  background-image: url('./images/chaotic-concoction.png');
+    background-image: url('./images/chaotic-concoction.png');
 }
 
 #asterion {
-  background-image: url('./images/asterion.png');
+    background-image: url('./images/asterion.png');
 }
 
 #distracction {
-  background-image: url('./images/distracction.png');
+    background-image: url('./images/distracction.png');
 }
 
 #flock-together {
-  background-image: url('./images/flock-together.png');
-  color: #333333;
+    background-image: url('./images/flock-together.png');
+    color: #333333;
 }
 
 #pewpew {
-  background-image: url('./images/pewpew.png');
+    background-image: url('./images/pewpew.png');
 }
 
 #froggo {
-  background-image: url('./images/froggo.png');
-  font-family: "Courier New";
-  color: white;
+    background-image: url('./images/froggo.png');
+    font-family: "Courier New";
+    color: white;
 }
 
 #stay-sane {
-  background-image: url('./images/stay-sane.jpg');
+    background-image: url('./images/stay-sane.jpg');
 }
 
 #shuffle-city {
-  background-image: url('./images/shuffle-city-logo.png');
+    background-image: url('./images/shuffle-city-logo.png');
 }
 
 #in-a-flash {
-  background-image: url('./images/in-a-flash-logo-standalone.png');
+    background-image: url('./images/in-a-flash-logo-standalone.png');
 }
 
 #sscl {
-  background-image: url('./images/sscl_2.png');
-  color: #ffffff;
+    background-image: url('./images/sscl_2.png');
+    color: #ffffff;
 }
 
 #queer-spacetime {
-  background-image: url('./images/queer_time.png');
-  color: #972486;
+    background-image: url('./images/queer_time.png');
+    color: #972486;
 }
 
 #fling-fleet {
-  background-image: url('./images/fling-fleet.png');
-  color: #eeeeee;
-  font-family: "Open Sans Condensed";
-  font-size: 50px;
+    background-image: url('./images/fling-fleet.png');
+    color: #eeeeee;
+    font-family: "Open Sans Condensed";
+    font-size: 50px;
 }
 
 
 
 ul {
-  margin-left: 30px;
+    margin-left: 30px;
 }
 
 li {
-  line-height: 1.4em;
-  color:#111111;
+    line-height: 1.4em;
+    color:#111111;
 }
 
 a {
-  text-decoration: none;
-  text-decoration-color: inherit;
-  color: inherit;
+    text-decoration: none;
+    text-decoration-color: inherit;
+    color: inherit;
 }
 
 
 
 .color1 {
-  color: #9fc6dd;
-  text-decoration-color: #9fc6dd;
+    color: #9fc6dd;
+    text-decoration-color: #9fc6dd;
 }
 
 .color2 {
-  color: #c5c5ff;
-  text-decoration-color: #c5c5ff;
+    color: #c5c5ff;
+    text-decoration-color: #c5c5ff;
 }
 
-  .color2b {
-    color: #716380;
-    text-decoration-color: #E2C5FF;
-    background-color: #E2C5FF;
-  }
+    .color2b {
+        color: #716380;
+        text-decoration-color: #E2C5FF;
+        background-color: #E2C5FF;
+    }
 
-  .color2c {
-    color: #806380;
-    text-decoration-color: #FFC5FF;
-    background-color: #FFC5FF;
-  }
-  
-  .color2d {
-    color: #806371;
-    text-decoration-color: #FFC5E2;
-    background-color: #FFC5E2;
-  }
+    .color2c {
+        color: #806380;
+        text-decoration-color: #FFC5FF;
+        background-color: #FFC5FF;
+    }
+    
+    .color2d {
+        color: #806371;
+        text-decoration-color: #FFC5E2;
+        background-color: #FFC5E2;
+    }
 
 .color3 {
-  color: #97d4c4;
-  text-decoration-color: #97d4c4;
+    color: #97d4c4;
+    text-decoration-color: #97d4c4;
 }
 
 .colorwhite {
-  color: #ffffff;
-  text-decoration-color: #ffffff;
+    color: #ffffff;
+    text-decoration-color: #ffffff;
 }
-
-
 
 /* activates when games stack */
 @media only screen and (max-width:1240px) {
-  .release {
-    width: 38vw;
-    min-height: 13vw;
-    font-size: 3.5vw;
-  }
-  #hearthstone {
-    background-position-y: 50%;
-  }
-  #pewpew {
-    background-position-y: 38%;
-  }
-  #stay-sane {
-    background-position-y: 45%;
-  }
-  #your-personal-photon {
-    background-position-y: 45%;
-  }
-  #chaotic-concoction {
-    background-position-y: 45%;
-  }
-  #asterion {
-    background-position-y: 60%;
-  }
-  #sscl {
-    background-position-y: 0%;
-  }
-  #escher-worldgen {
-    background-position-y: 0%;
-  }
-  #in-a-flash {
-    background-position-y: 50%;
-  }
-  #shuffle-city {
-    background-size: 160%;
-    background-position-y: 50%;
-  }
+    .release {
+        width: 38vw;
+        min-height: 13vw;
+        font-size: 3.5vw;
+    }
+    #hearthstone {
+        background-position-y: 50%;
+    }
+    #pewpew {
+        background-position-y: 38%;
+    }
+    #stay-sane {
+        background-position-y: 45%;
+    }
+    #your-personal-photon {
+        background-position-y: 45%;
+    }
+    #chaotic-concoction {
+        background-position-y: 45%;
+    }
+    #asterion {
+        background-position-y: 60%;
+    }
+    #sscl {
+        background-position-y: 0%;
+    }
+    #escher-worldgen {
+        background-position-y: 0%;
+    }
+    #in-a-flash {
+        background-position-y: 50%;
+    }
+    #shuffle-city {
+        background-size: 160%;
+        background-position-y: 50%;
+    }
 }
 
 /* activates mobile version */
 @media only screen and (max-width:1074px) {
-  .main {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .games {
-    margin-top: 25px;
-  }
-  .release {
-    width: 60vw;
-    min-height: 20vw;
-    font-size: 4vw;
-  }
-  .aboutplaceholder, .about {
-    position: relative;
-    min-width: 0;
-  }
-  .about-text {
-    max-width: 540px;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-  #shuffle-city {
-    background-size: 150%;
-    background-position-y: 50%;
-  }
+    .main {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .games {
+        margin-top: 25px;
+    }
+    .release {
+        width: 60vw;
+        min-height: 20vw;
+        font-size: 4vw;
+    }
+    .aboutplaceholder, .about {
+        position: relative;
+        min-width: 0;
+    }
+    .about-text {
+        max-width: 540px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    #shuffle-city {
+        background-size: 150%;
+        background-position-y: 50%;
+    }
 }
 
 /* activates "short window" version to scroll about section */
 @media (max-height:780px) {
-  .aboutplaceholder, .about {
-    position: relative;
-  }
-  .aboutplaceholder {
-    min-width: 0;
-  }
+    .aboutplaceholder, .about {
+        position: relative;
+    }
+    .aboutplaceholder {
+        min-width: 0;
+    }
 }
