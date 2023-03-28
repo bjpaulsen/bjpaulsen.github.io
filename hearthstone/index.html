@@ -13,27 +13,27 @@
         $(document).ready(function(){
             $(".detailBtn1").click(function(){
                 $(".detail1").animate({opacity: 'show', marginLeft: '0px'});
-                $(".detail2").animate({opacity: 'hide', marginRight: '50px'});
-                $(".detail3").animate({opacity: 'hide', marginRight: '50px'});
+                $(".detail2").animate({opacity: 'hide', marginRight: '100px'});
+                $(".detail3").animate({opacity: 'hide', marginRight: '100px'});
                 
-                $(".detail2").animate({marginLeft: '50px', marginRight: '0px'});
-                $(".detail3").animate({marginLeft: '50px', marginRight: '0px'});
+                $(".detail2").animate({marginLeft: '100px', marginRight: '0px'});
+                $(".detail3").animate({marginLeft: '100px', marginRight: '0px'});
             });
             $(".detailBtn2").click(function(){
                 $(".detail2").animate({opacity: 'show', marginLeft: '0px'});
-                $(".detail1").animate({opacity: 'hide', marginRight: '50px'});
-                $(".detail3").animate({opacity: 'hide', marginRight: '50px'});
+                $(".detail1").animate({opacity: 'hide', marginRight: '100px'});
+                $(".detail3").animate({opacity: 'hide', marginRight: '100px'});
                 
-                $(".detail1").animate({marginLeft: '50px', marginRight: '0px'});
-                $(".detail3").animate({marginLeft: '50px', marginRight: '0px'});
+                $(".detail1").animate({marginLeft: '100px', marginRight: '0px'});
+                $(".detail3").animate({marginLeft: '100px', marginRight: '0px'});
             });
             $(".detailBtn3").click(function(){
                 $(".detail3").animate({opacity: 'show', marginLeft: '0px'});
-                $(".detail2").animate({opacity: 'hide', marginRight: '50px'});
-                $(".detail1").animate({opacity: 'hide', marginRight: '50px'});
+                $(".detail2").animate({opacity: 'hide', marginRight: '100px'});
+                $(".detail1").animate({opacity: 'hide', marginRight: '100px'});
                 
-                $(".detail2").animate({marginLeft: '50px', marginRight: '0px'});
-                $(".detail1").animate({marginLeft: '50px', marginRight: '0px'});
+                $(".detail2").animate({marginLeft: '100px', marginRight: '0px'});
+                $(".detail1").animate({marginLeft: '100px', marginRight: '0px'});
             });
         });
     </script>
@@ -43,15 +43,15 @@
     <div class="info-header color2">HEARTHSTONE</div><br>
     <div class="game-oneliner color2 thin-padding">a strategy card game from Blizzard Entertainment</div>
     <div class="top-button-row">
-        <a href="../"><div class="info-button color2">❮ BACK</div></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="info-button color2">PLAY ❯</div></a>
+        <a href="../"><div class="info-button color2bg">❮ BACK</div></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="info-button color2bg">PLAY ❯</div></a>
     </div>
     <div class="release-info">
         <div class="info-box thick-padding rounded-top">
             <div class="info-subtitle">I was a Game Design Intern.</div>
-            <div class="text align-center">Responsible for <span class="detailBtn1 paragraph-link color1">designing game mechanics,</span> <span class="detailBtn2 paragraph-link color2">conducting playtests,</span> and <span class="detailBtn3 paragraph-link color3">debugging code.</span></div>
+            <div class="text align-center">Responsible for <span class="detailBtn1 paragraph-link color1">designing and scripting cards,</span> <span class="detailBtn2 paragraph-link color2">conducting playtests,</span> and <span class="detailBtn3 paragraph-link color3">debugging code.</span></div>
         </div>
-        <div class="detail1 info-box slide">
+        <div class="detail1 info-box slide thick-padding color1b">
             <div class="text info-subtitle">I designed cards for:</div>
             <div class="info-row clump">
                 <div class="info-column">
@@ -85,9 +85,18 @@
                     </a>
                 </div>
             </div>
+
+            <div class="text info-subtitle">I designed cards for:</div>
+
+            <div class="text info-subtitle">I designed cards for:</div>
+            <div class="text info-subtitle">I designed cards for:</div>
+            <div class="text info-subtitle">I designed cards for:</div>
+            <div class="text info-subtitle">I designed cards for:</div>
+            <div class="text info-subtitle">I designed cards for:</div>
+            <div class="text info-subtitle">I designed cards for:</div>
         </div>
-        <div class="detail2 slide hidden">detail 2</div>
-        <div class="detail3 slide hidden">detail 3</div>
+        <div class="detail2 info-box slide hidden color2b thick-padding">detail 2</div>
+        <div class="detail3 info-box slide hidden color3b thick-padding">detail 3</div>
     </div>
 </body>
 </html>

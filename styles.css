@@ -253,33 +253,39 @@ a {
     text-decoration-color: #9fc6dd;
 }
 
+    .color1b {
+        /* color: #716380; */
+        text-decoration-color: #F3F8FB;
+        background-color: #F3F8FB;
+    }
+
 .color2 {
     color: #c5c5ff;
     text-decoration-color: #c5c5ff;
 }
 
     .color2b {
-        color: #716380;
-        text-decoration-color: #E2C5FF;
-        background-color: #E2C5FF;
+        /* color: #716380; */
+        text-decoration-color: #F8F8FF;
+        background-color: #F8F8FF;
     }
 
-    .color2c {
-        color: #806380;
-        text-decoration-color: #FFC5FF;
-        background-color: #FFC5FF;
-    }
-    
-    .color2d {
-        color: #806371;
-        text-decoration-color: #FFC5E2;
-        background-color: #FFC5E2;
+    .color2bg {
+        color: #ffffff;
+        background-color: #c5c5ff;
+        text-decoration-color: #ffffff;
     }
 
 .color3 {
     color: #97d4c4;
     text-decoration-color: #97d4c4;
 }
+
+    .color3b {
+        /* color: #716380; */
+        text-decoration-color: #F2FAF8;
+        background-color: #F2FAF8;
+    }
 
 .colorwhite {
     color: #ffffff;

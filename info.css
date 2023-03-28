@@ -13,7 +13,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 92%;
 }
 
 .info-row {
@@ -36,7 +36,16 @@ body {
     min-height: 43px;
 
     padding: 20px;
+    /* background-color: #ffffff; */
+    border-radius: 4em;
 
+    z-index: 1;
+}
+
+.info-button:hover {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 4px;
 }
 
 .info-header {
@@ -62,8 +71,9 @@ body {
 .release-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
   
-    width: 70%;
+    width: 60vw;
   
     margin-top: 220px;
 }
@@ -72,9 +82,10 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    /* box-shadow: #e0e0e0 0px 0px 12px; */
-    margin-bottom: 50px;
+    box-shadow: #d0d0d0 0px 0px 15px;
+    margin-bottom: 5px;
     justify-content: center;
+    width: 100%;
 }
 
 .clump {
@@ -90,13 +101,6 @@ body {
 }
 
 .info-column:hover {
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-decoration-thickness: 4px;
-    text-decoration-color: #ffffff;
-}
-
-.info-button:hover {
     text-decoration-line: underline;
     text-decoration-style: dashed;
     text-decoration-thickness: 4px;
@@ -151,9 +155,9 @@ body {
 
 .slide {
     position: absolute;
-    top: 500px;
-    justify-self: center;
-    align-self: center;
+    margin-top: 150px;
+    width: 60vw;
+    z-index: -1;
 }
 
 .hidden {
@@ -173,12 +177,13 @@ body {
         top: 86%;
     }
     .info-button {
-        background-color: #ffffff;
-        border-radius: 4em;
-        box-shadow: #bbbbbb 0px 0px 20px;
+        box-shadow: #d0d0d0 0px 0px 15px;
     }
     .release-info {
-        width: 100%;
+        width: 85vw;
         margin-top: 120px;
+    }
+    .slide {
+        width: 85vw;
     }
 }
