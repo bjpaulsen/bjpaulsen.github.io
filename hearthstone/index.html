@@ -12,30 +12,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $(".detailBtn1").click(function(){
-                $(".detail1").animate({opacity: 'show', marginLeft: '0px'});
-                $(".detail2").animate({opacity: 'hide', marginRight: '100px'});
-                $(".detail3").animate({opacity: 'hide', marginRight: '100px'});
-                
-                $(".detail2").animate({marginLeft: '100px', marginRight: '0px'});
-                $(".detail3").animate({marginLeft: '100px', marginRight: '0px'});
-            });
-            $(".detailBtn2").click(function(){
-                $(".detail2").animate({opacity: 'show', marginLeft: '0px'});
-                $(".detail1").animate({opacity: 'hide', marginRight: '100px'});
-                $(".detail3").animate({opacity: 'hide', marginRight: '100px'});
-                
-                $(".detail1").animate({marginLeft: '100px', marginRight: '0px'});
-                $(".detail3").animate({marginLeft: '100px', marginRight: '0px'});
-            });
-            $(".detailBtn3").click(function(){
-                $(".detail3").animate({opacity: 'show', marginLeft: '0px'});
-                $(".detail2").animate({opacity: 'hide', marginRight: '100px'});
-                $(".detail1").animate({opacity: 'hide', marginRight: '100px'});
-                
-                $(".detail2").animate({marginLeft: '100px', marginRight: '0px'});
-                $(".detail1").animate({marginLeft: '100px', marginRight: '0px'});
-            });
+            let currentTab = 0;
+            let tabs = new Array(3);
+            for (let i = 0; i < tabs.length; i++) tabs[i] = ".detail" + i;
+
+            $(".detailBtn0").click(function(){ changeTab(0) });
+            $(".detailBtn1").click(function(){ changeTab(1) });
+            $(".detailBtn2").click(function(){ changeTab(2) });
+            $(".next-slide").click(function(){ changeTab(currentTab+1)});
+            $(".last-slide").click(function(){ changeTab(currentTab-1)});
+
+            function changeTab(newTab) {
+                newTab = keepWithinBounds(newTab);
+                currentTab = newTab;
+
+                $(tabs[currentTab]).animate({opacity: 'show', marginLeft: '0px'});
+                console.log("showing " + tabs[currentTab]);
+                for (let i = 0; i < tabs.length; i++) {
+                    if (i === currentTab) continue;
+                    $(tabs[i]).animate({opacity: 'hide', marginRight: '100px'});
+                    $(tabs[i]).animate({marginLeft: '100px', marginRight: '0px'});
+                    console.log("hiding " + tabs[i]);
+                }
+            }
+
+            function keepWithinBounds(tab) {
+                if (tab >= tabs.length) return 0;
+                if (tab < 0) return tabs.length-1;
+                return tab;
+            }
         });
     </script>
 </head>
@@ -47,13 +52,13 @@
         <a href="../"><div class="info-button color2bg">❮ BACK</div></a>
         <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="info-button color2bg">PLAY ❯</div></a>
     </div>
-    <iframe class="game-video color2border" width="560" height="315" src="https://www.youtube.com/embed/13JQDIo_0Vw?rel=0" title="Gameplay Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe class="game-video color2border" width="560" height="315" src="https://www.youtube.com/embed/13JQDIo_0Vw?rel=0" title="Gameplay Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div class="release-info">
         <div class="info-box rounded-top">
             <div class="info-subtitle">I was a Game Design Intern.</div>
-            <div class="text align-center">Responsible for <span class="detailBtn1 paragraph-link color1">designing and scripting cards,</span> <span class="detailBtn2 paragraph-link color2">conducting playtests,</span> and <span class="detailBtn3 paragraph-link color3">debugging code.</span></div>
+            <div class="text align-center">Responsible for <span class="detailBtn0 slide-link color1">designing and scripting cards,</span> <span class="detailBtn1 slide-link color2">conducting playtests,</span> and <span class="detailBtn2 slide-link color3">debugging code.</span></div>
         </div>
-        <div class="detail1 info-box slide thick-padding color1border rounded">
+        <div class="detail0 info-box slide thick-padding color1border color1 rounded">
             <div class="text info-subtitle">I designed cards for:</div>
             <div class="info-row clump">
                 <div class="info-column">
@@ -87,9 +92,19 @@
                     </a>
                 </div>
             </div>
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
         </div>
-        <div class="detail2 info-box slide hidden color2border rounded thick-padding">detail 2</div>
-        <div class="detail3 info-box slide hidden color3border rounded thick-padding">detail 3</div>
+        <div class="detail1 info-box slide hidden color2border rounded thick-padding">
+            detail 2
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
+        <div class="detail2 info-box slide hidden color3border rounded thick-padding">
+            detail 3
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
     </div>
 </body>
 </html>
