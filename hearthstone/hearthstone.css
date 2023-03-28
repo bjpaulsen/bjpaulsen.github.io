@@ -1,20 +1,49 @@
 #anduin {
-    background-image: url('../images/anduin.gif');
+    background-image: url('./images/anduin.gif');
 }
 
 #garrosh {
-    background-image: url('../images/garrosh.gif');
+    background-image: url('./images/garrosh.gif');
 }
 
 #guldan {
-    background-image: url('../images/guldan.gif');
+    background-image: url('./images/guldan.gif');
 }
 
 #jaina {
-    background-image: url('../images/jaina.gif');
+    background-image: url('./images/jaina.gif');
 }
 
 #lichking {
-    background-image: url('../images/lichking.png');
-    margin-left: 23px;
+    background-image: url('./images/lichking.png');
+    margin-left: 20px;
+}
+
+#spreadsheet {
+    background-image: url('./images/spreadsheet.png');
+}
+
+.color-priest {
+    color: #E2C5FF;
+    text-decoration-color: #E2C5FF;
+}
+
+.color-warrior {
+    color: #FFC5C5;
+    text-decoration-color: #FFC5C5;
+}
+
+.color-warlock {
+    color: #CDE3B6;
+    text-decoration-color: #CDE3B6;
+}
+
+.color-mage {
+    color: #C5E2FF;
+    text-decoration-color: #C5E2FF;
+}
+
+.color-deathknight {
+    color: #C5C5FF;
+    text-decoration-color: #C5C5FF;
 }
