@@ -4,7 +4,7 @@
     white-space: normal;
     scroll-behavior: smooth;
     cursor: default;
-    font-size: 17.5px;
+    font-size: 19px;
     font-family: "Figtree", "Open Sans";
 }
 
@@ -109,7 +109,7 @@
 .about-text {
     margin-top: 10px;
     margin-left: 23px;
-    max-width: 460px;
+    max-width: 470px;
 }
 
 .releases {
@@ -259,6 +259,13 @@ a {
         background-color: #F3F8FB;
     }
 
+    .color1border {
+        /* color: #716380; */
+        border-color: #C3DBEA;
+        border-style: dotted;
+        border-width: 10px;
+    }
+
 .color2 {
     color: #c5c5ff;
     text-decoration-color: #c5c5ff;
@@ -276,6 +283,13 @@ a {
         text-decoration-color: #ffffff;
     }
 
+    .color2border {
+        /* color: #716380; */
+        border-color: #DBDBFF;
+        border-style: dotted;
+        border-width: 10px;
+    }
+
 .color3 {
     color: #97d4c4;
     text-decoration-color: #97d4c4;
@@ -285,6 +299,13 @@ a {
         /* color: #716380; */
         text-decoration-color: #F2FAF8;
         background-color: #F2FAF8;
+    }
+
+    .color3border {
+        /* color: #716380; */
+        border-color: #BEE4DA;
+        border-style: dotted;
+        border-width: 10px;
     }
 
 .colorwhite {
