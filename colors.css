@@ -1,0 +1,69 @@
+.color1 {
+    color: #9fc6dd;
+    text-decoration-color: #9fc6dd;
+}
+
+    .color1b {
+        /* color: #716380; */
+        text-decoration-color: #F3F8FB;
+        background-color: #F3F8FB;
+    }
+
+    .color1border {
+        /* color: #716380; */
+        border-color: #C3DBEA;
+        border-style: dotted;
+        border-width: 8px;
+    }
+
+.color2 {
+    color: #c5c5ff;
+    text-decoration-color: #c5c5ff;
+}
+
+    .color2b {
+        /* color: #716380; */
+        text-decoration-color: #F8F8FF;
+        background-color: #F8F8FF;
+    }
+
+    .color2bg {
+        color: #ffffff;
+        background-color: #c5c5ff;
+        text-decoration-color: #ffffff;
+    }
+
+    .color2border {
+        /* color: #716380; */
+        border-color: #DBDBFF;
+        border-style: dotted;
+        border-width: 8px;
+    }
+
+.color3 {
+    color: #97d4c4;
+    text-decoration-color: #97d4c4;
+}
+
+    .color3b {
+        /* color: #716380; */
+        text-decoration-color: #F2FAF8;
+        background-color: #F2FAF8;
+    }
+
+    .color3border {
+        /* color: #716380; */
+        border-color: #BEE4DA;
+        border-style: dotted;
+        border-width: 8px;
+    }
+
+.colorwhite {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
+.colorgray {
+    color: #333333;
+    text-decoration-color: #333333;
+}
