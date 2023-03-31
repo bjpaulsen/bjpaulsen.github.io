@@ -4,15 +4,12 @@
 }
 
     .color1b {
-        /* color: #716380; */
         text-decoration-color: #F3F8FB;
         background-color: #F3F8FB;
     }
 
     .color1border {
-        /* color: #716380; */
         border-color: #C3DBEA;
-        border-style: dotted;
         border-width: 8px;
     }
 
@@ -22,7 +19,6 @@
 }
 
     .color2b {
-        /* color: #716380; */
         text-decoration-color: #F8F8FF;
         background-color: #F8F8FF;
     }
@@ -34,9 +30,7 @@
     }
 
     .color2border {
-        /* color: #716380; */
         border-color: #DBDBFF;
-        border-style: dotted;
         border-width: 8px;
     }
 
@@ -46,15 +40,12 @@
 }
 
     .color3b {
-        /* color: #716380; */
         text-decoration-color: #F2FAF8;
         background-color: #F2FAF8;
     }
 
     .color3border {
-        /* color: #716380; */
         border-color: #BEE4DA;
-        border-style: dotted;
         border-width: 8px;
     }
 
