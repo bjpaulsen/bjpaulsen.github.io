@@ -4,7 +4,7 @@ body {
     align-items: center;
 
     padding: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 600px;
 }
   
 .top-button-row {
@@ -95,12 +95,12 @@ body {
 .slide-link {
     font-weight: 700;
     cursor: pointer;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 3px;
 }
 
 .slide-link:hover {
     text-decoration-line: underline;
-    text-decoration-style: dotted;
-    text-decoration-thickness: 3px;
 }
 
 .clump {
@@ -191,6 +191,7 @@ body {
     padding: 20px;
     
     border: inherit;
+    border-style: dotted;
     border-radius: 4em;
     text-align: center;
     z-index: 1;
