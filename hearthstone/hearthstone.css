@@ -1,3 +1,29 @@
+.color-priest {
+    color: #E2C5FF;
+    text-decoration-color: #E2C5FF;
+}
+
+.color-warrior {
+    color: #FFC5C5;
+    text-decoration-color: #FFC5C5;
+}
+
+.color-warlock {
+    color: #CDE3B6;
+    text-decoration-color: #CDE3B6;
+}
+
+.color-mage {
+    color: #C5E2FF;
+    text-decoration-color: #C5E2FF;
+}
+
+.color-deathknight {
+    color: #C5C5FF;
+    text-decoration-color: #C5C5FF;
+}
+
+
 #anduin {
     background-image: url('./images/anduin.gif');
 }
@@ -23,27 +49,16 @@
     background-image: url('./images/spreadsheet.png');
 }
 
-.color-priest {
-    color: #E2C5FF;
-    text-decoration-color: #E2C5FF;
+/* wraps hs classes early */
+@media only screen and (max-width:1141px) {
+    #classes {
+        max-width: 636px;
+    }
 }
 
-.color-warrior {
-    color: #FFC5C5;
-    text-decoration-color: #FFC5C5;
-}
-
-.color-warlock {
-    color: #CDE3B6;
-    text-decoration-color: #CDE3B6;
-}
-
-.color-mage {
-    color: #C5E2FF;
-    text-decoration-color: #C5E2FF;
-}
-
-.color-deathknight {
-    color: #C5C5FF;
-    text-decoration-color: #C5C5FF;
+/* activates mobile version */
+@media only screen and (max-width:1074px) {
+    #design-process {
+        content: url('./images/design-process-mobile.png');
+    }
 }

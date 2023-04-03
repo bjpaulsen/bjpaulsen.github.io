@@ -245,6 +245,12 @@ a {
     color: inherit;
 }
 
+hr {
+    border: 1px solid;
+    /* border-bottom: none; */
+    border-radius: 1px;
+}
+
 
 
 /* activates when games stack */
