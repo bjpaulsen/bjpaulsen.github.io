@@ -4,11 +4,10 @@ body {
     align-items: center;
 
     padding: 50px;
-    margin-bottom: 600px;
 }
   
 .top-button-row {
-    position: fixed;
+    position: absolute;
     top: 75px;
     display: flex; 
     flex-direction: row;
@@ -31,11 +30,10 @@ body {
 .info-button {
     font-size: 36px;
     font-weight: 700;
+    text-align: center;
 
     cursor: pointer;
     width: max-content;
-    min-width: 43px;
-    min-height: 43px;
 
     padding: 20px;
     /* background-color: #ffffff; */
@@ -49,23 +47,16 @@ body {
 }
 
 .info-header {
-    position: absolute;
     font-weight: 900;
     font-size: 78px;
     text-align: center;
-    vertical-align: middle;
     background: #ffffff;
     z-index: 1;
 }
 
 .game-oneliner {
-    position: absolute;
-    top: 150px;
-    width: 580px;
-    align-self: center;
-    text-align: center;
+    margin-top: -20px;
     font-size: 24px;
-    text-decoration-thickness: 4px;
 }
 
 .release-info {
@@ -73,13 +64,13 @@ body {
     flex-direction: column;
     align-items: center;
   
-    width: 70vw;
+    /* width: 70vw; */
   
     margin-top: 40px;
 }
 
 .game-video {
-    margin-top: 150px;
+    margin-top: 50px;
     border-radius: 15px;
     border-style: solid;
 }
@@ -155,8 +146,10 @@ body {
 
 .adaptive-side-margins {
     /* doesn't work */
-    margin-left: max(0, 50vw - 100px);
-    margin-right: max(0, 50vw - 100px);
+    /* margin-left: 100px;
+    margin-right: max(0, 50vw - 100px); */
+    width: 90%;
+    
 }
 
 .little-img {
@@ -180,7 +173,6 @@ body {
     position: absolute;
     margin-top: 150px;
     width: 75%;
-    z-index: -1;
     border-style: dotted;
 }
 
@@ -208,7 +200,7 @@ body {
     margin-left: -103.5px;
 
     transition: transform .18s;
-    position:absolute;
+    position: absolute;
 }
 
 .last-slide:hover {
@@ -246,7 +238,14 @@ body {
 }
 
 .hidden {
-    display: none;
+    margin-left: 200vw;
+}
+
+.below-slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
 }
 
 @media only screen and (max-width:1225px) {
@@ -257,20 +256,19 @@ body {
 
 /* activates mobile version */
 @media only screen and (max-width:1074px) {
-    .info-header{
-        position: relative;
-    }
     .top-button-row {
-        top: 86%;
+        position: static;
+        width: 560px;
+        margin-top: 30px;
+        margin-bottom: -10px;
     }
     .info-button {
-        box-shadow: #d0d0d0 0px 0px 15px;
+        width: 170px;
+        font-size: 32px;
+        padding: 15px;
     }
     .slide {
         width: 75%;
-    }
-    .game-video {
-        margin-top: 57px;
     }
     .adaptive-side-margins {
         margin-left: 0px;
