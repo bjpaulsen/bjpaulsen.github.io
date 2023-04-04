@@ -63,6 +63,12 @@
             function updateSlideHeight(tab) {
                 $(".below-slides").animate({marginTop: $(tabs[tab]).outerHeight() + "px"});
             }
+
+            function updateSlideHeightOnResize() {
+                $(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px");
+            }
+
+            window.addEventListener('resize', updateSlideHeightOnResize);
         });
     </script>
 </head>
