@@ -34,16 +34,17 @@
                 updateSlideHeight(newTab);
                 
                 if (goingRight) {
-                    $(tabs[currentTab]).animate({marginRight: '200vw'});
+                    $(tabs[currentTab]).animate({marginRight: '200vw', opacity: 'hide'});
                     $(tabs[newTab]).css("marginLeft", '200vw');
                     $(tabs[newTab]).css("marginRight", '0px');
                 } else {
-                    $(tabs[currentTab]).animate({marginLeft: '200vw'});
+                    $(tabs[currentTab]).animate({marginLeft: '200vw', opacity: 'hide'});
                     $(tabs[newTab]).css("marginLeft", '0px');
                     $(tabs[newTab]).css("marginRight", '200vw');
                 }
-
-                $(tabs[newTab]).animate({marginLeft: '0px', marginRight: '0px'}, 500);
+                
+                $(tabs[newTab]).css("display", 'flex');
+                $(tabs[newTab]).animate({marginLeft: '0px', marginRight: '0px', opacity: 'show'}, 500);
                 
                 currentTab = newTab;
             }
