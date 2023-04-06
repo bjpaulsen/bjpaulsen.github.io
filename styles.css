@@ -176,6 +176,7 @@
   border-radius: 200px;
   border-style: solid;
   border-width: 10px;
+  text-shadow: #444444 0 0 5px;
 }
 
 .release:hover {
@@ -184,12 +185,41 @@
   cursor: pointer;
 }
 
-#acquiesce {
-  background-image: url('./images/acquiesce-logo.png');
+.underline {
+    text-decoration-line: underline;
 }
+
+.align-center {
+    align-self: center;
+    text-align: center;
+}
+
+.vl {
+    border-left: 2px solid;
+    height: 350px;
+    border-radius: 1px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.margin-bottom {
+    margin-bottom: 1em;
+}
+
 
 #hearthstone {
   background-image: url('./images/hearthstone-logo.jpeg');
+}
+
+#dracomaton {
+    background-image: url('./images/dracomaton-logo.png');
+    color: #fff;
+    font-family: 'Big Shoulders Stencil Text';
+    font-size: 4vw;
+}
+
+#acquiesce {
+    background-image: url('./images/acquiesce-logo.png');
 }
 
 #your-personal-photon {
@@ -290,6 +320,9 @@ a {
     min-height: 13vw;
     font-size: 3.5vw;
   }
+  #dracomaton {
+    font-size: 5.5vw;
+  }
   #hearthstone {
     background-position-y: 50%;
   }
@@ -337,6 +370,9 @@ a {
     width: 60vw;
     min-height: 20vw;
     font-size: 4vw;
+  }
+  #dracomaton {
+    font-size: 9vw;
   }
   .aboutplaceholder, .about {
     position: relative;
