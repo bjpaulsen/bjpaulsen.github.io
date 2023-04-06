@@ -20,7 +20,7 @@ body {
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     align-self: center;
     margin-bottom: 20px;
     width: 100%;
@@ -55,7 +55,6 @@ body {
 }
 
 .game-oneliner {
-    margin-top: -20px;
     font-size: 24px;
 }
 
@@ -107,6 +106,10 @@ body {
     margin: 10px;
 }
 
+.skinny {
+    width: 400px;
+}
+
 .info-column:hover {
     text-decoration-line: underline;
     text-decoration-style: dashed;
@@ -145,11 +148,7 @@ body {
 }
 
 .adaptive-side-margins {
-    /* doesn't work */
-    /* margin-left: 100px;
-    margin-right: max(0, 50vw - 100px); */
     width: 90%;
-    
 }
 
 .little-img {

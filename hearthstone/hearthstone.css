@@ -24,6 +24,12 @@
 }
 
 
+
+.margin-top {
+    margin-top: 1em;
+}
+
+
 #anduin {
     background-image: url('./images/anduin.gif');
 }
@@ -49,6 +55,22 @@
     background-image: url('./images/spreadsheet.png');
 }
 
+#designer-playtest {
+    background-image: url('./images/explorers.png');
+    /* width: 200px; */
+}
+
+#big-playtest {
+    background-image: url('./images/molk-group.png');
+}
+
+/* condenses playtest info */
+@media only screen and (max-width:1245px) {
+    .skinny {
+        width: 40%;
+    }
+}
+
 /* wraps hs classes early */
 @media only screen and (max-width:1141px) {
     #classes {
@@ -60,5 +82,17 @@
 @media only screen and (max-width:1074px) {
     #design-process {
         content: url('./images/design-process-mobile.png');
+    }
+    .skinny {
+        width: 80%;
+    }
+    .vl {
+        width: 80%;
+        height: 1px;
+        border-left: none;
+        border-bottom: 2px solid;
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
