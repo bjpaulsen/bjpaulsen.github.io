@@ -324,7 +324,7 @@ hr {
         min-height: 20vw;
         font-size: 4vw;
     }
-    .aboutplaceholder, .about {
+    #aboutplaceholder, .about {
         position: relative;
         min-width: 0;
     }
@@ -341,10 +341,10 @@ hr {
 
 /* activates "short window" version to scroll about section */
 @media (max-height:768px) {
-    .aboutplaceholder, .about {
+    #aboutplaceholder, .about {
         position: relative;
     }
-    .aboutplaceholder {
+    #aboutplaceholder {
         min-width: 0;
     }
 }
