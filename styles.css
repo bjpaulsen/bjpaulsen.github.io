@@ -171,36 +171,6 @@
 
 
 #hearthstone {
-    background-image: url('./images/hearthstone-logo.jpeg');
-}
-
-#dracomaton {
-    background-image: url('./images/dracomaton-logo.png');
-}
-
-.underline {
-    text-decoration-line: underline;
-}
-
-.align-center {
-    align-self: center;
-    text-align: center;
-}
-
-.vl {
-    border-left: 2px solid;
-    height: 350px;
-    border-radius: 1px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-.margin-bottom {
-    margin-bottom: 1em;
-}
-
-
-#hearthstone {
   background-image: url('./images/hearthstone-logo.jpeg');
 }
 
