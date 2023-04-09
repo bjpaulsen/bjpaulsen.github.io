@@ -168,12 +168,16 @@
 }
 
 
-#acquiesce {
-    background-image: url('./images/acquiesce-logo.png');
-}
-
 #hearthstone {
     background-image: url('./images/hearthstone-logo.jpeg');
+}
+
+#dracomaton {
+    background-image: url('./images/dracomaton-logo.png');
+}
+
+#acquiesce {
+    background-image: url('./images/acquiesce-logo.png');
 }
 
 #your-personal-photon {
