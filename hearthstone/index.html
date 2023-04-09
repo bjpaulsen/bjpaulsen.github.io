@@ -13,11 +13,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            let currentTab = 0;
+            let currentTab = 2;
             let tabs = new Array(3);
             for (let i = 0; i < tabs.length; i++) tabs[i] = ".detail" + i;
             updateLink(currentTab);
             $(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px");
+            changeTab(currentTab+1);
 
             $(".detailBtn0").click(function(){ changeTab(0) });
             $(".detailBtn1").click(function(){ changeTab(1) });
@@ -30,8 +31,8 @@
                 
                 let goingRight = newTab >= currentTab;
                 newTab = keepWithinBounds(newTab);
-                updateLink(newTab);
                 updateSlideHeight(newTab);
+                updateLink(newTab);
                 
                 if (goingRight) {
                     $(tabs[currentTab]).animate({marginRight: '200vw', opacity: 'hide'});
@@ -88,7 +89,7 @@
             <div class="text align-center">Responsible for <span class="detailBtn0 slide-link color1">designing and scripting cards,</span> <span class="detailBtn1 slide-link color2">conducting playtests,</span> and <span class="detailBtn2 slide-link color3">debugging code.</span></div>
         </div>
 
-        <div class="detail0 info-box slide thick-padding color1border color1b rounded">
+        <div class="detail0 info-box slide thick-padding color1border color1b rounded hidden">
             <div class="text info-subtitle">I made >150 prototypes for 5 classes</div>
             <div class="align-center text-color thin-padding">Design lead for Priest, Warrior, and Warlock.</div>
             <div class="info-row clump" id="classes">
@@ -145,8 +146,19 @@
             <div class="last-slide">❮</div>
             <div class="next-slide">❯</div>
         </div>
-        <div class="detail2 info-box slide thick-padding color3border color3 rounded hidden">
-            <div class="info-subtitle">I reviewed and debugged 15% of the cards <br>in the March of the Lich King expansion.</div>
+        <div class="detail2 info-box slide thick-padding color3border color3 rounded">
+            <div class="info-subtitle margin-bottom">I reviewed and debugged 15% of the cards <br>in the March of the Lich King expansion.</div>
+            <div class="info-row clump">
+                <div class="info-column skinny margin-top">
+                    <iframe class="game-video color3border" width="500" height="281" src="https://www.youtube.com/embed/mn9TivOV54I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="text">Here's someone using Faithful Companions, a card I debugged and hooked up animations for.</div>
+                </div>
+                <div class="vl"></div>
+                <div class="info-column skinny margin-top">
+                    <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">The Warlock&#39;s return shall grind your bones to dust. 🦴<br><br>Turn away while you still can! <a href="https://t.co/nJhdacz2ni">pic.twitter.com/nJhdacz2ni</a></p>&mdash; Hearthstone (@PlayHearthstone) <a href="https://twitter.com/PlayHearthstone/status/1624876090786291716?ref_src=twsrc%5Etfw">February 12, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div class="text">A selection of other cards I code reviewed.</div>
+                </div>
+            </div>
             <div class="last-slide">❮</div>
             <div class="next-slide">❯</div>
         </div>
