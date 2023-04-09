@@ -121,23 +121,25 @@
 }
 
 .release {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 21vw;
-    min-height: 14vw;
-    margin: 12px;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 30%;
-    transition: transform .18s;
-    font-size: 2.75vw;
-    font-weight: 900;
-    text-align: center;
-    border-color: #ffffff;
-    border-radius: 200px;
-    border-style: solid;
-    border-width: 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 21vw;
+  min-height: 14vw;
+  margin: 12px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 30%;
+  transition: transform .18s;
+  font-size: 2.75vw;
+  font-family: "Figtree", "Open Sans";
+  font-weight: 900;
+  text-align: center;
+  border-color: #ffffff;
+  border-radius: 200px;
+  border-style: solid;
+  border-width: 10px;
+  text-shadow: #444444 0 0 5px;
 }
 
 .release:hover {
@@ -174,6 +176,39 @@
 
 #dracomaton {
     background-image: url('./images/dracomaton-logo.png');
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.align-center {
+    align-self: center;
+    text-align: center;
+}
+
+.vl {
+    border-left: 2px solid;
+    height: 350px;
+    border-radius: 1px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.margin-bottom {
+    margin-bottom: 1em;
+}
+
+
+#hearthstone {
+  background-image: url('./images/hearthstone-logo.jpeg');
+}
+
+#dracomaton {
+    background-image: url('./images/dracomaton-logo.png');
+    color: #fff;
+    font-family: 'Big Shoulders Stencil Text';
+    font-size: 4vw;
 }
 
 #acquiesce {
@@ -271,72 +306,78 @@ hr {
 
 /* activates when games stack */
 @media only screen and (max-width:1240px) {
-    .release {
-        width: 38vw;
-        min-height: 13vw;
-        font-size: 3.5vw;
-    }
-    #hearthstone {
-        background-position-y: 50%;
-    }
-    #pewpew {
-        background-position-y: 38%;
-    }
-    #stay-sane {
-        background-position-y: 45%;
-    }
-    #your-personal-photon {
-        background-position-y: 45%;
-    }
-    #chaotic-concoction {
-        background-position-y: 45%;
-    }
-    #asterion {
-        background-position-y: 60%;
-    }
-    #sscl {
-        background-position-y: 0%;
-    }
-    #escher-worldgen {
-        background-position-y: 0%;
-    }
-    #in-a-flash {
-        background-position-y: 50%;
-    }
-    #shuffle-city {
-        background-size: 160%;
-        background-position-y: 50%;
-    }
+  .release {
+    width: 38vw;
+    min-height: 13vw;
+    font-size: 3.5vw;
+  }
+  #dracomaton {
+    font-size: 5.5vw;
+  }
+  #hearthstone {
+    background-position-y: 50%;
+  }
+  #pewpew {
+    background-position-y: 38%;
+  }
+  #stay-sane {
+    background-position-y: 45%;
+  }
+  #your-personal-photon {
+    background-position-y: 45%;
+  }
+  #chaotic-concoction {
+    background-position-y: 45%;
+  }
+  #asterion {
+    background-position-y: 60%;
+  }
+  #sscl {
+    background-position-y: 0%;
+  }
+  #escher-worldgen {
+    background-position-y: 0%;
+  }
+  #in-a-flash {
+    background-position-y: 50%;
+  }
+  #shuffle-city {
+    background-size: 160%;
+    background-position-y: 50%;
+  }
 }
 
 /* activates mobile version */
 @media only screen and (max-width:1074px) {
-    .main {
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .games {
-        margin-top: 25px;
-    }
-    .release {
-        width: 60vw;
-        min-height: 20vw;
-        font-size: 4vw;
-    }
-    #aboutplaceholder, .about {
-        position: relative;
-        min-width: 0;
-    }
-    .about-text {
-        max-width: 540px;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-    #shuffle-city {
-        background-size: 150%;
-        background-position-y: 50%;
-    }
+  .main {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .games {
+    margin-top: 25px;
+  }
+  .release {
+    width: 60vw;
+    min-height: 20vw;
+    font-size: 4vw;
+  }
+  #dracomaton {
+    font-size: 9vw;
+  }
+  .aboutplaceholder, .about {
+    position: relative;
+    min-width: 0;
+  }
+  .about-text {
+    max-width: 540px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  #shuffle-city {
+    background-size: 150%;
+    background-position-y: 50%;
+  }
 }
 
 /* activates "short window" version to scroll about section */
