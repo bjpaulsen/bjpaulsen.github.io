@@ -113,7 +113,7 @@ body {
     width: 400px;
 }
 
-.info-column:hover {
+.underline-on-hover:hover {
     text-decoration-line: underline;
     text-decoration-style: dashed;
     text-decoration-thickness: 4px;
