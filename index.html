@@ -2,46 +2,75 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./colors.css">
         <title>Ben Paulsen</title>
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700;900" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text" rel="stylesheet">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        
         <script>
-            function toggleOpen(openId, closeId, closeId2) {
-                let openElement = document.getElementById(openId);
-                let closeElement = document.getElementById(closeId);
-                let closeElement2 = document.getElementById(closeId2);
-                if (openElement.style.display === "none" || openElement.style.display === "") {
-                    openElement.style.display = "flex";
-                    if (closeElement.style.display === "flex") {
-                        closeElement.style.display = "none";
-                        closeElement.parentElement.style.width = openElement.parentElement.style.width;
-                    }
-                    if (closeElement2.style.display === "flex") {
-                        closeElement2.style.display = "none";
-                        closeElement2.parentElement.style.width = openElement.parentElement.style.width;
-                    }
-                    openElement.parentElement.style.width = "63vw";
-                }
-                else if (openElement.style.display === "flex") {
-                    openElement.style.display = "none";
-                    openElement.parentElement.style.width = closeElement.parentElement.style.width;
+            let inCounter = 1;
+            let outCounter = 0;
+            let infoPanelOut = 800;
+            let gamesOut = 130;
+
+            function easeInOutBack(x) {
+                const c1 = 1.70158;
+                const c2 = c1 * 1.525;
+
+                return x < 0.5
+                ? (Math.pow(2 * x, 2) * ((c2 + 1) * 2 * x - c2)) / 2
+                : (Math.pow(2 * x - 2, 2) * ((c2 + 1) * (x * 2 - 2) + c2) + 2) / 2;
+            }
+
+            function easeOutBounce(x) {
+                const n1 = 7.5625;
+                const d1 = 2.75;
+
+                if (x < 1 / d1) {
+                    return n1 * x * x;
+                } else if (x < 2 / d1) {
+                    return n1 * (x -= 1.5 / d1) * x + 0.75;
+                } else if (x < 2.5 / d1) {
+                    return n1 * (x -= 2.25 / d1) * x + 0.9375;
+                } else {
+                    return n1 * (x -= 2.625 / d1) * x + 0.984375;
                 }
             }
-        </script>
 
+            function tri(t) { return t*t*t*t; }
+
+            function in_out (t) {
+                return t < .5 ?
+                tri(t * 2) * .5 :
+                1 - tri((1 - t) * 2) * .5;// + .5;
+            } 
+
+            function slideIn(infoPanel) {
+                inCounter -= 0.01;
+                infoPanel.style.left = easeInOutBack(inCounter)*infoPanelOut+640 + "px";
+                if (inCounter > 0)
+                    setTimeout(slideIn.bind(null, infoPanel), 10);
+            }
+
+            function slideOut(infoPanel) {
+                outCounter += 0.01;
+                infoPanel.style.marginLeft = easeInOutBack(outCounter)*gamesOut + "vw";
+                if (outCounter < 1)
+                    setTimeout(slideOut.bind(null, infoPanel), 10);
+            }
+        </script>
     </head>
 
     <body>
         <div class="main">
-            <div class="aboutplaceholder"></div>
-            <div class="about">
-                <div class="section-header color1">ABOUT</div>
-                <img class="me-img" src="images/koi.jpg">
+            <div id="aboutplaceholder"></div>
+            <div class="about color1">
+                <div class="section-header">ABOUT</div>
+                <img class="me-img" src="./images/koi.jpg">
                 <div class="links">
                     <a target="_blank" rel="noopener noreferrer" class="link" href="./images/Ben_Paulsen_Resume.pdf" id="download-resume" download="Ben_Paulsen_Resume">resume</a>
                     <a target="_blank" rel="noopener noreferrer" class="link" href="https://banjo-games.itch.io/">itch.io</a>
@@ -49,16 +78,16 @@
                     <a target="_blank" rel="noopener noreferrer" class="link" href="https://www.linkedin.com/in/benjaminpaulsen/">linkedin</a>
                 </div>
                 <div class="text">
-                    <div class="about-text">What's up! I'm Ben Paulsen. I'm a game designer studying at <a target="_blank" rel="noopener noreferrer" href="https://www.ucsc.edu/" class="paragraph-link">UCSC</a>.</div>
-                    <div class="about-text">Last summer, I worked on <a target="_blank" rel="noopener noreferrer" href="https://playhearthstone.com/" class="paragraph-link">Hearthstone</a> at Blizzard Entertainment as an Intern Game Designer. Before that, I was a Lead Developer at <a target="_blank" rel="noopener noreferrer" href="https://tech4good.soe.ucsc.edu/#/" class="paragraph-link">Tech4Good Lab</a>, creating platforms for <a target="_blank" rel="noopener noreferrer" class="paragraph-link" href="https://relate.soe.ucsc.edu/#/">team-building games</a> and <a target="_blank" rel="noopener noreferrer" class="paragraph-link" href="https://causeway.soe.ucsc.edu/#/">teaching web development</a>.</div>
-                    <div class="about-text">My focus is on game design, but I also make <a target="_blank" rel="noopener noreferrer" href="https://thehandholdingyearningclub.bandcamp.com/" class="paragraph-link">music</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.bens.art/" class="paragraph-link">art</a>.</div>
+                    <div class="about-text">I'm Ben Paulsen, a game designer studying at <a target="_blank" rel="noopener noreferrer" href="https://www.ucsc.edu/" class="paragraph-link color1">UCSC</a>.</div>
+                    <div class="about-text">Last summer, I worked on <a target="_blank" rel="noopener noreferrer" href="https://playhearthstone.com/" class="paragraph-link color1">Hearthstone</a> at Blizzard Entertainment as a Game Design Intern. Before that, I was a Lead Developer at <a target="_blank" rel="noopener noreferrer" href="https://tech4good.soe.ucsc.edu/#/" class="paragraph-link color1">Tech4Good Lab</a>, creating platforms for <a target="_blank" rel="noopener noreferrer" class="paragraph-link color1" href="https://relate.soe.ucsc.edu/#/">team-building games</a> and <a target="_blank" rel="noopener noreferrer" class="paragraph-link color1" href="https://causeway.soe.ucsc.edu/#/">teaching web development</a>.</div>
+                    <div class="about-text">I also make <a target="_blank" rel="noopener noreferrer" href="https://thehandholdingyearningclub.bandcamp.com/" class="paragraph-link color1">music</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/just.bens.art/" class="paragraph-link color1">art</a> for fun.</div>
                     <div class="about-text">I'm currently working on a roguelite about a shapeshifting mechanical dragon with a team of 13.</div>
                 </div>
             </div>
             <div class="games color2">
                 <div class="section-header">GAMES</div><br>
                 <div class="releases" id="game-releases">
-                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="release" id="hearthstone"></div></a>
+                    <a href="./hearthstone"><div class="release" id="hearthstone"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://gun-jumpers.itch.io/dracomaton"><div class="release" id="dracomaton">DRACOMATON</div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/acquiesce"><div class="release" id="acquiesce"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/shuffle-city"><div class="release" id="shuffle-city"></div></a>
@@ -67,7 +96,7 @@
                     <a target="_blank" rel="noopener noreferrer" href="https://dyllistan.itch.io/asterion"><div class="release" id="asterion"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/distracction"><div class="release" id="distracction"></div></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://gameshowcase.ucsc.edu/project/sea-star-crossed-lovers/"><div class="release" id="sscl">Sea Star<br>Crossed Lovers</div></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/escher-worldgen"><div class="release" id="escher-worldgen"><div>Escher Level Generator</div></div></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://banjo-games.itch.io/escher-worldgen"><div class="release" id="escher-worldgen">Escher Level Generator</div></a>
                 </div>
             </div>
         </div>

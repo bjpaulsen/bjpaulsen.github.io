@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hearthstone</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../info.css">
+    <link rel="stylesheet" href="../colors.css">
+    <link rel="stylesheet" href="./hearthstone.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700;900" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let currentTab = 0;
+            let tabs = new Array(3);
+            for (let i = 0; i < tabs.length; i++) tabs[i] = ".detail" + i;
+            updateLink(currentTab);
+            $(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px");
+
+            $(".detailBtn0").click(function(){ changeTab(0) });
+            $(".detailBtn1").click(function(){ changeTab(1) });
+            $(".detailBtn2").click(function(){ changeTab(2) });
+            $(".next-slide").click(function(){ changeTab(currentTab+1)});
+            $(".last-slide").click(function(){ changeTab(currentTab-1)});
+
+            function changeTab(newTab) {
+                if (newTab == currentTab) return;
+                
+                let goingRight = newTab >= currentTab;
+                newTab = keepWithinBounds(newTab);
+                updateSlideHeight(newTab);
+                updateLink(newTab);
+                
+                if (goingRight) {
+                    $(tabs[currentTab]).animate({marginRight: '200vw', opacity: 'hide'});
+                    $(tabs[newTab]).css("marginLeft", '200vw');
+                    $(tabs[newTab]).css("marginRight", '0px');
+                } else {
+                    $(tabs[currentTab]).animate({marginLeft: '200vw', opacity: 'hide'});
+                    $(tabs[newTab]).css("marginLeft", '0px');
+                    $(tabs[newTab]).css("marginRight", '200vw');
+                }
+                
+                $(tabs[newTab]).css("display", 'flex');
+                $(tabs[newTab]).animate({marginLeft: '0px', marginRight: '0px', opacity: 'show'}, 500);
+                
+                currentTab = newTab;
+            }
+
+            function keepWithinBounds(tab) {
+                if (tab >= tabs.length) return 0;
+                if (tab < 0) return tabs.length-1;
+                return tab;
+            }
+
+            function updateLink(tab) {
+                for (let i = 0; i < tabs.length; i++)
+                    $(".detailBtn" + i).removeClass("underline");
+                $(".detailBtn" + tab).addClass("underline");
+            }
+
+            function updateSlideHeight(tab) {
+                $(".below-slides").animate({marginTop: $(tabs[tab]).outerHeight() + "px"});
+                setTimeout(updateSlideHeightOnResize, 400);
+            }
+
+            function updateSlideHeightOnResize() {
+                $(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px");
+                setTimeout(() => {$(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px")}, 200);
+            }
+
+            window.addEventListener('resize', updateSlideHeightOnResize);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="info-header color2">HEARTHSTONE</div>
+    <div class="game-oneliner color2 thin-padding">a strategy card game from Blizzard Entertainment</div>
+    <div class="top-button-row">
+        <a href="../"><div class="info-button color2bg">❮ BACK</div></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us"><div class="info-button color2bg">PLAY ❯</div></a>
+    </div>
+    <iframe class="main-video video color2border" width="560" height="315" src="https://www.youtube.com/embed/13JQDIo_0Vw?rel=0" title="Gameplay Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="release-info">
+        <div class="info-box rounded-top">
+            <div class="info-subtitle">Game Design Intern</div>
+            <div class="text align-center">Responsible for <span class="detailBtn0 slide-link color1">designing and scripting cards,</span> <span class="detailBtn1 slide-link color2">conducting playtests,</span> and <span class="detailBtn2 slide-link color3">debugging code.</span></div>
+        </div>
+
+        <div class="detail0 info-box slide thick-padding color1border color1b rounded">
+            <div class="text info-subtitle">I made >150 prototypes for 5 classes</div>
+            <div class="align-center text-color thin-padding">Design lead for Priest, Warrior, and Warlock.</div>
+            <div class="info-row clump" id="classes">
+                <div class="info-column color-priest">
+                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/priest">
+                        <div class="little-img" id="anduin"></div>
+                        <div class="link">Priest</div>
+                    </a>
+                </div>
+                <div class="info-column color-warrior">
+                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/warrior">
+                        <div class="little-img" id="garrosh"></div>
+                        <div class="link">Warrior</div>
+                    </a>
+                </div>
+                <div class="info-column color-warlock">
+                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/warlock">
+                        <div class="little-img" id="guldan"></div>
+                        <div class="link">Warlock</div>
+                    </a>
+                </div>
+                <div class="info-column color-mage">
+                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/mage">
+                        <div class="little-img" id="jaina"></div>
+                        <div class="link">Mage</div>
+                    </a>
+                </div>
+                <div class="info-column color-deathknight">
+                    <a target="_blank" rel="noopener noreferrer" href="https://hearthstone.blizzard.com/en-us/heroes/deathknight">
+                        <div class="little-img" id="lichking"></div>
+                        <div class="link">Death Knight</div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-color align-center margin-bottom">The cards I created will be released in Summer 2023.</div>
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
+        <div class="detail1 info-box slide thick-padding color2border color2 rounded hidden">
+            <div class="info-subtitle margin-bottom">I participated in 4 playtests every week.</div>
+            <div class="info-row clump">
+                <div class="info-column skinny margin-top">
+                    <div class="little-img rounded" id="designer-playtest"></div>
+                    <div class="info-subtitle">3 with a small group of designers</div>
+                    <div class="text align-center">In-depth feedback on every card, revised daily.</div>
+                </div>
+                <div class="vr"></div>
+                <div class="info-column skinny margin-top">
+                    <div class="little-img rounded" id="big-playtest"></div>
+                    <div class="info-subtitle">1 with hundreds of developers</div>
+                    <div class="text align-center">Data-driven analysis of classes' strengths and weaknesses. </div>
+                </div>
+            </div>
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
+        <div class="detail2 info-box slide thick-padding color3border color3 rounded hidden">
+            <div class="info-subtitle margin-bottom">I reviewed and debugged 15% of the cards <br id="molk-br">in the March of the Lich King expansion.</div>
+            <div class="info-row clump">
+                <div class="info-column skinny margin-top">
+                    <iframe class="video color3border" id="companions" width="400" height="225" src="https://www.youtube.com/embed/mn9TivOV54I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="text margin-bottom">Here's a player using Faithful Companions, a card I debugged and assigned animations to.</div>
+                    <div class="hr margin-top margin-bottom"></div>
+                    <div class="text align-left margin-bottom">My responsibilities were:</div>
+                    <ul>
+                        <li>Adjusting script implementation for consistency, speed, and edge cases.</li>
+                        <li>Propogating script changes through multiple upcoming patches, ensuring they still work and resolving merge conflicts.</li>
+                        <li>Assigning animations made by our artists and triggering them in scripts at the appropriate moment.</li>
+                    </ul>
+                </div>
+                <div class="vr" id="debug"></div>
+                <div class="info-column skinny margin-top">
+                    <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="en" dir="ltr"><a href="https://t.co/nJhdacz2ni">pic.twitter.com/nJhdacz2ni</a></p>&mdash; Hearthstone (@PlayHearthstone) <a href="https://twitter.com/PlayHearthstone/status/1624876090786291716?ref_src=twsrc%5Etfw">February 12, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div class="text">A selection of other cards I reviewed for code quality.</div>
+                </div>
+            </div>
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
+    </div>
+    <div class="below-slides">
+        <div class="text info-subtitle margin-bottom">My design cycle looked like:</div>
+        <img class="adaptive-side-margins" id="design-process" src="./images/design-process.png">
+    </div>
+</body>
+</html>

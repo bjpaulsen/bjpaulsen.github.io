@@ -1,0 +1,120 @@
+.color-priest {
+    color: #E2C5FF;
+    text-decoration-color: #E2C5FF;
+}
+
+.color-warrior {
+    color: #FFC5C5;
+    text-decoration-color: #FFC5C5;
+}
+
+.color-warlock {
+    color: #CDE3B6;
+    text-decoration-color: #CDE3B6;
+}
+
+.color-mage {
+    color: #C5E2FF;
+    text-decoration-color: #C5E2FF;
+}
+
+.color-deathknight {
+    color: #C5C5FF;
+    text-decoration-color: #C5C5FF;
+}
+
+
+
+.margin-top {
+    margin-top: 1em;
+}
+
+
+#anduin {
+    background-image: url('./images/anduin.gif');
+}
+
+#garrosh {
+    background-image: url('./images/garrosh.gif');
+}
+
+#guldan {
+    background-image: url('./images/guldan.gif');
+}
+
+#jaina {
+    background-image: url('./images/jaina.gif');
+}
+
+#lichking {
+    background-image: url('./images/lichking.png');
+    margin-left: 20px;
+}
+
+#spreadsheet {
+    background-image: url('./images/spreadsheet.png');
+}
+
+#designer-playtest {
+    background-image: url('./images/explorers.png');
+    /* width: 200px; */
+}
+
+#big-playtest {
+    background-image: url('./images/molk-group.png');
+}
+
+/* condenses playtest info */
+@media only screen and (max-width:1245px) {
+    .skinny {
+        width: 40%;
+    }
+}
+
+#debug {
+    height: 800px;
+}
+
+/* wraps hs classes early */
+@media only screen and (max-width:1245px) {
+    #companions {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* wraps hs classes early */
+@media only screen and (max-width:1141px) {
+    #classes {
+        max-width: 636px;
+    }
+}
+
+/* activates mobile version */
+@media only screen and (max-width:1074px) {
+    #design-process {
+        content: url('./images/design-process-mobile.png');
+    }
+    .skinny {
+        width: 80%;
+    }
+    .vr {
+        width: 80%;
+        height: 1px;
+        border-left: none;
+        border-bottom: 2px solid;
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #debug {
+        height: 1px;
+    }
+    #companions {
+        width: 560px;
+        height: 315px;
+    }
+    #molk-br {
+        display: none;
+    }
+}
