@@ -64,6 +64,10 @@
     background-image: url('./images/molk-group.png');
 }
 
+#debug {
+    height: 800px;
+}
+
 /* condenses playtest info */
 @media only screen and (max-width:1245px) {
     .skinny {
@@ -86,7 +90,7 @@
     .skinny {
         width: 80%;
     }
-    .vl {
+    .vr {
         width: 80%;
         height: 1px;
         border-left: none;
