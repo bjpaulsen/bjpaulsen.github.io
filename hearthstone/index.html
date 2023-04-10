@@ -63,10 +63,12 @@
 
             function updateSlideHeight(tab) {
                 $(".below-slides").animate({marginTop: $(tabs[tab]).outerHeight() + "px"});
+                setTimeout(updateSlideHeightOnResize, 400);
             }
 
             function updateSlideHeightOnResize() {
                 $(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px");
+                setTimeout(() => {$(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px")}, 200);
             }
 
             window.addEventListener('resize', updateSlideHeightOnResize);
@@ -146,7 +148,7 @@
             <div class="next-slide">❯</div>
         </div>
         <div class="detail2 info-box slide thick-padding color3border color3 rounded hidden">
-            <div class="info-subtitle margin-bottom">I reviewed and debugged 15% of the cards <br>in the March of the Lich King expansion.</div>
+            <div class="info-subtitle margin-bottom">I reviewed and debugged 15% of the cards <br id="molk-br">in the March of the Lich King expansion.</div>
             <div class="info-row clump">
                 <div class="info-column skinny margin-top">
                     <iframe class="video color3border" id="companions" width="400" height="225" src="https://www.youtube.com/embed/mn9TivOV54I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

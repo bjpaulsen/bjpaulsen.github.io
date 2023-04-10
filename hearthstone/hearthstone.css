@@ -114,4 +114,7 @@
         width: 560px;
         height: 315px;
     }
+    #molk-br {
+        display: none;
+    }
 }
