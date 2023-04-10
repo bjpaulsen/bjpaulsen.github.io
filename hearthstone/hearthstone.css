@@ -64,14 +64,22 @@
     background-image: url('./images/molk-group.png');
 }
 
-#debug {
-    height: 800px;
-}
-
 /* condenses playtest info */
 @media only screen and (max-width:1245px) {
     .skinny {
         width: 40%;
+    }
+}
+
+#debug {
+    height: 800px;
+}
+
+/* wraps hs classes early */
+@media only screen and (max-width:1245px) {
+    #companions {
+        width: 100%;
+        height: 200px;
     }
 }
 
@@ -98,5 +106,12 @@
         margin: 0px;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    #debug {
+        height: 1px;
+    }
+    #companions {
+        width: 560px;
+        height: 315px;
     }
 }

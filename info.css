@@ -68,8 +68,11 @@ body {
     margin-top: 40px;
 }
 
-.game-video {
+.main-video {
     margin-top: 50px;
+}
+
+.video {
     border-radius: 15px;
     border-style: solid;
 }
