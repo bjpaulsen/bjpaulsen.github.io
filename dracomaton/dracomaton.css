@@ -1,4 +1,20 @@
+#role-br {
+    display: none;
+}
 
+.levels {
+    height: 400px;
+}
+
+@media only screen and (max-width:1225px) {
+    #role-br {
+        display: inherit;
+    }
+
+    .release-info {
+        width: 520px;
+    }
+}
 
 /* activates mobile version */
 @media only screen and (max-width:1074px) {
