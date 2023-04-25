@@ -113,6 +113,10 @@ body {
     width: 400px;
 }
 
+.medium-width {
+    width: 550px;
+}
+
 .underline-on-hover {
     cursor: pointer;
 }
