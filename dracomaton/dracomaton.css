@@ -4,10 +4,7 @@
 
 .levels {
     height: 400px;
-}
-
-#level-1 {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:1225px) {

@@ -81,14 +81,16 @@
             var modal = document.getElementById("myModal");
 
             // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById("level-1");
             var modalImg = document.getElementById("img01");
             var captionText = document.getElementById("caption");
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-                console.log("image clicked");
+            for (let i = 1; i <= 3; i++) {
+                var img = document.getElementById("level-"+i);
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    console.log("image clicked");
+                }
             }
 
             // Get the <span> element that closes the modal
@@ -163,11 +165,11 @@
                     <div class="text skinny"><b>Gameplay Goal:</b> Test players' close-combat skills and ability to use conveyor belts to launch enemies into their AOE attacks.</div>
                 </div>
                 <div class="info-column">
-                    <img src="./images/level-3.png" class="levels">
+                    <img src="./images/level-3.png" class="levels" id="level-3" alt="<b>Gameplay Goal:</b> Surprise players with an ambush at the end of a long conveyor belt. Give them multiple interesting paths through.">
                     <div class="text skinny"><b>Gameplay Goal:</b> Surprise players with an ambush at the end of a long conveyor belt. Give them multiple interesting paths through.</div>
                 </div>
                 <div class="info-column">
-                    <img src="./images/level-2.png" class="levels">
+                    <img src="./images/level-2.png" class="levels" id="level-2" alt="<b>Gameplay Goal:</b> Let players explore a larger, darker flooded area of the factory, featuring spacious sections and 2 chokepoints.">
                     <div class="text medium-width"><b>Gameplay Goal:</b> Let players explore a larger, darker flooded area of the factory, featuring spacious sections and 2 chokepoints.</div>
                 </div>
             </div>
