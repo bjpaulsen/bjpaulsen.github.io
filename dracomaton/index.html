@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dracomaton</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../info.css">
+    <link rel="stylesheet" href="../colors.css">
+    <link rel="stylesheet" href="./dracomaton.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700;900" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let currentTab = 0;
+            let tabs = new Array(3);
+            for (let i = 0; i < tabs.length; i++) tabs[i] = ".detail" + i;
+            updateLink(currentTab);
+            $(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px");
+
+            $(".detailBtn0").click(function(){ changeTab(0) });
+            $(".detailBtn1").click(function(){ changeTab(1) });
+            $(".detailBtn2").click(function(){ changeTab(2) });
+            $(".next-slide").click(function(){ changeTab(currentTab+1)});
+            $(".last-slide").click(function(){ changeTab(currentTab-1)});
+
+            function changeTab(newTab) {
+                if (newTab == currentTab) return;
+                
+                let goingRight = newTab >= currentTab;
+                newTab = keepWithinBounds(newTab);
+                updateSlideHeight(newTab);
+                updateLink(newTab);
+                
+                if (goingRight) {
+                    $(tabs[currentTab]).animate({marginRight: '200vw', opacity: 'hide'});
+                    $(tabs[newTab]).css("marginLeft", '200vw');
+                    $(tabs[newTab]).css("marginRight", '0px');
+                } else {
+                    $(tabs[currentTab]).animate({marginLeft: '200vw', opacity: 'hide'});
+                    $(tabs[newTab]).css("marginLeft", '0px');
+                    $(tabs[newTab]).css("marginRight", '200vw');
+                }
+                
+                $(tabs[newTab]).css("display", 'flex');
+                $(tabs[newTab]).animate({marginLeft: '0px', marginRight: '0px', opacity: 'show'}, 500);
+                
+                currentTab = newTab;
+            }
+
+            function keepWithinBounds(tab) {
+                if (tab >= tabs.length) return 0;
+                if (tab < 0) return tabs.length-1;
+                return tab;
+            }
+
+            function updateLink(tab) {
+                for (let i = 0; i < tabs.length; i++)
+                    $(".detailBtn" + i).removeClass("underline");
+                $(".detailBtn" + tab).addClass("underline");
+            }
+
+            function updateSlideHeight(tab) {
+                $(".below-slides").animate({marginTop: $(tabs[tab]).outerHeight() + "px"});
+                setTimeout(updateSlideHeightOnResize, 400);
+            }
+
+            function updateSlideHeightOnResize() {
+                $(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px");
+                setTimeout(() => {$(".below-slides").css("marginTop", $(tabs[currentTab]).outerHeight() + "px")}, 200);
+            }
+
+            window.addEventListener('resize', updateSlideHeightOnResize);
+        });
+    </script>
+    <script>
+
+        $(document).ready(function(){
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            for (let i = 1; i <= 3; i++) {
+                var img = document.getElementById("level-"+i);
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    console.log("image clicked");
+                }
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="info-header color2">DRACOMATON</div>
+    <div class="game-oneliner color2 thin-padding">a roguelike about a shapeshifting mechanical dragon</div>
+    <div class="top-button-row">
+        <a href="../"><div class="info-button color2bg">❮ BACK</div></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://gun-jumpers.itch.io/dracomaton"><div class="info-button color2bg">PLAY ❯</div></a>
+    </div>
+    <iframe class="main-video video color2border" width="560" height="315" src="https://www.youtube.com/embed/WSz4moOx_Do" title="Gameplay Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="release-info">
+        <div class="info-box rounded-top">
+            <div class="info-subtitle">Game Designer</div>
+            <div class="text align-center">Responsible for creating <br id="role-br"><span class="detailBtn0 slide-link color1">exciting abilities,</span> <span class="detailBtn1 slide-link color2">robust design documents,</span> and <span class="detailBtn2 slide-link color3">engaging levels.</span></div>
+        </div>
+
+        <div class="detail0 info-box slide thick-padding color1border color1b rounded">
+            <div class="text info-subtitle">I designed and implemented modular<br>abilities that work together.</div>
+            <div class="align-center text-color thin-padding margin-top"><b>Design Goal:</b> Encourage players to fight expressively and creatively <br>by combining movesets, or "forms," during combat.</div>
+            <div class="info-row clump margin-top">
+                <div class="info-column">
+                    <img src="./images/TennisAbilities2.gif" class="forms video color1border">
+                    <div class="text skinny"><b>Tennis Form:</b> Serve bouncy tennis balls at enemies, and redirect ANY projectile with your secondary ability!</div>
+                </div>
+                <div class="info-column">
+                    <img src="./images/MagnetAbilitiesSmall.gif" class="forms video color1border">
+                    <div class="text skinny"><b>Magnet Form:</b> Create huge electromagnetic fields that pull enemies in, and stick them with magnetic bombs to explode groups!</div>
+                </div>
+                <div class="info-column">
+                    <img src="./images/ConstructAbilitiesSmall.gif" class="forms video color1border">
+                    <div class="text skinny"><b>Construct Form:</b> Mark enemies with a laser to spawn small allies when they're killed! Direct them to attack or defend with your abilities.</div>
+                </div>
+                <div class="info-column">
+                    <img src="./images/FlameAbilities.gif" class="forms video color1border">
+                    <div class="text skinny"><b>Flame Form:</b> Incinerate enemies with a flamethrower and exploding oil slick! Position carefully, you're slower while firing!</div>
+                </div>
+            </div>
+            <div class="align-center text-color thin-padding margin-top">...with more in development!</div>
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
+        <div class="detail1 info-box slide thick-padding color2border color2 rounded hidden">
+            <div class="text info-subtitle margin-bottom">I created and updated critical <br>design documents.</div>
+            <img class="adaptive-side-margins align-center" id="documents" src="./images/documentsLarge.png">
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
+        <div class="detail2 info-box slide thick-padding color3border color3 rounded hidden">
+            <div class="info-subtitle margin-bottom">I designed and grayboxed <br>action-packed levels that tell a story.</div>
+            <div class="info-row clump">
+                <div class="info-column">
+                    <img src="./images/level-1.png" class="levels" id="level-1" alt="<b>Design Goal:</b> Test players' close-combat skills and ability to use conveyor belts to launch enemies into their AOE attacks.">
+                    <div class="text skinny"><b>Design Goal:</b> Test players' close-combat skills and ability to use conveyor belts to launch enemies into their AOE attacks.</div>
+                </div>
+                <div class="info-column">
+                    <img src="./images/level-3.png" class="levels" id="level-3" alt="<b>Design Goal:</b> Surprise players with an ambush at the end of a long conveyor belt. Give them multiple interesting paths through.">
+                    <div class="text skinny"><b>Design Goal:</b> Surprise players with an ambush at the end of a long conveyor belt. Give them multiple interesting paths through.</div>
+                </div>
+                <div class="info-column">
+                    <img src="./images/level-2.png" class="levels" id="level-2" alt="<b>Design Goal:</b> Let players explore a larger, darker flooded area of the factory, featuring spacious sections and 2 chokepoints.">
+                    <div class="text medium-width"><b>Design Goal:</b> Let players explore a larger, darker flooded area of the factory, featuring spacious sections and 2 chokepoints.</div>
+                </div>
+            </div>
+            <div class="last-slide">❮</div>
+            <div class="next-slide">❯</div>
+        </div>
+    </div>
+    <div class="below-slides"></div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+</div>
+</body>
+</html>
