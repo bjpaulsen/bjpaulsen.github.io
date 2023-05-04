@@ -1,3 +1,5 @@
+@-ms-viewport{ width: device-width; }
+
 * {
     margin: 0;
     padding: 0;
@@ -105,7 +107,6 @@
 }
 
 .about-text {
-    margin-top: 10px;
     margin-left: 50px;
     max-width: 500px;
 }
@@ -176,6 +177,10 @@
 
 .margin-top {
     margin-top: 1em;
+}
+
+.small-margin-top {
+    margin-top: 10px;
 }
 
 
@@ -343,9 +348,9 @@ hr {
     margin-top: 25px;
   }
   .release {
-    width: 60vw;
-    min-height: 20vw;
-    font-size: 4vw;
+    width: 510px;
+    min-height: 170px;
+    font-size: 47px;
   }
   #dracomaton {
     font-size: 9vw;
@@ -355,9 +360,11 @@ hr {
     min-width: 0;
   }
   .about-text {
+    display: flex;
+    flex-direction: column;
     max-width: 540px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 85px;
+    margin-right: 0px;
   }
   #shuffle-city {
     background-size: 150%;
@@ -366,11 +373,29 @@ hr {
 }
 
 /* activates "short window" version to scroll about section */
-@media (max-height:768px) {
+@media (max-height:768px) and (min-width:1075) {
     #aboutplaceholder, .about {
         position: relative;
     }
     #aboutplaceholder {
         min-width: 0;
+    }
+}
+
+/* activates tiny version */
+@media (max-width:750px) {
+    .about-text {
+        max-width: 445px;
+        margin: 0px;
+    }
+
+    .release {
+        width: 450px;
+        min-height: 150px;
+        font-size: 42px;
+    }
+
+    #dracomaton {
+        font-size: 67.5px;
     }
 }
