@@ -23,6 +23,14 @@
     text-decoration-color: #C5C5FF;
 }
 
+.cards {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+}
+
+
 
 #anduin {
     background-image: url('./images/anduin.gif');
@@ -43,6 +51,34 @@
 #lichking {
     background-image: url('./images/lichking.png');
     margin-left: 20px;
+}
+
+#forgeofwills {
+    background-image: url('./images/forgeofwills.png');
+}
+
+#kingtide {
+    background-image: url('./images/kingtide.png');
+}
+
+#maladaar {
+    background-image: url('./images/maladaar.png');
+}
+
+#raynor {
+    background-image: url('./images/raynor.avif');
+}
+
+#ttn-logo {
+    background-image: url('./images/ttn-logo.png');
+}
+
+#pip-logo {
+    background-image: url('./images/pip-logo.avif');
+}
+
+#gdb-logo {
+    background-image: url('./images/gdb-logo.avif');
 }
 
 #spreadsheet {

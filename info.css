@@ -117,10 +117,6 @@ body {
     width: 550px;
 }
 
-.underline-on-hover {
-    cursor: pointer;
-}
-
 .underline-on-hover:hover {
     text-decoration-line: underline;
     text-decoration-style: dashed;

@@ -184,6 +184,15 @@
 }
 
 
+.hoverbig {
+    transition: transform .18s;
+}
+.hoverbig:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
 #hearthstone {
   background-image: url('./images/hearthstone-logo.jpeg');
 }
