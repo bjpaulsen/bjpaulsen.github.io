@@ -113,21 +113,34 @@
     }
 }
 
-@media only screen and (max-width:1225px) {
-    .release-info {
-        width: 500px;
+@media only screen and (max-width:1214px) {
+    .gap {
+        gap: 0px;
     }
 }
 
 /* wraps hs classes early */
-@media only screen and (max-width:1141px) {
+@media only screen and (max-width:1174px) {
     #classes {
         max-width: 636px;
+    }
+    .gap {
+        row-gap: 10px;
+        column-gap: 30px;
+    }
+    .cards {
+        width: 250px;
+    }
+    .shrinkwidth {
+        width: 500px;
     }
 }
 
 /* activates mobile version */
 @media only screen and (max-width:1074px) {
+    .release-info {
+        width: 500px;
+    }
     #design-process {
         content: url('./images/design-process-mobile.png');
     }
