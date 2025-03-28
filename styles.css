@@ -191,6 +191,9 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+#default-cursor {
+    cursor:default;
+}
 
 
 #hearthstone {
