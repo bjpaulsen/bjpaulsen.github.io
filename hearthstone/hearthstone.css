@@ -110,6 +110,13 @@
     background-image: url('./images/molk-group.png');
 }
 
+/* hides .hiding-hr when smaller than 1270px */
+@media only screen and (max-width:1268px) {
+    .hiding-hr {
+        display: none;
+    }
+}
+
 /* condenses playtest info */
 @media only screen and (max-width:1245px) {
     .skinny {
@@ -129,14 +136,14 @@
     }
 }
 
-@media only screen and (max-width:1214px) {
+@media only screen and (max-width:1200px) {
     .gap {
-        gap: 0px;
+        column-gap: 0px;
     }
 }
 
 /* wraps hs classes early */
-@media only screen and (max-width:1174px) {
+@media only screen and (max-width:1074px) {
     #classes {
         max-width: 636px;
     }
@@ -148,7 +155,7 @@
         width: 250px;
     }
     .shrinkwidth {
-        width: 500px;
+        max-width: 700px;
     }
 }
 
@@ -182,4 +189,6 @@
     #molk-br {
         display: none;
     }
+
+    
 }
