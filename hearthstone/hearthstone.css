@@ -111,7 +111,7 @@
 }
 
 /* hides .hiding-hr when smaller than 1270px */
-@media only screen and (max-width:1268px) {
+@media only screen and (max-width:1266px) {
     .hiding-hr {
         display: none;
     }
