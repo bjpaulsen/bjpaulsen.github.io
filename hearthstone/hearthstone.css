@@ -37,14 +37,16 @@
     align-items: center; */
     margin-left: 15px;
     margin-right: 15px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .info-column-text {
     width: 150px;
     justify-self: center;
 }
+
+
 
 
 
